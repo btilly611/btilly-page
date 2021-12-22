@@ -1,15 +1,15 @@
 const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars')
-
+const port = process.env.PORT || 3000;
 
 app.set('views','./views')
 app.set('view engine','handlebars')
 app.engine('handlebars',exphbs.create({}).engine)
 
 app.use(express.static('public'))
-app.listen(3000,()=>{
-    console.log("Listening on 3000")
+app.listen(port,()=>{
+    console.log("Listening on" + port)
 })
 
 app.get('/',(req,res)=>{
