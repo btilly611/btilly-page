@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cantarell:ital@1&family=PT+Sans+Narrow&family=Roboto:wght@100;900&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="styles/tributarios.css">
+     <title>Consultoría</title>
+</head>
+<body>
+    {{>nav}}
+    <section id="header">
+        <h2 class="text-center text-white display-4">
+        </h2>
+    </section>
+
+    <section id="main">
+        <div id="first-section">
+              <p>
+                Contamos con amplia experiencia en el área procesal del derecho tributario en Honduras. A lo largo de nuestros años de experiencia profesional hemos afrontado procesos administrativos y judiciales en el área fiscal, obteniendo un grado de efectividad sumamente positivo en favor de nuestros clientes. </p>
+              <p> ​
+                Nuestros socios y asociados están en capacidad de atender de manera integral los distintos procesos que en el área administrativa y Fiscal existen en Honduras, entre ellos manejamos los siguientes procesos.
+              </p>
+                <h5>
+                    <b>Declaración y Regulación para el 2014</b>
+                </h5>
+                <p>
+                    La Declaración y Regulación para el 2014 tiene como finalidad regular las operaciones comerciales y financieras que se realicen entre empresas relacionadas o vinculadas, valoradas de acuerdo con el principio de libre o plena competencia facilitando a la Administración Tributaria (SAR) el control y fiscalización de dichas transacciones reduciendo los costos de cumplimiento tanto para el Fisco como para el contribuyente.
+                </p>
+                <p>
+                    Dentro de nuestras competencias como firma auditora, medir el impacto fiscal que estas transacciones pueden tener dentro del engranaje financiero de una compañía es muy importante, nos permite determinar la viabilidad de mantener estructuras entre relacionadas o mantener relaciones independientes.
+                </p>
+                <p>
+                    Es importante para nosotros poder darle a nuestros clientes un estudio que les arroje conclusiones importantes, que los llevaran a tomar mejores decisiones que conllevaran a una mejor administración de sus empresas.
+                </p>
+        </div>
+        <div id="second-section">
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="prop one">
+            <h2>
+                Consultas formales a la autoridad tributaria.
+            </h2>
+        </div>
+          <div class="prop two">
+            <h2>
+                 Procesos administrativos no contenciosos ante la autoridad tributaria.
+            </h2>
+        </div>
+          <div class="prop three">
+            <h2>
+                Acompañamiento técnico tanto en el área legal, como financiera en procesos de revisión administrativa.
+            </h2>
+        </div>
+          <div class="prop four">
+            <h2>    
+                Contestación de requerimientos fiscales por parte de la autoridad tributaria.
+            </h2>
+        </div>
+        <div class="prop one">
+            <h2>
+                Consultas formales a la autoridad tributaria.
+            </h2>
+        </div>
+          <div class="prop two">
+            <h2>
+                 Procesos administrativos no contenciosos ante la autoridad tributaria.
+            </h2>
+        </div>
+          <div class="prop three">
+            <h2>
+                Acompañamiento técnico tanto en el área legal, como financiera en procesos de revisión administrativa.
+            </h2>
+        </div>
+    </section>
+    {{>footer}}
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+        <script>
+            gsap.to('#cta-header',{duration:1,opacity:1,x:0})
+            gsap.to('#work-with-us .box',{duration:1.5,x:150})
+            gsap.to(".prop", {
+                scrollTrigger: "#servicios", 
+                duration:1,
+                opacity:1,
+                ease:"ease in",
+                x:0
+                });
+        </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script>
+                 const text = 'Impuestos';
+                function typeHeader(){
+                for(let i = 0; i < text.length;i++){
+                    setTimeout(()=>{
+                        document.querySelector('#header h2').innerHTML+=text.charAt(i);
+                    },i * 50)
+                }
+            }
+        typeHeader()
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,71 @@
+#header {
+  padding: 35vh 0;
+  background-size: 33% 100%;
+  background-image: url('https://static.wixstatic.com/media/11062b_6dd0686f46df414eaae0238e00f9be33~mv2.jpg/v1/fill/w_980,h_1743,al_c,q_85,usm_0.66_1.00_0.01/11062b_6dd0686f46df414eaae0238e00f9be33~mv2.webp');
+  font-weight: bolder;
+  background-repeat: repeat;
+  font-family: 'Roboto' !important;
+}
+#main {
+  display: flex;
+  padding: 10vh 0;
+}
+
+#first-section {
+  width: 60%;
+  padding: 3vh 5vw;
+}
+
+#second-section {
+  width: 25%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+#servicios {
+  padding: 5vh 8vw;
+}
+#servicios > .prop {
+  padding: 50px;
+  background-color: green;
+  transform: translateX(-1000px);
+}
+
+#servicios .prop.one {
+  background-color: #eaf4b2;
+}
+
+#servicios .prop.two {
+  background-color: #d6ea6a;
+}
+
+#servicios .prop.three {
+  background-color: #f7f7f7;
+}
+
+#servicios .prop.four {
+  background-color: #c5c5c5;
+}
+
+#servicios > div > h2 {
+  border-left: 3px solid black;
+  padding: 10px;
+  text-align: left;
+  margin-left: 80px;
+}
+
+@media screen and (max-width: 612px) {
+  #main {
+    flex-direction: column;
+  }
+  #servicios > .prop {
+    padding: 0px;
+  }
+  #first-section,
+  #second-section {
+    width: 100%;
+    margin-top: 5vh;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="styles/contabilidad.css">
+    <title>Document</title>
+</head>
+<body>
+
+    {{>nav}}
+     <section id="header">
+        <h2 class="text-center text-white display-4" >
+        </h2>
+    </section>
+    <section id="main">
+        <div class="left-container">
+            <p>
+                Ofrecemos servicios completos de contabilidad a aquellas firmas y entidades que por diferentes razones
+                 prefieren no mantener un staff contable en casa. Las ventajas de estos servicios para los clientes es 
+                 que no se tienen que preocupar por problemas de rotación de personal y su costo no está sujeto al pago de beneficios por contribuciones y leyes sociales (indemnizaciones, gratificaciones y bonificaciones).
+            </p>
+            <h1 class="display-4">
+                Nuestro Personal
+            </h1>
+            <p>
+                Nos comprometemos a ofrecerles a nuestro personal encargado del área de consultorías contables con la experiencia requerida para garantizarles el mejor servicio, en lo que respecta a los procedimientos se ejecutarán 
+                de acuerdo al marco de referencia indicado el cual puede ser las Normas Internacionales de Información Financiera (NIIF), de acuerdo a ley., así mismo ofrecemos la conversión Normas Internacionales de Información Financiera (NIIF)
+            </p>
+            <h1 class="display-4">
+                Nuestro Compromiso
+            </h1>
+            <p>
+                Nos comprometemos también a ofrecer un servicio administrativo el cual incluye la preparación de las nóminas de sueldo de los empleados de la empresa, los cálculos respectivos en base a Ley como ser el Impuesto sobre Renta, Impuestos Municipales, IHSS, etc.; así como también la inscripción de los empleados en los registros de previsión social respectivos, con el fin de elaborar la Contabilidad mensual de la empresa para generar los Estados Financieros y reportes contables respectivos.
+            </p>
+            <h1 class="display-4">
+                Servicio Administrativo
+            </h1>
+              <p> ​
+                Nos comprometemos también a ofrecer un servicio administrativo el cual incluye la preparación de las nóminas de sueldo de los empleados de la empresa, los cálculos respectivos en base a Ley como ser el Impuesto sobre Renta, Impuestos Municipales, IHSS, etc.; 
+                así como también la inscripción de los empleados en los registros de previsión social respectivos, con el fin de elaborar la Contabilidad mensual de la empresa para generar los Estados Financieros y reportes contables respectivos.
+            </p>
+
+        </div>
+
+        <div class="right-container">
+            <h2 class="text-white px-3 my-3">
+            "El manejo y asesoría en materia contable en nuestra firma promete un ROI más rápido, ver los beneficios y la reducción de tus costos operativos".
+            </h2>
+            <div class="bg-dark mt-auto bottom-banner">
+            </div>
+        </div>
+    </section>
+
+    {{>footer}}
+
+ <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script>
+       const text = 'Servicios de Contabilidad.'
+        function typeHeader(){
+            for(let i = 0; i < text.length;i++){
+                setTimeout(()=>{
+                    document.querySelector('#header h2').innerHTML+=text.charAt(i);
+                },i * 50)
+            }
+        }
+        typeHeader()
+    </script>
+    
+</body>
+</html>
+
+

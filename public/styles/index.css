@@ -1,0 +1,264 @@
+#hero-section {
+  height: 100vh;
+  background-image: url('/images/feature.jpg');
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#cta-header {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-300px);
+  font-size: 6.5em;
+}
+
+#cta-header h1 {
+  font-family: 'Roboto';
+  font-weight: 900 !important;
+}
+
+.h1,
+h1 {
+  font-weight: 900 !important;
+}
+
+#hero-section button {
+  font-size: 1.5rem;
+  margin-left: 1vw;
+}
+
+#about-us {
+  background-color: #d5ea69;
+}
+
+.carousel-item {
+  padding: 15vh 10vw;
+}
+
+#about-us p {
+  font-size: 18px;
+  color: black;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper > div {
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  padding: 15px;
+  margin-left: 12px;
+  font-size: 1.3rem;
+}
+
+.value-prop {
+  text-align: center;
+}
+.value-prop img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1vh;
+}
+
+#services {
+  display: flex;
+  background-color: #2d2d2d;
+  overflow-x: hidden;
+}
+
+.services-image {
+  width: 50%;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.services-image::before {
+  content: '';
+  position: absolute;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/services-img.png');
+  background-size: 100% 100%;
+}
+
+#services a {
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-left: 5vw;
+  color: white;
+}
+
+#services-header {
+  font-weight: bolder;
+  color: #d5ea69;
+  font-size: 5rem;
+  opacity: 0;
+  transform: translate(500px, 60px);
+  font-style: 'Roboto';
+}
+
+#work-with-us {
+  background-image: url('https://static.wixstatic.com/media/11062b_418c9a1ec32f40c09ddb609a1b9289ff~mv2.jpeg/v1/fill/w_2560,h_1096,al_c,q_90,usm_0.66_1.00_0.01/11062b_418c9a1ec32f40c09ddb609a1b9289ff~mv2.webp');
+  background-size: 100% 100%;
+  overflow-x: hidden;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+#work-with-us .box {
+  width: 40%;
+  background-color: #d5ea69;
+  font-size: 3rem;
+  transform: translateX(-600px);
+
+  height: auto;
+}
+
+.inner-box {
+  padding: 10px;
+}
+
+.black-arrow {
+  transition: transform 1.3s ease-in-out;
+}
+#work-with-us .box:hover .black-arrow {
+  transform: translate(30px, 30px);
+}
+
+#work-with-us .box:hover .inner-box {
+  padding: 0;
+}
+
+.black-arrow:hover {
+  cursor: pointer;
+  background-color: white !important;
+  color: black;
+}
+
+#work-with-us .box h1 {
+  font-size: 5rem;
+  font-weight: 999 !important;
+}
+
+.box i {
+  color: white;
+  background-color: black;
+  right: 0;
+}
+
+footer {
+  background-color: #181818;
+}
+
+footer .row-1 {
+  background-color: #3c3c3c;
+  display: flex;
+  align-items: center;
+}
+
+footer .row-1 > div {
+  width: 50%;
+}
+
+footer .row-2 a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: underline;
+  font-weight: bold;
+}
+footer .row-2 ul {
+  margin-top: 10vh;
+}
+
+footer .row-3 {
+  display: flex;
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 10vh;
+}
+
+.slogan-container {
+  position: relative;
+}
+.slogan-container h1 {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+@media screen and (max-width: 612px) {
+  #hero-section {
+    height: 70vh;
+  }
+  #cta-header {
+    font-size: 3rem;
+  }
+
+  #about-us h1 {
+    font-size: 3rem;
+  }
+
+  #services {
+    flex-direction: column;
+  }
+
+  #services .services-image,
+  #services .services-names {
+    width: 100%;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper > div {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin-top: 2vh;
+  }
+
+  .services-image {
+    height: 300px;
+  }
+
+  #work-with-us {
+    padding: 0vh;
+    height: 50vh;
+  }
+  #work-with-us .box {
+  }
+
+  #work-with-us .box h1 {
+    font-size: 1.5rem;
+  }
+
+  footer .row-3 {
+    flex-direction: column;
+  }
+
+  footer .row-3 ul {
+    width: 100%;
+  }
+
+  footer .row-3 > div:nth-child(1) {
+    padding-bottom: 8vh;
+    text-align: center;
+  }
+  footer .row-3 > * {
+    width: 100% !important;
+  }
+}

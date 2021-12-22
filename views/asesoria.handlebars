@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+     <link rel="stylesheet" href="styles/asesoria.css">
+     <title>Consultoría</title>
+</head>
+<body>
+    {{>nav}}
+    <section id="header">
+        <h2 class="text-center text-white display-4">
+        </h2>
+    </section>
+    <section id="main">
+        <div id="first-section">
+                <p>
+                    La Consultoría de servicios especializados, complementa de gran manera los servicios que la firma ya entrega al mercado nacional. Estos servicios promueven la interrelación entre consultores nacionales y extranjeros que brindan su expertos y amplios conocimientos en el desarrollo de sus actividades de consultoría. Estos servicios incluyen diferentes alcances con soluciones que se acomodan a las necesidades de los clientes.
+                </p>
+                <h1 class="display-4">
+                    Precios de Transferencia
+                </h1>
+                <p>
+                    Los precios de transferencia surgen para controlar las transacciones entre las partes relacionadas de un grupo económico. Se definen como el precio o el monto por el cual una serie de empresas relacionadas pactan transar un bien o un servicio entre ellas.
+                </p>
+                <h5>
+                    <b>Declaración y Regulación para el 2014</b>
+                </h5>
+                <p>
+La Declaración y Regulación para el 2014 tiene como finalidad regular las operaciones comerciales y financieras que se realicen entre empresas relacionadas o vinculadas, valoradas de acuerdo con el principio de libre o plena competencia facilitando a la Administración Tributaria (SAR) el control y fiscalización de dichas transacciones reduciendo los costos de cumplimiento tanto para el Fisco como para el contribuyente.
+                </p>
+                <p>
+                    Dentro de nuestras competencias como firma auditora, medir el impacto fiscal que estas transacciones pueden tener dentro del engranaje financiero de una compañía es muy importante, nos permite determinar la viabilidad de mantener estructuras entre relacionadas o mantener relaciones independientes.
+                </p>
+                <p>
+                    Es importante para nosotros poder darle a nuestros clientes un estudio que les arroje conclusiones importantes, que los llevaran a tomar mejores decisiones que conllevaran a una mejor administración de sus empresas.
+                </p>
+        </div>
+        <div id="second-section">
+          <h1 class="display-4">
+             <b> Equipo Legal</b>
+          </h1>
+          <p>
+              Contamos con un equipo de abogados y consultores en distintas áreas de Derecho, que de manera uniforme puedan brindar un servicio altamente competitivo a través de la integración entre profesionales con un alto grado de experiencia y juventud, y contando a los más altos estandartes de preparación académica a nivel mundial, lo cual ha logrado plasmar en nuestros clientes un alto grado de satisfacción con el servicio brindado.
+          </p>
+          <div class="lower-part-div mt-auto">
+          </div>
+        </div>
+    </section>
+    {{>footer}}
+<script>
+            const text = 'Asesoría Legal Corporativa';
+                function typeHeader(){
+                for(let i = 0; i < text.length;i++){
+                    setTimeout(()=>{
+                        document.querySelector('#header h2').innerHTML+=text.charAt(i);
+                    },i * 50)
+                }
+            }
+        typeHeader()
+</script>
+
+</body>

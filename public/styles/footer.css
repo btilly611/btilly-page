@@ -1,0 +1,39 @@
+footer {
+  background-color: #181818;
+}
+
+footer .row-1 {
+  background-color: #3c3c3c;
+  display: flex;
+  align-items: center;
+}
+
+footer .row-1 > div {
+  width: 50%;
+}
+
+footer .row-2 a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: underline;
+  font-weight: bold;
+}
+footer .row-2 ul {
+  margin-top: 10vh;
+}
+
+footer .row-3 {
+  display: flex;
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 10vh;
+}
+
+.slogan-container {
+  position: relative;
+}
+.slogan-container h1 {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}

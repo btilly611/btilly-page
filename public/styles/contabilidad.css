@@ -1,0 +1,48 @@
+#header {
+  height: 70vh;
+  padding: 35vh 0;
+  background-image: url('https://static.wixstatic.com/media/9441146dbd3b4a31a35f513916b26942.jpg/v1/fill/w_980,h_759,al_c,q_85,usm_0.66_1.00_0.01/9441146dbd3b4a31a35f513916b26942.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-weight: bolder;
+}
+
+#main {
+  display: flex;
+  padding: 5vh 0;
+}
+
+.left-container {
+  width: 65%;
+  padding: 5vh 5vw;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding: 0vh 0vw;
+  background-color: #d5ea69;
+}
+
+.right-container .bottom-banner {
+  width: 100%;
+  height: 10vh;
+}
+
+@media screen and (max-width: 612px) {
+  #header {
+    height: 60vh;
+    padding: 30vh 0;
+    box-sizing: border-box;
+  }
+  #main {
+    flex-direction: column;
+  }
+
+  .left-container,
+  .right-container {
+    width: 100%;
+    margin-top: 5vh;
+  }
+}
