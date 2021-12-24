@@ -139,7 +139,7 @@
             <div class="box">
                 <div class="inner-box">
                     <h4>Carreras</h4>
-                    <h1 class="p-3"><b>Trabaja con nosotros</b></h1>
+                    <h1><b>Trabaja con nosotros</b></h1>
                 </div>
                 <div class="d-flex">
                     <i class="fas fa-arrow-right ml-auto black-arrow"></i>
@@ -153,12 +153,31 @@
         <script>
             gsap.to('#cta-header',{duration:1,opacity:1,x:0})
             gsap.to('#work-with-us .box',{duration:1.5,x:150})
-            gsap.to("#services-header", {
+
+            if(this.innerWidth <= 612){
+                 gsap.to("#services-header", {
                 scrollTrigger: "#services", 
                 duration:2,
                 opacity:1,
-                x:50
+                x:'30%',
+                y:'0%'
+                }); 
+
+                console.log('hieroeji')
+            }else{
+                   gsap.to("#services-header", {
+                scrollTrigger: "#services", 
+                duration:2,
+                opacity:1,
+                x:'55%',
+                y:'0%'
                 });
+
+
+            }
+
+         
+                console.log('rjieorejor',this.innerWidth)
         </script>
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
