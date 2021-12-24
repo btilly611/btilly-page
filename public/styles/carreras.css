@@ -1,0 +1,45 @@
+h1,
+h2 {
+  font-family: 'Noto Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+#main {
+  display: flex;
+  padding: 20vh 0;
+}
+
+#form-container {
+  width: 60%;
+  padding: 3vh 3vw 3vh 15vw;
+}
+
+#form-container h1 {
+  font-size: 3.5rem;
+}
+
+#form-container #mensaje {
+  height: 15vh;
+}
+
+input:hover {
+  background-color: #d5ea69;
+}
+
+button {
+  background-color: #d5ea69 !important;
+  color: white !important;
+  border: none !important;
+}
+
+button:hover {
+  background-color: gray !important;
+  color: #d5ea69 !important;
+}
+
+#plazas-disponibles {
+  width: 25%;
+  margin-left: 5vw;
+  background-color: whitesmoke;
+  padding: 5vh 3vw;
+}

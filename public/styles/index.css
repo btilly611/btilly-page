@@ -12,7 +12,23 @@
   position: relative;
   opacity: 0;
   transform: translateX(-300px);
-  font-size: 6.5em;
+  font-size: 5.3em;
+  font-family: 'Noto-Sans', sans-serif;
+  font-weight: 700;
+}
+
+#hero-section button {
+  border-radius: 0 !important;
+  background-color: rgb(34, 33, 33);
+  color: white;
+  padding: 0 1.5vw;
+  font-weight: 700;
+  font-family: 'Noto Sans';
+}
+
+#hero-section button:hover {
+  background-color: white;
+  color: black;
 }
 
 #cta-header h1 {
@@ -30,12 +46,18 @@
 }
 
 .carousel-item {
-  padding: 15vh 10vw;
+  padding: 9vh 20vw;
 }
 
+#about-us-header {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: 'Noto Sans';
+}
 #about-us p {
   font-size: 18px;
   color: black;
+  font-weight: 700;
 }
 
 .wrapper {
@@ -53,9 +75,27 @@
   font-size: 1.3rem;
 }
 
+#bakertilly-button {
+  padding: 1vh 3.3vw;
+  background-color: white;
+  font-size: 1.2rem;
+  font-weight: 700 !important;
+  font-family: 'Noto Sans';
+  border: none;
+}
+
+#bakertilly-button:hover {
+  color: gray;
+}
 .value-prop {
   text-align: center;
 }
+
+.value-prop h6 {
+  font-weight: 600;
+  font-family: 'Noto Sans';
+}
+
 .value-prop img {
   width: 40px;
   height: 40px;
@@ -118,8 +158,11 @@
   background-color: #d5ea69;
   font-size: 3rem;
   transform: translateX(-600px);
-
   height: auto;
+}
+
+#work-witu-us .box {
+  font-weight: 700 !important;
 }
 
 .inner-box {
@@ -145,7 +188,7 @@
 
 #work-with-us .box h1 {
   font-size: 5rem;
-  font-weight: 999 !important;
+  font-weight: 9 !important;
 }
 
 .box i {

@@ -41,4 +41,14 @@ app.get('/btilly-h',(req,res)=>{
 })
 
 
+app.get('/carreras',(req,res)=>{
+    res.render('carreras',{layout:false})
+})
+
+
+app.get('/contactanos',(req,res)=>{
+    res.render('contactanos',{layout:false})
+})
+
+
 

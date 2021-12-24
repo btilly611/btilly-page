@@ -6,6 +6,11 @@
   background-repeat: repeat;
 }
 
+h1,
+h2 {
+  font-family: 'Noto Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
 #main {
   display: flex;
   padding: 10vh 0;

@@ -1,5 +1,121 @@
+h1,
+h2 {
+  font-family: 'Noto Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
 #header {
-  height: 50vh;
+  height: 80vh;
   background-image: url('https://static.wixstatic.com/media/b77f167f974449ab821f55c403f58af3.jpg/v1/fill/w_980,h_1743,al_c,q_85,usm_0.66_1.00_0.01/b77f167f974449ab821f55c403f58af3.webp');
   background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-container {
+  display: flex;
+  height: 50vh;
+  align-items: center;
+}
+
+.img-container,
+.country-container {
+  height: 8.5vh;
+  margin: 0 3vw;
+}
+
+.img-container img {
+  height: 100%;
+}
+
+.inner-container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-top: 1vh;
+}
+
+#more-info {
+  display: flex;
+  padding: 10vh 10vw;
+}
+
+#first-section {
+  width: 50%;
+}
+
+#second-section {
+  width: 25%;
+  background-color: whitesmoke;
+  margin-left: 10vw;
+}
+
+#clients {
+  background-color: #d5ea69;
+  display: flex;
+}
+
+#clients-first-section p {
+  margin-top: 5vh;
+}
+#clients-first-section,
+#clients-second-section {
+  width: 50%;
+  text-align: center;
+  padding: 8vh 6vw;
+  text-align: justify;
+  font-weight: 550;
+}
+
+#structure {
+  background-color: white;
+  padding: 15vh 15vw;
+  margin-top: 3vh;
+}
+
+@media screen and (max-width: 612px) {
+  #header {
+    height: 50vh;
+  }
+  .img-container,
+  .country-container {
+    height: 6.5vh;
+    margin: 0 1.5vw;
+  }
+  .inner-container {
+    margin-top: 10vh;
+  }
+  .inner-container h1 {
+    font-size: 2rem;
+    margin-top: 0.5vh;
+  }
+  #more-info {
+    flex-direction: column;
+  }
+  #first-section,
+  #second-section {
+    width: 100%;
+  }
+
+  #clients {
+    flex-direction: column;
+  }
+  #clients-first-section,
+  #clients-second-section {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .inner-container {
+    height: 20vh;
+    margin-top: 20vh;
+  }
+  .inner-container h1 {
+    font-size: 1.2rem;
+  }
+  .img-container,
+  .country-container {
+    height: 5vh;
+  }
 }
