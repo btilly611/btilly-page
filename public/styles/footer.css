@@ -75,6 +75,10 @@ footer .social-media-links i {
   margin-left: 0.3vw;
 }
 
+footer a:hover {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 612px) {
   .row-2 ul,
   .row-3 ul {

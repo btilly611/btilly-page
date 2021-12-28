@@ -157,10 +157,14 @@ Nuestros socios y asociados están en capacidad de atender de manera integral lo
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script>
             const text = 'Consultoría de Servicios Especializados';
-                function typeHeader(){
+            function typeHeader(){
                 for(let i = 0; i < text.length;i++){
+                    let header = document.querySelector('#header h2')
                     setTimeout(()=>{
-                        document.querySelector('#header h2').innerHTML+=text.charAt(i);
+                        header.innerHTML+=text.charAt(i);
+                        if(i === text.length-1){
+                            header.innerHTML+='<span style="color:#d5ea69;">.</span>'
+                        }
                     },i * 50)
                 }
             }
