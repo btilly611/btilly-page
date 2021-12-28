@@ -1,9 +1,36 @@
-#header {
+/* #header {
   padding: 35vh 0;
   background-size: 33% 100%;
   background-image: url('https://static.wixstatic.com/media/11062b_3ed23a496271479f952fc5627ade149c~mv2.jpg/v1/fill/w_980,h_2123,al_c,q_90,usm_0.66_1.00_0.01/11062b_3ed23a496271479f952fc5627ade149c~mv2.webp');
   font-weight: bolder;
   background-repeat: repeat;
+} */
+#header {
+  width: 100vw;
+  height: 80vh;
+  background-color: black;
+  position: relative;
+}
+
+#header::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://static.wixstatic.com/media/11062b_3ed23a496271479f952fc5627ade149c~mv2.jpg/v1/fill/w_980,h_2123,al_c,q_90,usm_0.66_1.00_0.01/11062b_3ed23a496271479f952fc5627ade149c~mv2.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.5;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header h2 {
+  position: relative;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 900;
+  top: 50%;
 }
 
 h1,

@@ -3,52 +3,42 @@ h2 {
   font-family: 'Noto Sans', sans-serif !important;
   font-weight: 700 !important;
 }
-
 #main {
   display: flex;
   padding: 20vh 0;
 }
-
 #contact-info-container {
   display: flex;
   flex-direction: column;
   padding: 0 11vw;
 }
-
 #contact-info {
   text-align: center;
 }
-
 #form-container {
   width: 60%;
   padding: 0vh 3vw 3vh 5vw;
 }
-
 #form-container h1 {
   font-size: 1.2rem;
   color: gray;
   margin-bottom: 3vh;
 }
-
 #form-container #mensaje {
   height: 15vh;
 }
-
 input:hover {
   background-color: #d5ea69;
 }
-
-button {
+form button {
   background-color: #d5ea69 !important;
   color: white !important;
   border: none !important;
 }
-
-button:hover {
+form button:hover {
   background-color: gray !important;
   color: #d5ea69 !important;
 }
-
 @media screen and (max-width: 612px) {
   #main {
     flex-direction: column;

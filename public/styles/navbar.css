@@ -1,5 +1,6 @@
 nav > * {
-  font-family: 'Roboto';
+  font-family: 'Roboto' !important;
+  font-weight: 500 !important;
 }
 
 nav {
@@ -15,15 +16,26 @@ nav ul {
   color: gray;
   margin-right: 7vw;
 }
-
 .navbar-brand {
   margin-left: 15vw;
 }
 nav li a {
   font-size: 16px;
-  font-weight: 500 !important;
-  font-family: 'Noto Sans' !important;
+  font-family: 'Roboto';
+  font-weight: 500;
   margin: 0 1vw;
+}
+nav a:focus {
+  background-color: none;
+}
+
+.dropdown-item:focus {
+  background-color: white;
+  color: black;
+}
+.dropdown-menu {
+  border-radius: 0;
+  border: none;
 }
 .social-media-links {
   font-size: 30px;
@@ -31,12 +43,10 @@ nav li a {
   margin-left: auto;
   margin-right: 5vw;
 }
-
 .social-media-links img {
   width: 2.3vw;
   height: 2.3vw;
 }
-
 @media screen and (max-width: 612px) {
   .social-media-links img {
     width: 8.5vw;

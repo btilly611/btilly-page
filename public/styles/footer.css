@@ -14,7 +14,7 @@ footer .row-1 > div {
 
 footer .row-2 a {
   color: white;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -29,11 +29,72 @@ footer .row-3 {
   margin-top: 10vh;
 }
 
+footer .row-3 .address {
+  width: 80%;
+}
+
+footer .row-3 .slogan-container {
+  width: 20%;
+}
+
+.slogan-container img {
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+footer .logo {
+  width: 15vw;
+  height: 15vw;
+  object-fit: contain;
+}
+.row-3 ul:nth-child(1) {
+  text-align: justify;
+  list-style-type: none;
+}
+
 .slogan-container {
   position: relative;
+}
+
+.address ul,
+.row-2 ul {
+  margin-left: 100px;
+}
+
+.address ul {
+  font-size: 0.8rem;
 }
 .slogan-container h1 {
   position: absolute;
   bottom: 0;
   right: 20px;
+}
+
+footer .social-media-links i {
+  margin-left: 0.3vw;
+}
+
+@media screen and (max-width: 612px) {
+  .row-2 ul,
+  .row-3 ul {
+    margin-left: 0;
+  }
+  .row-3 {
+    flex-direction: column;
+  }
+
+  .row-3 > div {
+    width: 100% !important;
+  }
+
+  .row-3 .slogan-container {
+    display: flex;
+  }
+  .row-3 .slogan-container img {
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
 }

@@ -57,6 +57,7 @@
 #about-us p {
   font-size: 18px;
   color: black;
+  font-family: 'Roboto';
   font-weight: 700;
 }
 
@@ -303,7 +304,7 @@ footer .row-3 {
   }
 
   footer .row-3 ul {
-    width: 100%;
+    width: auto;
   }
 
   footer .row-3 > div:nth-child(1) {
