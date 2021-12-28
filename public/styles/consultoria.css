@@ -37,7 +37,7 @@ h2 {
 }
 
 #third-section {
-  padding: 10vh 8vw;
+  padding: 10vh 0vw;
 }
 
 .box-container {
@@ -69,6 +69,10 @@ h2 {
 .box-container > div {
   transform: translateX(800px);
   opacity: 0;
+}
+
+.box-container {
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 612px) {
