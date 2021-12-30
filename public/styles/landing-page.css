@@ -1,0 +1,80 @@
+#main {
+  height: 80vw;
+  background-color: #dadcdb;
+  display: flex;
+  align-items: center;
+  padding: 10vh 0 15vh 0;
+}
+
+#main h1 {
+  font-family: 'Noto Sans';
+  font-weight: 900;
+}
+
+#main p {
+  font-size: 1.5rem;
+  padding: 3vw;
+}
+
+.second-section {
+  text-align: left;
+}
+#main button {
+  font-size: 1.8rem;
+  background-color: transparent;
+  border: 2px black solid;
+  font-family: 'Noto Sans';
+}
+
+#main .first-section img {
+  object-fit: contain;
+}
+
+.first-section {
+  width: 30%;
+}
+.second-section {
+  width: 70%;
+}
+
+#services-section {
+  padding: 5vw 3vw;
+  font-size: 1.2rem;
+  font-family: 'Roboto';
+  height: 90vh;
+}
+
+#services-section h1 {
+  font-family: 'Noto Sans';
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+#service-boxes {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 15vh;
+}
+
+.box {
+  background-color: black;
+  border-radius: 10px;
+  height: 55vh;
+  width: 20vw;
+  color: #d5ea69;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+#step-instructions {
+  height: 70vh;
+  background-color: #dadcdb;
+  display: flex;
+  padding: 20vh 5vh;
+}
+
+.step-instructions-section {
+  width: 65%;
+}
+.step-instructions-image-section {
+}

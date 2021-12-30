@@ -1,0 +1,52 @@
+nav > * {
+  font-family: 'Roboto' !important;
+  font-weight: 500 !important;
+}
+
+nav {
+  background-color: white;
+  padding: 2vh 0 !important;
+}
+.nav a {
+  color: black;
+}
+nav ul {
+  color: gray;
+  margin-right: 7vw;
+}
+.navbar-brand {
+  margin-left: 5vw;
+}
+nav li a {
+  font-size: 16px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+nav a:focus {
+  background-color: none;
+}
+
+.dropdown-item:focus {
+  background-color: white;
+  color: black;
+}
+.dropdown-menu {
+  border-radius: 0;
+  border: none;
+}
+.social-media-links {
+  font-size: 30px;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: 5vw;
+}
+.social-media-links img {
+  width: 2.3vw;
+  height: 2.3vw;
+}
+@media screen and (max-width: 612px) {
+  .social-media-links img {
+    width: 8.5vw;
+    height: 8.5vw;
+  }
+}

@@ -37,5 +37,9 @@ app.get('/contactanos',(req,res)=>{
     res.render('contactanos',{layout:false})
 })
 
+app.get('/landing-p-1',(req,res)=>{
+    res.render('landing-page',{layout:false})
+})
+
 
 
