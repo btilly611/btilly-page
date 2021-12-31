@@ -67,14 +67,19 @@
 }
 
 #step-instructions {
-  height: 70vh;
-  background-color: #dadcdb;
+  height: auto;
+  background-color: #ebe7e4;
   display: flex;
-  padding: 20vh 5vh;
+  padding: 20vh 2vh;
 }
 
 .step-instructions-section {
   width: 65%;
 }
 .step-instructions-image-section {
+  width: 35%;
+  display: flex;
+  justify-content: right;
+}
+.step-instructions-image-section img {
 }
