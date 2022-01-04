@@ -10,7 +10,12 @@ app.listen(port,()=>{
     console.log("Listening on" + port)
 })
 app.get('/',(req,res)=>{
-    res.render('index',{layout:false})
+    res.render('index',{layout:false},function(err,html){
+        if(err){
+            return console.log('A rendering error was found')
+        }
+        res.status(200).send(html)
+    })
 })
 app.get('/auditoria',(req,res)=>{
     res.render('auditoria',{layout:false})
@@ -39,6 +44,10 @@ app.get('/contactanos',(req,res)=>{
 
 app.get('/landing-p-1',(req,res)=>{
     res.render('landing-page',{layout:false})
+})
+
+app.get('/form',(req,res)=>{
+    res.render('form-page',{layout:false})
 })
 
 

@@ -1,0 +1,40 @@
+.container {
+  padding: 2vh 3vw;
+}
+
+.button {
+  background-color: #d5ea69;
+  font-size: 1.5rem;
+  border: transparent;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.plan {
+  font-size: 1.2rem;
+  background-color: #d5ea69;
+  padding: 3vh 1vw;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 12vw;
+  white-space: wrap;
+  font-family: sans-serif;
+  font-weight: 700;
+  margin-left: 1vw;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  border-bottom: 1px gray solid;
+}
+td {
+  width: 33%;
+  font-size: 3rem;
+  text-align: center;
+}

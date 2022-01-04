@@ -7,7 +7,7 @@
 }
 
 #main h1 {
-  font-family: 'Noto Sans';
+  font-family: 'Noto Sans', sans-serif;
   font-weight: 900;
 }
 
@@ -38,10 +38,16 @@
 }
 
 #services-section {
-  padding: 5vw 3vw;
+  padding: 5vw 0;
   font-size: 1.2rem;
   font-family: 'Roboto';
   height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+#services-section > div {
+  width: 60%;
 }
 
 #services-section h1 {
@@ -52,8 +58,7 @@
 
 #service-boxes {
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 15vh;
+  padding-top: 6vh;
 }
 
 .box {
@@ -64,6 +69,8 @@
   color: #d5ea69;
   box-sizing: border-box;
   padding: 0 10px;
+  margin-left: 2vw;
+  font-family: sans-serif;
 }
 
 #step-instructions {
@@ -115,5 +122,18 @@
 
   .box p {
     font-size: 1rem;
+  }
+
+  #services-section {
+    height: auto;
+  }
+
+  #service-boxes {
+    flex-direction: column;
+  }
+
+  .box {
+    width: auto;
+    margin-top: 2vw;
   }
 }
