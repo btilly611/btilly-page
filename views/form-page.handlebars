@@ -28,7 +28,9 @@
             </ul>
         </div>
     </nav>
-    <section id="main-container">
+
+<section id="wrapper">
+    <div id="main-container">
             <div class="buttons container">
                 <button class="button prev">
                     Anterior
@@ -37,7 +39,7 @@
                     Siguiente
                 </button>
             </div> 
-            <div class="container">
+            <div class="container step-header">
                 <h1>Selecciona el Servicio para tu negocio</h1>
                 <p>A continuación te proporcionamos selecciones de nuestros servicios para ayudarte a elegir.</p>
             </div>
@@ -136,7 +138,7 @@
                                     <div class="dot"></div>
                                 </td>
                             </tr>
-                                        <tr>
+                             <tr>
                                 <td class="benefit">
                                     Asesoría Fiscal
                                 </td>
@@ -166,23 +168,87 @@
                             </tr>
                         </table>
                     </div>
-                        <div class="step">
-                    <h1>Hello there Step 2</h1>
-                </div>
-
                  <div class="step">
+                    <form action="/payment" method="POST">
+
+                    <div class="d-flex">
+                        <div class="form-group w-50">
+                            <input type="text" class="form-control"   placeholder="Nombre">
+                        </div>
+                        <div class="form-group w-50">
+                            <input type="text" class="form-control" placeholder="Apellido">
+                        </div>
+                     </div>
+                       <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Cargo">
+                        </div>
+                          <div class="form-group">
+                            <input type="email" class="form-control"  placeholder="Correo Electrónico">
+                        </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Tipo de Empresa">
+                        </div>
+                         <div class="form-group">
+                            <input type="text" class="form-control"  placeholder="Registro Tributario Nacion">
+                        </div>
+                         <div class="form-group">
+                            <input type="text" class="form-control"  placeholder="Nombre de la Empresa">
+                        </div>
+                         <div class="form-group">
+                            <input type="text" class="form-control"  placeholder="Dirección de la Empresa">
+                        </div>
+                      
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                 <div class="step third" style="height:auto;">
                     <h1>Hello there Step 3</h1>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+                    <script>
+                    Calendly.initInlineWidget({
+                        url: 'https://calendly.com/cita-btilly',
+                        parentElement: document.querySelector('.third'),
+                        prefill: {},
+                        utm: {},
+                        innerHeight:1000,
+                        innerWidth:800
+                                });
+                    </script>
                 </div>
-                </div>
-    </section>
+            </div>
+    </div>
+</div>
+<div id="steps-container">
+        <div class="step-mark">
+            <h3>Paso 1</h3>
+            <h6>Plan de Servicios</h6>
+        </div>
+        <div class="step-mark"> 
+             <h3>Paso 2</h3>
+             <h6>Información de Contacto</h6>
+        </div>
+        <div class="step-mark">
+          <h3>Paso 3</h3>
+           <h6>Agendar Cita</h6>
+        </div>
+        <div class="step-mark">
+             <h3>Paso 4</h3>
+             <h6>Pago</h6>
+        </div>
+</div>
+</section>
     <script>
         let stepCount = 0;
+        const stepsHeader = document.querySelector('.step-header')
+        const stepHeaders = ['Selecciona el servicio para tu negocio','Información de Contacto y de Negocio','Proceso de Pago']
+        const stepSubHeaders = ['A continuación te proporcionamos selecciones de nuestros servicios para ayudarte a elegir.','Por favor complete el formulario a continuación','Configura tu tarjeta']
         const steps = document.querySelectorAll('.step')
         const prev = document.querySelector('.prev')
         const nxt = document.querySelector('.nxt')
         const plans = document.querySelectorAll('.plan')
         const dots = Array.from(document.querySelectorAll('.dot'));
-        const rows = Array.from(document.querySelectorAll('tr'));        
+        const rows = Array.from(document.querySelectorAll('tr'));  
+        const stepMarks = document.querySelectorAll('.step-mark')      
         plans.forEach((plan)=>{
             plan.addEventListener('click',(e)=>{
                dots.forEach((dot)=>{
@@ -209,13 +275,20 @@
                 prev.disabled=false
                 stepCount--
                 steps[stepCount].style="none"
+                stepMarks[stepCount].style.backgroundColor="whitesmoke"
+                stepMarks[stepCount].style.color="black"
                 stepCount--
+                  stepsHeader.querySelector('h1').innerText=stepHeaders[stepCount]
+                stepsHeader.querySelector('p').innerText=stepSubHeaders[stepCount]
                 steps[stepCount].style.display="block";
+                stepMarks[stepCount].style.backgroundColor="black"
+                stepMarks[stepCount].style.color="#d5ea69"
                 console.log(stepCount,'SC')
                 stepCount++
                 stepCount === 1 ? prev.disabled=true : '';
             }
         }
+
         function nxtStep(){
             if(stepCount === steps.length){
                 prev.disabled=false
@@ -225,6 +298,10 @@
             }
             if(stepCount === 0){
                 steps[stepCount].style.display="block";
+                stepMarks[stepCount].style.backgroundColor="black";
+                stepMarks[stepCount].style.color="#d5ea69";
+                stepsHeader.querySelector('h1').innerText=stepHeaders[stepCount]
+                stepsHeader.querySelector('p').innerText=stepSubHeaders[stepCount]
                 stepCount++
                 console.log(stepCount,'stepCount')
                 return
@@ -232,12 +309,17 @@
             if(stepCount > 0){
                 prev.disabled=false
                 steps[stepCount-1].style.display="none";
+                stepMarks[stepCount-1].style.backgroundColor="whitesmoke";
+                stepMarks[stepCount-1].style.color="black";
+                stepMarks[stepCount].style.backgroundColor="black"
+                stepMarks[stepCount].style.color="#d5ea69";
                 steps[stepCount].style.display="block";
+                stepsHeader.querySelector('h1').innerText=stepHeaders[stepCount]
+                stepsHeader.querySelector('p').innerText=stepSubHeaders[stepCount]
                 stepCount++
                 console.log(stepCount,'stepCount')
             }
     }
-
         const benefits = {
              'one':{
                  'numberOfBenefits':5,

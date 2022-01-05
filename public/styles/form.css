@@ -63,3 +63,31 @@ tr {
 #main-container {
   width: 70%;
 }
+
+#wrapper {
+  display: flex;
+}
+#steps-container {
+  width: 30%;
+  text-align: center;
+  padding-top: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-content: right;
+}
+.step-mark {
+  background-color: whitesmoke;
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.third {
+  height: 800px !important;
+  width: 800px !important;
+}
+
+.step-mark h3 {
+  font-size: 1.5rem !important;
+}
