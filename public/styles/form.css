@@ -15,7 +15,7 @@ h1 {
 
 .plan {
   font-size: 1.2rem;
-  background-color: #d5ea69;
+  background-color: whitesmoke;
   padding: 3vh 1vw;
   border-radius: 5px;
   box-sizing: border-box;
@@ -26,6 +26,11 @@ h1 {
   margin-left: 1vw;
 }
 
+.plan:hover {
+  background-color: #d5ea69;
+  cursor: pointer;
+}
+
 table {
   width: 100%;
 }
@@ -33,8 +38,28 @@ table {
 tr {
   border-bottom: 1px gray solid;
 }
-td {
-  width: 33%;
+
+.benefit {
+  width: 45%;
+}
+.dot-container {
+  width: 13%;
   font-size: 3rem;
   text-align: center;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  display: inline-block;
+}
+
+.step {
+  display: none;
+}
+
+#main-container {
+  width: 70%;
 }

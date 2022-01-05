@@ -28,41 +28,234 @@
             </ul>
         </div>
     </nav>
-    <div class="buttons container">
-        <button class="button">
-            Anterior
-        </button>
-         <button class="button">
-            Siguiente
-        </button>
-    </div> 
-    <div class="container">
-        <h1>Selecciona el Servicio para tu negocio</h1>
-        <p>A continuación te proporcionamos selecciones de nuestros servicios para ayudarte a elegir.</p>
-    </div>
+    <section id="main-container">
+            <div class="buttons container">
+                <button class="button prev">
+                    Anterior
+                </button>
+                <button class="button nxt">
+                    Siguiente
+                </button>
+            </div> 
+            <div class="container">
+                <h1>Selecciona el Servicio para tu negocio</h1>
+                <p>A continuación te proporcionamos selecciones de nuestros servicios para ayudarte a elegir.</p>
+            </div>
+            <div class="container plan-details">
+                    <div class="step">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                    </th>
+                                    <th>
+                                        <div class="plan one">
+                                            Presentación de Impuestos
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="plan two">
+                                            Presentación de Impuestos
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="plan three">
+                                            Presentación de Impuestos
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td class="benefit">
+                                    Presentación de declaración de impuestos sobre la renta (ISR)
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="benefit">
+                                    Presentación de Impuesto sobre Venta (ISV)
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="benefit">
+                                    Declaración Mensual de retenciones (DMRs) a las que te 
+                                    encuentras sujeto
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                            </tr>
+                                        <tr>
+                                <td class="benefit">
+                                  Apoyo en Presentación de Declaraciones Informativas de Impuestos 
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                            </tr>
+                                        <tr>
+                                <td class="benefit">
+                                    Asesoría Financiera para toma de decisiones Diarias
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                            </tr>
+                                        <tr>
+                                <td class="benefit">
+                                    Asesoría Fiscal
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                            </tr>
+                                        <tr>
+                                <td class="benefit">
+                                    Estados Financieros Mensuales
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                                <td class="dot-container">
+                                    <div class="dot"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                        <div class="step">
+                    <h1>Hello there Step 2</h1>
+                </div>
 
-    <div class="container d-flex">
-        <div class="plan-wrapper ml-auto d-flex">
-            <div class="plan">
-                Presentación de Impuestos
-            </div>
-            <div class="plan">
-                Contabilidad Básica
-            </div>
-            <div class="plan">
-                Contabilidad Completa
-            </div>
-        </div>
-    </div>
-    <div class="container plan-details">
-        <table>
-            <tr>
-                <td>Hello</td>
-                <td>Hello</td>
-                <td>Hello</td>
-            </tr>
+                 <div class="step">
+                    <h1>Hello there Step 3</h1>
+                </div>
+                </div>
+    </section>
+    <script>
+        let stepCount = 0;
+        const steps = document.querySelectorAll('.step')
+        const prev = document.querySelector('.prev')
+        const nxt = document.querySelector('.nxt')
+        const plans = document.querySelectorAll('.plan')
+        const dots = Array.from(document.querySelectorAll('.dot'));
+        const rows = Array.from(document.querySelectorAll('tr'));        
+        plans.forEach((plan)=>{
+            plan.addEventListener('click',(e)=>{
+               dots.forEach((dot)=>{
+                   dot.style.backgroundColor="whitesmoke";
+               })
+                plans.forEach((plan)=>{
+                    plan.style.backgroundColor="whitesmoke";
+                })
+               e.target.style.backgroundColor="#d5ea69";
+               const numberOfBenefits = benefits[e.target.classList[1]]['numberOfBenefits'];
+               const columnNumber = benefits[e.target.classList[1]]['column'];
+               console.log(columnNumber,numberOfBenefits)
+              for(var i = 1; i <= numberOfBenefits;i++){
+                 const currentRow = rows[i]
+                 const td = rows[i].querySelector(`td:nth-child(${columnNumber}) > .dot`);
+                 td.style.backgroundColor="#d5ea69";
+          
+               } 
+            })
+        })
+        prev.disabled=true
+        function prevStep(){
+            if(stepCount > 1){
+                prev.disabled=false
+                stepCount--
+                steps[stepCount].style="none"
+                stepCount--
+                steps[stepCount].style.display="block";
+                console.log(stepCount,'SC')
+                stepCount++
+                stepCount === 1 ? prev.disabled=true : '';
+            }
+        }
+        function nxtStep(){
+            if(stepCount === steps.length){
+                prev.disabled=false
+                nxt.disabled=true
+                console.log(stepCount,'stepCount')
+                return 
+            }
+            if(stepCount === 0){
+                steps[stepCount].style.display="block";
+                stepCount++
+                console.log(stepCount,'stepCount')
+                return
+            }
+            if(stepCount > 0){
+                prev.disabled=false
+                steps[stepCount-1].style.display="none";
+                steps[stepCount].style.display="block";
+                stepCount++
+                console.log(stepCount,'stepCount')
+            }
+    }
 
-        </table>
-    </div>
+        const benefits = {
+             'one':{
+                 'numberOfBenefits':5,
+                 'column':2
+             },
+             'two':{
+                 'numberOfBenefits':7,
+                 'column':3
+             },
+             'three':{
+                 'numberOfBenefits':7,
+                 'column':4
+             }
+            
+        };
+        nxt.addEventListener('click',nxtStep)
+        prev.addEventListener('click',prevStep)
+        window.addEventListener('load',nxtStep)
+    </script>
 </body>
 </html>
