@@ -28,10 +28,7 @@
             </ul>
         </div>
     </nav>
-
-<section id="wrapper">
-    <div id="main-container">
-            <div class="buttons container">
+      <div class="buttons container">
                 <button class="button prev">
                     Anterior
                 </button>
@@ -39,10 +36,14 @@
                     Siguiente
                 </button>
             </div> 
+
             <div class="container step-header">
                 <h1>Selecciona el Servicio para tu negocio</h1>
                 <p>A continuación te proporcionamos selecciones de nuestros servicios para ayudarte a elegir.</p>
             </div>
+
+<section id="wrapper" >    
+    <div id="main-container">
             <div class="container plan-details">
                     <div class="step">
                         <table>
@@ -170,7 +171,6 @@
                     </div>
                  <div class="step">
                     <form action="/payment" method="POST">
-
                     <div class="d-flex">
                         <div class="form-group w-50">
                             <input type="text" class="form-control"   placeholder="Nombre">
@@ -197,10 +197,17 @@
                          <div class="form-group">
                             <input type="text" class="form-control"  placeholder="Dirección de la Empresa">
                         </div>
-                      
+                        <div class="form-group">
+                            <label for="plan-selection">Selecciona un plan</label>
+                            <select  class="form-control" name="plan-selection" id="plan-selection">
+                                <option value=""> Plan 1</option>
+                                <option value=""> Plan 2</option>
+                                <option value=""> Plan 3</option>
+                            </select>
+                        </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
                 </div>
+  </form>
                  <div class="step third" style="height:auto;">
                     <h1>Hello there Step 3</h1>
                     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
@@ -213,131 +220,53 @@
                         innerHeight:1000,
                         innerWidth:800
                                 });
-                    </script>
+                    </script> 
                 </div>
             </div>
     </div>
 </div>
-<div id="steps-container">
-        <div class="step-mark">
-            <h3>Paso 1</h3>
-            <h6>Plan de Servicios</h6>
+        <div id="steps-container">
+                <div class="step-mark">
+                    <div class="square">
+                    </div>
+                    <div class="number">
+                        01
+                    </div>
+                    <div class="step-description">
+                        <h3>Paso 1</h3>
+                        <h6>Plan de Servicios</h6>
+                     </div>
+                </div>
+                <div class="vertical-line">
+                </div>
+                <div class="step-mark"> 
+                    <div class="square">
+                    </div>
+                      <div class="number">
+                        02
+                    </div>
+                    <div class="step-description">
+                        <h3>Paso 2</h3>
+                        <h6>Información de Contacto</h6>
+                    </div>
+                </div>
+                 <div class="vertical-line">
+                </div>
+                <div class="step-mark">
+                    <div class="square"></div>
+                      <div class="number">
+                        03
+                    </div>
+                    <div class="step-description">
+                        <h3>Paso 3</h3>
+                        <h6>Agendar Cita</h6>
+                    </div>
+                </div>
         </div>
-        <div class="step-mark"> 
-             <h3>Paso 2</h3>
-             <h6>Información de Contacto</h6>
-        </div>
-        <div class="step-mark">
-          <h3>Paso 3</h3>
-           <h6>Agendar Cita</h6>
-        </div>
-        <div class="step-mark">
-             <h3>Paso 4</h3>
-             <h6>Pago</h6>
-        </div>
-</div>
-</section>
-    <script>
-        let stepCount = 0;
-        const stepsHeader = document.querySelector('.step-header')
-        const stepHeaders = ['Selecciona el servicio para tu negocio','Información de Contacto y de Negocio','Proceso de Pago']
-        const stepSubHeaders = ['A continuación te proporcionamos selecciones de nuestros servicios para ayudarte a elegir.','Por favor complete el formulario a continuación','Configura tu tarjeta']
-        const steps = document.querySelectorAll('.step')
-        const prev = document.querySelector('.prev')
-        const nxt = document.querySelector('.nxt')
-        const plans = document.querySelectorAll('.plan')
-        const dots = Array.from(document.querySelectorAll('.dot'));
-        const rows = Array.from(document.querySelectorAll('tr'));  
-        const stepMarks = document.querySelectorAll('.step-mark')      
-        plans.forEach((plan)=>{
-            plan.addEventListener('click',(e)=>{
-               dots.forEach((dot)=>{
-                   dot.style.backgroundColor="whitesmoke";
-               })
-                plans.forEach((plan)=>{
-                    plan.style.backgroundColor="whitesmoke";
-                })
-               e.target.style.backgroundColor="#d5ea69";
-               const numberOfBenefits = benefits[e.target.classList[1]]['numberOfBenefits'];
-               const columnNumber = benefits[e.target.classList[1]]['column'];
-               console.log(columnNumber,numberOfBenefits)
-              for(var i = 1; i <= numberOfBenefits;i++){
-                 const currentRow = rows[i]
-                 const td = rows[i].querySelector(`td:nth-child(${columnNumber}) > .dot`);
-                 td.style.backgroundColor="#d5ea69";
-          
-               } 
-            })
-        })
-        prev.disabled=true
-        function prevStep(){
-            if(stepCount > 1){
-                prev.disabled=false
-                stepCount--
-                steps[stepCount].style="none"
-                stepMarks[stepCount].style.backgroundColor="whitesmoke"
-                stepMarks[stepCount].style.color="black"
-                stepCount--
-                  stepsHeader.querySelector('h1').innerText=stepHeaders[stepCount]
-                stepsHeader.querySelector('p').innerText=stepSubHeaders[stepCount]
-                steps[stepCount].style.display="block";
-                stepMarks[stepCount].style.backgroundColor="black"
-                stepMarks[stepCount].style.color="#d5ea69"
-                console.log(stepCount,'SC')
-                stepCount++
-                stepCount === 1 ? prev.disabled=true : '';
-            }
-        }
+    </section>   
 
-        function nxtStep(){
-            if(stepCount === steps.length){
-                prev.disabled=false
-                nxt.disabled=true
-                console.log(stepCount,'stepCount')
-                return 
-            }
-            if(stepCount === 0){
-                steps[stepCount].style.display="block";
-                stepMarks[stepCount].style.backgroundColor="black";
-                stepMarks[stepCount].style.color="#d5ea69";
-                stepsHeader.querySelector('h1').innerText=stepHeaders[stepCount]
-                stepsHeader.querySelector('p').innerText=stepSubHeaders[stepCount]
-                stepCount++
-                console.log(stepCount,'stepCount')
-                return
-            }
-            if(stepCount > 0){
-                prev.disabled=false
-                steps[stepCount-1].style.display="none";
-                stepMarks[stepCount-1].style.backgroundColor="whitesmoke";
-                stepMarks[stepCount-1].style.color="black";
-                stepMarks[stepCount].style.backgroundColor="black"
-                stepMarks[stepCount].style.color="#d5ea69";
-                steps[stepCount].style.display="block";
-                stepsHeader.querySelector('h1').innerText=stepHeaders[stepCount]
-                stepsHeader.querySelector('p').innerText=stepSubHeaders[stepCount]
-                stepCount++
-                console.log(stepCount,'stepCount')
-            }
-    }
-        const benefits = {
-             'one':{
-                 'numberOfBenefits':5,
-                 'column':2
-             },
-             'two':{
-                 'numberOfBenefits':7,
-                 'column':3
-             },
-             'three':{
-                 'numberOfBenefits':7,
-                 'column':4
-             }
-            
-        };
-        nxt.addEventListener('click',nxtStep)
-        prev.addEventListener('click',prevStep)
-        window.addEventListener('load',nxtStep)
+    <script src="scripts/steps.js">
+       
     </script>
 </body>
 </html>

@@ -2,10 +2,15 @@
   padding: 2vh 3vw;
 }
 
-.button {
+.buttons.container button {
   background-color: #d5ea69;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   border: transparent;
+  font-family: sans-serif;
+  padding: 3px 30px;
+  color: gray;
+  border-radius: 10px;
+  margin-left: 1vw;
 }
 
 h1 {
@@ -52,7 +57,7 @@ tr {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: whitesmoke;
+  background-color: #afaeae;
   display: inline-block;
 }
 
@@ -62,6 +67,7 @@ tr {
 
 #main-container {
   width: 70%;
+  padding: 0 5vw;
 }
 
 #wrapper {
@@ -70,17 +76,23 @@ tr {
 #steps-container {
   width: 30%;
   text-align: center;
-  padding-top: 30vh;
   display: flex;
   flex-direction: column;
   align-content: right;
 }
+
 .step-mark {
   background-color: whitesmoke;
   font-family: 'Noto Sans';
   font-weight: 700;
-  padding: 5px;
-  border-radius: 10px;
+  padding: 10px 5px;
+  border-radius: 3px;
+}
+
+.vertical-line {
+  border-left: 1px solid black;
+  height: 30px;
+  margin-left: 4.5vw;
 }
 
 .third {
@@ -88,6 +100,36 @@ tr {
   width: 800px !important;
 }
 
+.step-mark {
+  display: flex;
+}
+
+.square {
+  border: 2px #d5ea69 solid;
+  border-radius: 5px;
+  width: 5vw;
+  height: 5vw;
+  padding: 20px;
+  display: none;
+  margin-left: 1.7vw;
+}
+
+.number {
+  display: block;
+  border-radius: 5px;
+  width: 5vw;
+  height: 5vw;
+  padding: 20px;
+  margin-left: 1.7vw;
+}
+.step-description {
+  text-align: center;
+  width: 70%;
+}
+
 .step-mark h3 {
   font-size: 1.5rem !important;
+}
+#wrapper {
+  display: flex;
 }
