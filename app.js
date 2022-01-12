@@ -6,6 +6,7 @@ app.set('views','./views')
 app.set('view engine','handlebars')
 app.engine('handlebars',exphbs.create({}).engine)
 app.use(express.static('public'))
+app.use(express.urlencoded({extended:false}))
 app.listen(port,()=>{
     console.log("Listening on" + port)
 })
@@ -50,5 +51,6 @@ app.get('/form',(req,res)=>{
     res.render('form-page',{layout:false})
 })
 
-
-
+app.post('/payment',(req,res)=>{
+    res.redirect('/form')
+})

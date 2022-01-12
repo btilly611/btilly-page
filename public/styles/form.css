@@ -3,19 +3,41 @@
 }
 
 .buttons.container button {
-  background-color: #d5ea69;
-  font-size: 1.4rem;
+  background-color: #edfd9a;
+  font-size: 0.9rem;
   border: transparent;
   font-family: sans-serif;
   padding: 3px 30px;
-  color: gray;
-  border-radius: 10px;
-  margin-left: 1vw;
+  color: black;
+  border-radius: 3px;
+  margin-right: 1vw;
+  width: 12vw;
+  height: 3vw;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+.buttons.container button:hover {
+  background-color: #bdd352;
 }
 
+.navbar-brand {
+  margin-left: 48px !important;
+}
 h1 {
   font-family: sans-serif;
   font-weight: 700;
+}
+
+.container.step-header {
+  padding: 2vh 3vw;
+}
+.container.step-header h1 {
+  font-size: 22px;
+}
+.container.step-header p {
+  font-family: 'Roboto';
+  font-size: 15px;
 }
 
 .plan {
@@ -29,6 +51,12 @@ h1 {
   font-family: sans-serif;
   font-weight: 700;
   margin-left: 1vw;
+  font-size: 15px;
+}
+
+.container.plan-details {
+  margin: 0 !important;
+  padding-right: 0 !important;
 }
 
 .plan:hover {
@@ -40,8 +68,26 @@ table {
   width: 100%;
 }
 
-tr {
-  border-bottom: 1px gray solid;
+td > :nth-child(1) {
+  border: none;
+}
+tr > td:nth-child(1) {
+  padding-left: 67px;
+  font-size: 15px;
+}
+
+tr::after {
+  content: '';
+  width: 60%;
+  position: absolute;
+  border: 1px solid gray;
+  left: 100px;
+}
+
+tr:nth-child(1)::after,
+tr:nth-child(2)::after {
+  width: 0%;
+  height: 0%;
 }
 
 .benefit {
@@ -66,26 +112,33 @@ tr {
 }
 
 #main-container {
-  width: 70%;
-  padding: 0 5vw;
+  width: 72.7%;
+  margin: 0 !important;
+  padding-right: 0 !important;
 }
 
 #wrapper {
   display: flex;
 }
 #steps-container {
-  width: 30%;
+  width: 20%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-content: right;
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-left: 7% !important;
+  position: absolute;
+  right: 0;
+  bottom: 43vh;
 }
 
 .step-mark {
   background-color: whitesmoke;
   font-family: 'Noto Sans';
   font-weight: 700;
-  padding: 10px 5px;
+  padding: 0px 5px;
   border-radius: 3px;
 }
 
@@ -102,31 +155,65 @@ tr {
 
 .step-mark {
   display: flex;
+  align-items: center;
+  height: 75px;
+}
+.clock {
+  width: 4vw;
+  height: 4vw;
+  object-fit: contain;
+  margin-left: 1.7vw;
+  display: none;
 }
 
-.square {
-  border: 2px #d5ea69 solid;
-  border-radius: 5px;
-  width: 5vw;
-  height: 5vw;
-  padding: 20px;
+.check {
   display: none;
-  margin-left: 1.7vw;
+  width: 3vw;
+  margin-left: 2.7vw;
 }
 
 .number {
   display: block;
-  border-radius: 5px;
-  width: 5vw;
-  height: 5vw;
-  padding: 20px;
-  margin-left: 1.7vw;
-}
-.step-description {
-  text-align: center;
-  width: 70%;
+  width: 3vw;
+  margin-left: 2.7vw;
 }
 
+.step.form {
+  padding: 0 70px;
+}
+
+.step.form button {
+  background-color: #d5ea69;
+  padding: 5px;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.step.form button:hover {
+  background-color: #bdd352;
+}
+.step-description {
+  text-align: left;
+  width: 70%;
+  height: 100% !important;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+}
+
+.step-description h6 {
+  font-family: sans-serif;
+  font-weight: 700;
+  margin-bottom: 0 !important;
+}
 .step-mark h3 {
   font-size: 1.5rem !important;
 }
