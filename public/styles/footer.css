@@ -79,6 +79,23 @@ footer a:hover {
   text-decoration: none;
 }
 
+.images-footer {
+  padding-left: 10vw;
+}
+footer .images-footer img {
+  width: 15%;
+  height: 15vw;
+  margin-right: 2vw;
+  object-fit: contain;
+}
+
+.registros-header {
+  color: white;
+  padding-left: 11vw;
+  padding-top: 2vh;
+  font-family: sans-serif;
+}
+
 @media screen and (max-width: 612px) {
   .row-2 ul,
   .row-3 ul {
