@@ -1,7 +1,9 @@
+<html>
 <head>
     <link rel="stylesheet" href="styles/landing-page.css">
+   
 </head>
-<body>
+<body >
     {{>landing-page-nav}}
     <section id="main">
      <div class="first-section">
@@ -29,10 +31,10 @@
     </section>
 
     <section id="services-section">
-        <div>
         <h1>
             Servicios Contables de Calidad
         </h1>
+        <div>
         <div id="service-boxes">
             <div class="box">
                 <h3 class="text-center mt-3">Firma Responsable</h3>
@@ -108,7 +110,7 @@
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
             <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                Llena un formulario sencillo con tus datos y los de tu negocio.
             </div>
             </div>
         <div class="d-flex" style="align-items:center;">
@@ -124,7 +126,7 @@
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
             <div class="card-body">
-
+                Haz tu primera llamada de asesoría con uno de nuestros especialistas.
             </div>
         </div>
     </div>
@@ -144,10 +146,26 @@
             </p>
       </div>
   </section>
-
-    {{>footer}}
   
+    {{>footer}}
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
- </body>
+    <script>
+    $('body').scrollspy({target: ".navbar", offset: 50});
+    $(".navbar a").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+            scrollTop: $(hash).offset().top
+            }, 800, function(){
+            window.location.hash = hash;
+            });
+        } 
+        });
+    </script>
+</body>
+</html>
+
+ 

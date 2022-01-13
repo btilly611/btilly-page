@@ -220,3 +220,44 @@ tr:nth-child(2)::after {
 #wrapper {
   display: flex;
 }
+
+@media screen and (max-width: 612px) {
+  #wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #steps-container {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+  }
+
+  #main-container {
+    width: 100%;
+  }
+
+  .container {
+    padding: 0 !important;
+  }
+
+  .step-mark {
+    padding: 0px 5px;
+    border-radius: 3px;
+  }
+
+  .buttons.container button {
+    width: 30vw;
+    padding: 0;
+    height: auto;
+  }
+
+  .plan {
+    width: 15vw;
+    font-size: 10px;
+  }
+
+  td {
+    font-size: 15px;
+  }
+}

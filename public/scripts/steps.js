@@ -118,11 +118,11 @@ const benefits = {
          'column':2
      },
      'two':{
-         'numberOfBenefits':7,
+         'numberOfBenefits':9,
          'column':3
      },
      'three':{
-         'numberOfBenefits':7,
+         'numberOfBenefits':16,
          'column':4
      }
 }
