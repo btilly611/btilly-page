@@ -32,21 +32,34 @@ p {
 }
 
 #main button {
-  font-size: 1.3rem;
+  font-size: 1rem;
   background-color: transparent;
   border: 2px black solid;
-  font-family: 'Noto Sans';
+  font-family: Roboto;
+  font-weight: 300;
 }
+
+#main button a {
+  color: black;
+}
+#main button a:hover {
+  color: white;
+}
+
+#main button:hover #main button a {
+  color: white;
+}
+/* Fix button hover */
 
 #main button:hover {
   background-color: black;
-  color: white;
 }
 
 #main .first-section img {
   object-fit: contain;
   position: relative;
   margin-top: auto;
+  width: 38vh;
 }
 
 .first-section {
@@ -62,7 +75,7 @@ p {
   padding: 5vw 0;
   font-size: 1.2rem;
   font-family: 'Roboto';
-  height: 90vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,9 +92,16 @@ p {
   font-size: 3rem;
 }
 
+#services-section h1,
+#services-section h4 {
+  position: relative;
+  top: 11vh;
+}
 #service-boxes {
   display: flex;
   padding: 0 0 6vh 0;
+  position: relative;
+  top: 13.5vh;
 }
 
 .box {
@@ -91,9 +111,17 @@ p {
   width: 20vw;
   color: #d5ea69;
   box-sizing: border-box;
-  padding: 0 10px;
+  padding: 35px 10px 0 10px;
   margin-right: 2vw;
   font-family: sans-serif;
+}
+
+.box p {
+  font-size: 1rem;
+}
+
+.box h3 {
+  font-size: 1.3rem;
 }
 
 #step-instructions {
@@ -121,6 +149,14 @@ p {
 .icon {
   text-align: left;
 }
+.icon h5 {
+  margin-left: 8vw !important;
+}
+
+h5 {
+  margin-left: 1.3vw;
+}
+
 .icon img {
   width: 3vw;
   height: 3vw;
@@ -130,10 +166,14 @@ p {
 
 #third-section-header {
   background-color: #ebe7e4;
-  padding: 15vh 0;
+  padding: 0;
+  height: 20vh;
+  position: relative;
 }
 .container.third-section-headers {
   padding-left: 170px;
+  position: absolute;
+  bottom: 15vh;
 }
 
 .container.third-section-headers h1 {
@@ -142,8 +182,8 @@ p {
 }
 
 .container.third-section-headers p {
-  font-family: 'Noto Sans', sans-serif;
-  margin-top: 10vh;
+  font-family: Roboto;
+  margin-top: 3vh;
 }
 
 .img-container {
@@ -153,8 +193,8 @@ p {
 }
 
 .img-container img {
-  width: 7vw;
-  height: 7vw;
+  width: 9vw;
+  height: 9vw;
 }
 
 @media screen and (max-width: 612px) {

@@ -1,13 +1,16 @@
 <html>
 <head>
-    <link rel="stylesheet" href="styles/landing-page.css">
-   
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <link rel="stylesheet" href="styles/landing-page.css">
+
 </head>
 <body >
     {{>landing-page-nav}}
     <section id="main">
      <div class="first-section">
-            <img class="img-fluid" src="/images/receipt-main.png" alt="">
+            <img src="/images/receipt-main.png" alt="">
         </div>
         <div class="second-section">
             <h5 class="text-right">
@@ -24,16 +27,21 @@
             </p>
             <div class="d-flex">
             <button class="ml-auto">
-                Verifica Nuestros Planes
+                <a href="/form">
+                    Verifica Nuestros Planes
+                </a>
             </button>
             </div>
         </div>
     </section>
 
     <section id="services-section">
-        <h1>
-            Servicios Contables de Calidad
-        </h1>
+            <h1>
+                Servicios Contables de Calidad
+            </h1>
+            <h4 style="padding:0 230px;font-size:1rem;margin-bottom:4vh;margin-top:3vh;text-align:center;">
+                Con nuestros servicios contables obtienes información actualizada permitiéndote tomar mejores decisiones de manera oportuna para optimizar tu competitividad. <b>Los principales beneficios son:</b> 
+            </h4>
         <div>
         <div id="service-boxes">
             <div class="box">
@@ -70,7 +78,7 @@
 
   <section id="step-instructions">
       <div class="step-instructions-section">
-          <h1> Obtén  tu Plan</h1>
+          <h1> Obtén  tu plan</h1>
           <p>
               Nuestro proceso de solicitud permite que adquieras servicios contables ajustados para tu negocio en 3 sencillos pasos
           </p>
@@ -80,7 +88,7 @@
                 <img src="/images/accounting.png" alt="">
             </div>
             <h5 class="mb-0">
-                Selecciona Tu Plan De Servicios Contables
+                Selecciona yu plan de servicios contables
             </h5>
                 <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size:2.5rem;font-weight:700;">
                 +
@@ -102,7 +110,7 @@
                 <img src="/images/user.png" alt="">
             </div>
             <h5 class="mb-0">
-                Selecciona Tu Plan De Servicios Contables
+                Ingresa tu información de contacto
             </h5>
                 <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne" style="font-size:2.5rem;font-weight:700;">
                 +
@@ -110,7 +118,7 @@
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
             <div class="card-body">
-                Llena un formulario sencillo con tus datos y los de tu negocio.
+               Agenda una cita y obtén asesoría gratuita
             </div>
             </div>
         <div class="d-flex" style="align-items:center;">
@@ -118,7 +126,7 @@
                 <img src="/images/calendar.png" alt="">
             </div>
             <h5 class="mb-0">
-                Selecciona Tu Plan De Servicios Contables
+                Información de Contacto 
             </h5>
                 <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne" style="font-size:2.5rem;font-weight:700;">
                 +

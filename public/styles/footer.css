@@ -6,6 +6,7 @@ footer .row-1 {
   background-color: #3c3c3c;
   display: flex;
   align-items: center;
+  height: 15vh;
 }
 
 footer .row-1 > div {
