@@ -91,6 +91,13 @@ p {
   position: relative;
   top: 11vh;
 }
+#services-section h4 {
+  padding: 0 230px;
+  font-size: 1rem;
+  margin-bottom: 4vh;
+  margin-top: 3vh;
+  text-align: center;
+}
 #service-boxes {
   display: flex;
   padding: 0 0 6vh 0;
@@ -119,7 +126,7 @@ p {
 }
 
 #step-instructions {
-  height: auto;
+  height: 100vh;
   background-color: #ebe7e4;
   display: flex;
 }
@@ -216,14 +223,17 @@ h5 {
 
   #third-section-header {
     background-color: #ebe7e4;
-    padding: 5vh;
+    padding: 2vh;
+    height: auto;
   }
   .container.third-section-headers {
-    padding-left: 0;
+    padding-left: 0 !important;
+    position: relative;
   }
 
   #step-instructions {
     flex-direction: column;
+    height: auto;
   }
 
   .step-instructions-section,
@@ -233,13 +243,19 @@ h5 {
 
   .step-instructions-section {
     padding: 5vh;
+    height: auto;
+  }
+
+  .step-instructions-image-section img {
+    height: 60vh;
+    width: 100%;
+    padding-left: 50vw;
   }
 
   .first-section,
   .second-section {
     width: 100%;
   }
-
   .first-section img {
     margin-top: 7vh;
   }
@@ -275,6 +291,13 @@ h5 {
     text-align: center;
     margin-bottom: 2vh;
   }
+  #services-section h4 {
+    padding: 0 50px;
+    font-size: 1rem;
+    margin-bottom: 4vh;
+    margin-top: 3vh;
+    text-align: center;
+  }
 
   #service-boxes {
     flex-direction: column;
@@ -283,5 +306,11 @@ h5 {
   .box {
     width: auto;
     margin-top: 2vw;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #main h1 {
+    font-size: 2rem;
   }
 }
