@@ -28,16 +28,14 @@ plans.forEach((plan)=>{
        const chosenPlan = e.target.classList[1]
        const columnNumber = benefits[chosenPlan]['column'];
        window.localStorage.chosenPlan=chosenPlan
-
-      for(var i = 1; i <= numberOfBenefits;i++){
-         const currentRow = rows[i]
-         const td = rows[i].querySelector(`td:nth-child(${columnNumber}) > .dot`);
-         td.style.backgroundColor="#d5ea69";
-       } 
+        for(var i = 2; i <= numberOfBenefits;i++){
+            const currentRow = rows[i]
+            const td = rows[i].querySelector(`td:nth-child(${columnNumber}) > .dot`);
+            td.style.backgroundColor="#d5ea69";
+        } 
     })
 })
 prev.disabled=true
-
 
 function prevStep(){
     if(stepCount > 1){
@@ -72,7 +70,6 @@ function nxtStep(){
         steps[stepCount].style.display="block";
         clocks[stepCount].style.display="block";
         checks[stepCount].style.display="none";
-        
         stepMarks[stepCount].style.backgroundColor="black";
         stepMarks[stepCount].style.color="#d5ea69";
         stepMarksSubHeaders[stepCount].style.color="#d5ea69";
@@ -132,7 +129,5 @@ window.addEventListener('load',nxtStep)
 const form = document.querySelector('form')
 form.addEventListener('submit',(e)=>{
     // e.preventDefault()
-    window.localStorage.greeting="hi"
-    console.log(window.localStorage.greeting)
 })
 

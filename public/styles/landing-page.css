@@ -39,22 +39,16 @@ p {
   font-weight: 300;
 }
 
-#main button a {
+#main a {
+  text-decoration: none;
   color: black;
 }
-#main button a:hover {
-  color: white;
-}
-
-#main button:hover #main button a {
-  color: white;
-}
-/* Fix button hover */
 
 #main button:hover {
   background-color: black;
+  color: white;
 }
-
+/* Fix button hover */
 #main .first-section img {
   object-fit: contain;
   position: relative;
@@ -154,7 +148,7 @@ p {
 }
 
 h5 {
-  margin-left: 1.3vw;
+  margin-left: 1.5vw;
 }
 
 .icon img {

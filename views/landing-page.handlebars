@@ -26,11 +26,15 @@
             puede <br> brindar soluciones de manera más fácil y accesible.
             </p>
             <div class="d-flex">
-            <button class="ml-auto">
-                <a href="/form">
-                    Verifica Nuestros Planes
-                </a>
-            </button>
+        
+                      <button class="ml-auto" >
+
+                          <a href="/form">
+                           Verifica Nuestros Planes</a>
+                           
+                        </button>
+          
+      
             </div>
         </div>
     </section>
@@ -88,7 +92,7 @@
                 <img src="/images/accounting.png" alt="">
             </div>
             <h5 class="mb-0">
-                Selecciona yu plan de servicios contables
+                Selecciona tu plan de servicios contables
             </h5>
                 <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size:2.5rem;font-weight:700;">
                 +
@@ -97,8 +101,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
                            Contamos con servicios ideales para obligados tributarios (comerciantes individuales, personas naturales y
-                            sociedades mercantiles) que desean presentar sus declaraciones de impuestos puntuales. Además de servicios
-                            contables que te permiten llevar correctamente tu contabilidad para que puedas dedicarte a crecer el negocio.
+                            sociedades mercantiles) que desean presentar sus declaraciones de impuestos puntuales. Adicionalmente, te ofrecemos  servicios
+                            que te permiten llevar correctamente tu contabilidad para que así puedas dedicarte a crecer tu negocio.
                             Ingresa tu información de contacto:
                             Llena un formulario sencillo con tus datos y los de tu negocio.
                             Agenda una cita y obtén asesoría gratuita:
@@ -150,7 +154,7 @@
                Estamos aquí para facilitar tus negocios
             </h1>
             <p>
-                Contaras con el respaldo de un equipo de especialistas en conocimientos sobre cuentas contables, leyes o <br> disposiciones vigentes para la ejecución de presupuesto. Nuestro equipo cuenta con más de 28 años de <br> experiencia en el rubro de servicios contables, satisfaciendo a todo tipo de empresa.
+                Contarás con el respaldo de un equipo de especialistas en conocimientos sobre cuentas contables, leyes o <br> disposiciones vigentes para la ejecución de presupuesto. Nuestro equipo cuenta con más de 28 años de <br> experiencia en el rubro de servicios contables, satisfaciendo a todo tipo de empresa.
             </p>
       </div>
   </section>
@@ -172,6 +176,15 @@
             });
         } 
         });
+
+        const button = document.querySelector('#main button')
+
+        button.addEventListener('mouseover',()=>{
+            document.querySelector('#main button a').style.color="white";
+        })
+          button.addEventListener('mouseout',()=>{
+            document.querySelector('#main button a').style.color="black";
+        })
     </script>
 </body>
 </html>
