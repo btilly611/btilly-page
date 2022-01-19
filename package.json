@@ -1,4 +1,4 @@
-{ 
+{
   "name": "baker-tilly",
   "version": "1.0.0",
   "description": "",
@@ -9,6 +9,7 @@
   "dependencies": {
     "@pixelpay/sdk": "^1.1.5",
     "express": "^4.17.1",
-    "express-handlebars": "^6.0.2"
+    "express-handlebars": "^6.0.2",
+    "mongoose": "^6.1.7"
   }
 }

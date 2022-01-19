@@ -39,9 +39,9 @@ footer .row-3 .slogan-container {
 }
 
 .slogan-container img {
-  margin: auto;
+  margin: 3vh;
   width: 80%;
-  height: 80%;
+  /* height: 80%; */
   object-fit: contain;
 }
 footer .logo {
@@ -84,7 +84,7 @@ footer a:hover {
   padding-left: 10vw;
 }
 footer .images-footer img {
-  width: 15%;
+  width: 12%;
   height: 10vw;
   margin-right: 2vw;
   object-fit: contain;
@@ -95,6 +95,11 @@ footer .images-footer img {
   padding-left: 11vw;
   padding-top: 2vh;
   font-family: sans-serif;
+}
+
+.registros-header h4 {
+  font-size: 0.8rem;
+  margin-left: 0.5vw;
 }
 
 @media screen and (max-width: 612px) {
@@ -109,12 +114,14 @@ footer .images-footer img {
   .row-3 > div {
     width: 100% !important;
   }
-
+  .slogan-container img {
+    margin: -15vh 0;
+  }
   .row-3 .slogan-container {
     display: flex;
   }
   .row-3 .slogan-container img {
-    margin: auto;
+    margin: -12vh auto;
     width: 50%;
     height: 50%;
     object-fit: contain;

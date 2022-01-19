@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cantarell:ital@1&family=Noto+Sans:wght@700&family=PT+Sans+Narrow&family=Roboto:wght@100;900&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="styles/calendly-step.css">
+    <title>Reserva tu cita</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a href="/landing-p-1" class="navbar-brand">
+            <img  width="190" height="47"  src="images/logo.svg" alt="">
+        </a>
+        <button class="navbar-toggler">
+            <span class="navbar-toggler-icon">
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" data-target="#list" data-toggle="collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+      <div class="buttons container">
+                <button class="button prev">
+                    Regresar a primer paso
+                </button>
+                {{!-- <button class="button nxt">
+                    Siguiente
+                </button> --}}
+      </div> 
+            <div class="container step-header">
+                <h1>Selecciona el Servicio para tu negocio</h1>
+                <p>A continuación te proporcionamos selecciones de nuestros servicios para ayudarte a elegir.</p>
+            </div>
+<section id="wrapper" >    
+    <div id="main-container">
+        <div class="container plan-details">
+                <div class="step third" style="height:auto;">
+                </div>
+                </div>
+        </div>
+    </div>
+    </div>
+        <div id="steps-container">
+                <div class="step-mark">
+                    <div class="icon-container">
+                        <div class="number">
+                            01
+                        </div>
+                         <img src="/images/wall-clock.png" alt="" class="img-fluid clock">
+                         <img src="/images/check.png" alt="" class="img-fluid check">
+                        </div>
+                    <div class="step-description">
+                            <h6>Plan de Servicios</h6>
+                     </div>
+                </div>
+                <div class="vertical-line">
+                </div>
+                <div class="step-mark"> 
+                      <div class="icon-container">
+                          <div class="number">
+                            02
+                        </div>
+                         <img src="/images/wall-clock.png" alt="" class="img-fluid clock">
+                         <img src="/images/check.png" alt="" class="img-fluid check">
+                        </div>
+                    <div class="step-description">
+                            <h6>Información de Contacto</h6>
+                    </div>
+                </div>
+                 <div class="vertical-line">
+                </div>
+                <div class="step-mark">
+                        <div class="icon-container">
+                        <div class="number">
+                            03
+                        </div>
+                        <img src="/images/wall-clock.png" alt="" class="img-fluid clock">
+                        <img src="/images/check.png" alt="" class="img-fluid check">
+                        </div>
+                    <div class="step-description">
+                             <h6>Agendar Cita</h6>
+                    </div>
+                </div>
+        </div>
+    </section>   
+    
+    <div id="testing">
+    </div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" >
+        </script>
+        <script type="text/javascript">
+            const prev = document.querySelector('.button.prev')
+            prev.addEventListener('click',()=>{
+                window.location.href="/form";
+            })
+            Calendly.initInlineWidget({
+                url: 'https://calendly.com/bakertillyhn/asesoria-inicial',
+                parentElement: document.querySelector('.third'),
+                prefill: {},
+                utm: {},
+            });
+        </script>  
+</body>
+</html>

@@ -2,6 +2,38 @@ const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars')
 const port = process.env.PORT || 3000;
+
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
+ async function connectToMongoose(){
+    try{
+       
+        // await mongoose.connect('mongodb+srv://btilly:2022@cluster0.cpoyx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+        await mongoose.connect('mongodb+srv://ventasBTHN:US50Uo0CsfbpnyfM@bakertillytesting.lsiny.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+
+        console.log('Successfully connected')
+    }catch(e){
+        console.log(e,'Not connected')
+    }
+}
+
+const ContactDetailsSchema = new Schema({
+    plan:String,
+    firstName:String,
+    lastName:String,
+    companyPosition:String,
+    email:String,
+    companyCategory:String,
+    rtn:Number,
+    companyCategory:String,
+    companyAddress:String
+})
+
+const ContactDetails= mongoose.model('contactDetails',ContactDetailsSchema)
+
+connectToMongoose()
+
 app.set('views','./views')
 app.set('view engine','handlebars')
 app.engine('handlebars',exphbs.create({}).engine)
@@ -51,6 +83,13 @@ app.get('/form',(req,res)=>{
     res.render('form-page',{layout:false})
 })
 
-app.post('/payment',(req,res)=>{
-    res.redirect('/form')
+
+app.post('/calendly', async (req,res)=>{
+    res.render('calendly',{layout:false})
+    let contact = new ContactDetails(req.body)
+    await contact.save()
 })
+
+// app.post('/payment',(req,res)=>{
+//     res.redirect('/form')
+// })

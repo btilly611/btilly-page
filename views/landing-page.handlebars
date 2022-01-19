@@ -94,7 +94,7 @@
             <h5 class="mb-0">
                 Selecciona tu plan de servicios contables
             </h5>
-                <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size:2.5rem;font-weight:700;">
+                <button class="btn ml-auto accordion-button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size:2.5rem;font-weight:700;">
                 +
                 </button>
             </div>
@@ -116,7 +116,7 @@
             <h5 class="mb-0">
                 Ingresa tu información de contacto
             </h5>
-                <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne" style="font-size:2.5rem;font-weight:700;">
+                <button class="btn ml-auto accordion-button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne" style="font-size:2.5rem;font-weight:700;">
                 +
                 </button>
             </div>
@@ -132,7 +132,7 @@
             <h5 class="mb-0">
                 Información de Contacto 
             </h5>
-                <button class="btn ml-auto" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne" style="font-size:2.5rem;font-weight:700;">
+                <button class="btn ml-auto accordion-button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne" style="font-size:2.5rem;font-weight:700;">
                 +
                 </button>
         </div>
@@ -144,7 +144,7 @@
     </div>
 </div>
  <div class="step-instructions-image-section">
-  <img src="/images/calculator.png" class="img-fluid" alt=""> 
+  {{!-- <img src="/images/calculator.png" class="img-fluid" alt="">  --}}
  
 </div> 
 
@@ -178,14 +178,16 @@
             });
         } 
         });
-
-
         const button = document.querySelector('#main button')
+        const accordionButtons = Array.from(document.querySelectorAll('.accordion-button'))
+        const thirdSectionHeaders = document.querySelector('.container.third-section-headers')
+     
+        console.log(accordionButtons)
         button.addEventListener('mouseover',()=>{
-            document.querySelector('#main button a').style.color="white";
+            document.querySelector('#main button a').style.color="black";
         })
           button.addEventListener('mouseout',()=>{
-            document.querySelector('#main button a').style.color="black";
+            document.querySelector('#main button a').style.color="white";
         })
     </script>
 </body>
