@@ -2,7 +2,7 @@
 let stepCount = 0;
 const stepsHeader = document.querySelector('.step-header')
 const stepHeaders = ['Selecciona el servicio para tu negocio','Información de Contacto y de Negocio','Proceso de Pago']
-const stepSubHeaders = ['A continuación te proporcionamos descripciones de nuestros servicios para ayudarte a elegir.','Por favor complete el formulario a continuación','Configura tu tarjeta']
+const stepSubHeaders = ['A continuación te proporcionamos descripciones de nuestros servicios para ayudarte a elegir.','Por favor completa el formulario a continuación','Configura tu tarjeta']
 const steps = document.querySelectorAll('.step')
 const prev = document.querySelector('.prev')
 const nxt = document.querySelector('.nxt')
@@ -14,14 +14,10 @@ const checks = Array.from(document.querySelectorAll('.check'))
 const numbers = Array.from(document.querySelectorAll('.number'))
 const stepMarks = document.querySelectorAll('.step-mark')    
 const stepMarksSubHeaders = document.querySelectorAll('.step-mark h6');
-
-
 function selectPlan(e,chosenPlan){
     let planInput = document.querySelector('#plan')
     planInput.value=chosenPlan
-    console.log(planInput.value)
 }
-
 plans.forEach((plan)=>{
     plan.addEventListener('click',(e)=>{  
        dots.forEach((dot)=>{
@@ -70,8 +66,10 @@ function prevStep(){
         stepCount === 1 ? prev.disabled=true : '';
     }
 }
-
 function nxtStep(){
+    gtag('event','nextStep',{
+        nextStep:true
+    })
     if(stepCount === 0){
         numbers[stepCount].style.display="none"
         steps[stepCount].style.display="block";
@@ -82,12 +80,10 @@ function nxtStep(){
         stepMarksSubHeaders[stepCount].style.color="#d5ea69";
         stepsHeader.querySelector('h1').innerText=stepHeaders[stepCount]
         stepsHeader.querySelector('p').innerText=stepSubHeaders[stepCount]
-        console.log(stepHeaders[stepCount])
         window.location.hash=stepHeaders[stepCount]
         stepCount++
         return
     }
-
     if(stepCount > 0){
         window.location.hash=stepHeaders[stepCount]
         prev.disabled=false
@@ -114,7 +110,6 @@ function nxtStep(){
         stepCount++
     }
 }
-
 const benefits = {
      'one':{
          'numberOfBenefits':6,
@@ -129,7 +124,6 @@ const benefits = {
          'column':4
      }
 }
-
 const selectPlanBtns = Array.from(document.querySelectorAll('.plan button.select-plan-btn'))
 console.log(selectPlanBtns)
 selectPlanBtns.forEach((button)=>{
@@ -140,7 +134,6 @@ selectPlanBtns.forEach((button)=>{
             console.log('button clicked')
         })
     })
-
 nxt.addEventListener('click',nxtStep)
 prev.addEventListener('click',prevStep)
 window.addEventListener('load',nxtStep)

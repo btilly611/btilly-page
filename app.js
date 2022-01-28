@@ -2,22 +2,20 @@ const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars')
 const port = process.env.PORT || 3000;
-
-const mongoose = require('mongoose')
+const sendGrid = require('@sendgrid/mail')
+const mongoose = require('mongoose');
+const req = require('express/lib/request');
 const Schema = mongoose.Schema
-
  async function connectToMongoose(){
     try{
-       
         // await mongoose.connect('mongodb+srv://btilly:2022@cluster0.cpoyx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
         await mongoose.connect('mongodb+srv://ventasBTHN:US50Uo0CsfbpnyfM@bakertillytesting.lsiny.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
-
         console.log('Successfully connected')
     }catch(e){
         console.log(e,'Not connected')
     }
 }
-
+sendGrid.setApiKey('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')
 const ContactDetailsSchema = new Schema({
     plan:String,
     firstName:String,
@@ -29,11 +27,8 @@ const ContactDetailsSchema = new Schema({
     companyCategory:String,
     companyAddress:String
 })
-
 const ContactDetails= mongoose.model('contactDetails',ContactDetailsSchema)
-
 connectToMongoose()
-
 app.set('views','./views')
 app.set('view engine','handlebars')
 app.engine('handlebars',exphbs.create({}).engine)
@@ -82,14 +77,24 @@ app.get('/landing-p-1',(req,res)=>{
 app.get('/form',(req,res)=>{
     res.render('form-page',{layout:false})
 })
-
-
 app.post('/calendly', async (req,res)=>{
-    res.render('calendly',{layout:false})
-    let contact = new ContactDetails(req.body)
-    await contact.save()
-})
+    try{
+        const message = {
+            to:req.body.email,
+            from:'btilly611@gmail.com',
+            subject:`Hola ${req.body.firstName}, gracias por suscribirte`,
+            text:'Gracias por suscribirte a Baker Tilly HN.'
+        }        
+      
+        let contact = new ContactDetails(req.body)
+        await contact.save()
+        await sendGrid.send(message)
+        res.render('calendly',{layout:false})
 
+    }catch(e){
+        res.status(404).send(e)
+    }
+})
 // app.post('/payment',(req,res)=>{
 //     res.redirect('/form')
 // })

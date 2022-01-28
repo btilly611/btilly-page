@@ -56,6 +56,7 @@ h1 {
 .plan button {
   background-color: black;
   color: white;
+  font-size: 9.5px;
 }
 
 .container.plan-details {
@@ -311,5 +312,9 @@ iframe {
 
   .container.step-header {
     padding-left: 20px;
+  }
+
+  td {
+    font-size: 10px;
   }
 }

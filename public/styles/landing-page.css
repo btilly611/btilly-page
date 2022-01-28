@@ -146,6 +146,8 @@ p {
 }
 
 .step-instructions-image-section img {
+  width: 700px;
+  height: 700px;
   object-fit: contain;
 }
 
@@ -235,6 +237,7 @@ h5 {
   #step-instructions {
     flex-direction: column;
     height: auto;
+    padding-top: 7vh;
   }
 
   .step-instructions-section,
