@@ -15,7 +15,8 @@ const Schema = mongoose.Schema
         console.log(e,'Not connected')
     }
 }
-sendGrid.setApiKey('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')
+
+sendGrid.setApiKey('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')
 const ContactDetailsSchema = new Schema({
     plan:String,
     firstName:String,
@@ -87,10 +88,11 @@ app.post('/calendly', async (req,res)=>{
         }        
       
         let contact = new ContactDetails(req.body)
+        console.log(req.body.email)
         await contact.save()
         await sendGrid.send(message)
-        res.render('calendly',{layout:false})
-
+        res.status(201).send('Message sent')
+        // res.render('calendly',{layout:false})
     }catch(e){
         res.status(404).send(e)
     }

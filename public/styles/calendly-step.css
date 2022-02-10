@@ -59,8 +59,8 @@ h1 {
   flex-direction: column;
   align-content: right;
   margin: 0 !important;
-  padding: 0 !important;
-  margin-left: 7% !important;
+  padding: 0;
+  margin-left: 7%;
   position: absolute;
   right: 0;
   bottom: 43vh;
@@ -164,4 +164,38 @@ iframe {
 
 .step-mark:nth-child(5) .clock {
   display: block;
+}
+
+@media screen and (max-width: 612px) {
+  #wrapper {
+    flex-direction: column;
+  }
+
+  #main-container,
+  #steps-container {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  #steps-container {
+    position: relative;
+  }
+
+  #steps-container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: right;
+    margin: 0 !important;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+    padding-bottom: 0;
+    bottom: 0;
+  }
+
+  .container.step-header {
+    padding-bottom: 10vh;
+  }
 }

@@ -349,36 +349,36 @@
                         </div>
                     </div>
                  <div class="step form">
-                    <form action="/calendly" method="POST">
+                    <form action="/calendly" method="POST" class="contact-form">
                     <div class="d-flex">
-                        <input type="text" id="plan" name="plan" value="" style="display:none;">
+                        <input type="text" id="plan" name="plan" value="" style="display:none;" required>
                         <div class="form-group w-50 mr-3">
-                            <input type="text" class="form-control" name="firstName"  placeholder="Nombre">
+                            <input type="text" class="form-control" name="firstName"  placeholder="Nombre" required>
                         </div>
                         <div class="form-group w-50">
-                            <input type="text" class="form-control"  name="lastName" placeholder="Apellido">
+                            <input type="text" class="form-control"  name="lastName" placeholder="Apellido" required>
                         </div>
                      </div>
                        <div class="form-group">
-                            <input type="text" class="form-control" name="companyPosition" placeholder="Cargo">
+                            <input type="text" class="form-control" name="companyPosition" placeholder="Cargo" required>
                         </div>
                           <div class="form-group">
-                            <input type="email" class="form-control"  name="email" placeholder="Correo Electrónico">
+                            <input type="email" class="form-control"  name="email" placeholder="Correo Electrónico" required>
                         </div>
                           <div class="form-group">
-                            <input type="text" class="form-control" name="companyCategory" placeholder="Tipo de Empresa">
+                            <input type="text" class="form-control" name="companyCategory" placeholder="Tipo de Empresa" required>
                         </div>
                          <div class="form-group">
-                            <input type="text" class="form-control" name="rtn"  placeholder="Registro Tributario Nacion">
+                            <input type="number" class="form-control" name="rtn"  placeholder="Registro Tributario Nacion" required>
                         </div>
                          <div class="form-group">
-                            <input type="text" class="form-control" name="companyName" placeholder="Nombre de la Empresa">
+                            <input type="text" class="form-control" name="companyName" placeholder="Nombre de la Empresa" required>
                         </div>
                          <div class="form-group">
-                            <input type="text" class="form-control" name="companyAddress" placeholder="Dirección de la Empresa">
+                            <input type="text" class="form-control" name="companyAddress" placeholder="Dirección de la Empresa" required>
                         </div>
                         <div class="d-flex">
-                            <button type="submit" class="mx-auto w-50">Enviar Formulario</button>
+                            <button type="submit" class="mx-auto">Enviar Formulario</button>
                         </div>
                 </div>
   </form>
@@ -432,6 +432,7 @@
     </section>   
     <script src="scripts/steps.js">
     </script>
+    <script src="scripts/validateForm.js"></script>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" ></script>
     <script>
         

@@ -28,7 +28,7 @@ plans.forEach((plan)=>{
         })
        e.currentTarget.style.backgroundColor="#d5ea69";
        const chosenPlan = e.currentTarget.classList[1]
-       const numberOfBenefits = benefits[e.currentTarget.classList[1]]['numberOfBenefits'];
+       const numberOfBenefits = benefits[chosenPlan]['numberOfBenefits'];
        const columnNumber = benefits[chosenPlan]['column'];
         selectPlan(e,chosenPlan)
         for(var i = 2; i <= numberOfBenefits;i++){
@@ -112,15 +112,15 @@ function nxtStep(){
 }
 const benefits = {
      'one':{
-         'numberOfBenefits':6,
+         'numberOfBenefits':5,
          'column':2
      },
      'two':{
-         'numberOfBenefits':10,
+         'numberOfBenefits':9,
          'column':3
      },
      'three':{
-         'numberOfBenefits':17,
+         'numberOfBenefits':15,
          'column':4
      }
 }
