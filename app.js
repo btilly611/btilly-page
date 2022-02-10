@@ -16,7 +16,7 @@ const Schema = mongoose.Schema
     }
 }
 
-sendGrid.setApiKey('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')
+
 const ContactDetailsSchema = new Schema({
     plan:String,
     firstName:String,
