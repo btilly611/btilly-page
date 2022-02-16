@@ -1,5 +1,5 @@
 footer {
-  background-color: #181818;
+  background-color: #000;
 }
 
 footer .row-1 {
@@ -31,13 +31,13 @@ footer .logo {
 .logos-container {
   display: flex;
   width: 70%;
-  background-color: gray;
+  background-color: black;
   margin-left: 20%;
 }
 .logos-container img {
   object-fit: contain;
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 150px;
 }
 footer .social-media-links i {
   margin-left: 0.3vw;
@@ -75,7 +75,7 @@ footer a:hover {
   width: 30%;
 }
 .slogan-container img {
-  width: 300;
+  width: 300px;
   height: auto;
   object-fit: contain;
   margin-left: 80px;

@@ -17,13 +17,13 @@ nav ul {
   margin-right: 7vw;
 }
 .navbar-brand {
-  margin-left: 15vw;
+  margin-left: 5vw;
 }
 nav li a {
   font-size: 16px;
   font-family: 'Roboto';
-  font-weight: 700;
   margin: 0 1vw;
+  text-transform: uppercase;
 }
 nav a:focus {
   background-color: none;
@@ -46,6 +46,12 @@ nav a:focus {
 .social-media-links img {
   width: 2.3vw;
   height: 2.3vw;
+}
+
+.navbar-light .navbar-nav .nav-link,
+a,
+li {
+  font-weight: 700 !important;
 }
 @media screen and (max-width: 612px) {
   .social-media-links img {
