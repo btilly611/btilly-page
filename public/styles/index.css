@@ -255,7 +255,7 @@
 }
 
 #work-with-us {
-  background-image: url('https://static.wixstatic.com/media/11062b_418c9a1ec32f40c09ddb609a1b9289ff~mv2.jpeg/v1/fill/w_2560,h_1096,al_c,q_90,usm_0.66_1.00_0.01/11062b_418c9a1ec32f40c09ddb609a1b9289ff~mv2.webp');
+  background-image: url('../images/work-with-us-background.jpg');
   background-size: cover;
   overflow-x: hidden;
   height: 70vh;
@@ -276,11 +276,13 @@
 }
 
 .inner-box {
-  padding: 5px;
-}
-
-.inner-box {
-  margin-left: 3.3vw;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3vh 2vw;
+  position: relative;
+  top: 30px;
 }
 
 .inner-box h1 {
@@ -306,7 +308,7 @@
 }
 
 #work-with-us .box h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 9 !important;
 }
 

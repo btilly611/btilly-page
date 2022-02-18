@@ -6,15 +6,23 @@ footer .row-1 {
   background-color: #3c3c3c;
   display: flex;
   align-items: center;
+  position: relative;
+  height: 15vh;
 }
 
 footer .row-1 > div {
   width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 footer .logo {
   width: 15vw;
   height: 15vw;
   object-fit: contain;
+  position: absolute;
 }
 
 .row-2 {
@@ -38,6 +46,11 @@ footer .logo {
   object-fit: contain;
   width: 180px;
   height: 150px;
+}
+
+.social-media-links.footer-sm-links {
+  text-align: center;
+  margin: 0;
 }
 footer .social-media-links i {
   margin-left: 0.3vw;

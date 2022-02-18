@@ -17,7 +17,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('https://static.wixstatic.com/media/11062b_3ed23a496271479f952fc5627ade149c~mv2.jpg/v1/fill/w_980,h_2123,al_c,q_90,usm_0.66_1.00_0.01/11062b_3ed23a496271479f952fc5627ade149c~mv2.webp');
+  background-image: url('../images/legal.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   opacity: 0.5;
@@ -31,16 +31,22 @@
   font-family: 'Noto Sans', sans-serif;
   font-weight: 900;
   top: 50%;
+  font-size: 2.7rem !important;
 }
 
 h1,
-h2 {
-  font-family: 'Noto Sans', sans-serif !important;
+h2,
+h5 {
+  font-family: sans-serif !important;
   font-weight: 700 !important;
 }
 #main {
   display: flex;
-  padding: 10vh 0;
+  padding: 0vh 0;
+}
+
+p {
+  font-family: Roboto;
 }
 
 #first-section {
@@ -52,16 +58,90 @@ h2 {
   width: 25%;
   background-color: whitesmoke;
   display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 #second-section > * {
   padding: 2vh 3vw;
 }
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
-.lower-part-div {
-  background-color: #d5ea69;
-  height: 10vh;
+/*Cuadro para auditoría es diferente */
+
+.conoce-equipo {
+  transform: rotateZ(90deg);
+  white-space: nowrap;
+  width: auto;
+  padding: 0;
+  height: 5px;
+  position: absolute;
+  right: -130px;
+  top: 110px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 300px;
+  border: 1px solid whitesmoke;
+  perspective: 1000px;
+  margin: 2vh 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 250px;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner img {
+  width: 250px;
+  height: 300px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('../images/logo-card.png');
+  background-size: 70% 70%;
+  background-repeat: no-repeat;
+  background-position: right 10% top 50%;
+}
+
+.flip-card-back h1 {
+  font-family: sans-serif;
+  font-size: 1.8rem;
+}
+.flip-card-back p {
+  font-family: Roboto;
 }
 
 @media screen and (max-width: 612px) {

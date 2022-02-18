@@ -6,17 +6,21 @@ const sendGrid = require('@sendgrid/mail')
 const mongoose = require('mongoose');
 const req = require('express/lib/request');
 const Schema = mongoose.Schema
+const dotenv = require('dotenv')
+dotenv.config()
+
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
  async function connectToMongoose(){
     try{
         // await mongoose.connect('mongodb+srv://btilly:2022@cluster0.cpoyx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
-        await mongoose.connect('mongodb+srv://ventasBTHN:US50Uo0CsfbpnyfM@bakertillytesting.lsiny.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+        await mongoose.connect(process.env.MONGO_DB)
         console.log('Successfully connected')
     }catch(e){
         console.log(e,'Not connected')
     }
 }
-
-
 const ContactDetailsSchema = new Schema({
     plan:String,
     firstName:String,
@@ -82,17 +86,15 @@ app.post('/calendly', async (req,res)=>{
     try{
         const message = {
             to:req.body.email,
-            from:'btilly611@gmail.com',
+            from:'ventas@bakertilly.hn',
             subject:`Hola ${req.body.firstName}, gracias por suscribirte`,
             text:'Gracias por suscribirte a Baker Tilly HN.'
         }        
-      
         let contact = new ContactDetails(req.body)
         console.log(req.body.email)
         await contact.save()
         await sendGrid.send(message)
-        res.status(201).send('Message sent')
-        // res.render('calendly',{layout:false})
+        res.render('calendly',{layout:false})
     }catch(e){
         res.status(404).send(e)
     }
