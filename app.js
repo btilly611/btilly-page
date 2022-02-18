@@ -90,10 +90,10 @@ app.post('/calendly', async (req,res)=>{
             subject:`Hola ${req.body.firstName}, gracias por suscribirte`,
             text:'Gracias por suscribirte a Baker Tilly HN.'
         }        
-        let contact = new ContactDetails(req.body)
-        console.log(req.body.email)
-        await contact.save()
-        await sendGrid.send(message)
+        // let contact = new ContactDetails(req.body)
+        // console.log(req.body.email)
+        // await contact.save()
+        // await sendGrid.send(message)
         res.render('calendly',{layout:false})
     }catch(e){
         res.status(404).send(e)
