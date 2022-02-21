@@ -146,8 +146,8 @@ p {
 }
 
 .step-instructions-image-section img {
-  width: 900px;
-  height: 900px;
+  width: 1000px;
+  height: 1000px;
   object-fit: contain;
   padding-bottom: 10vh;
 }
@@ -255,6 +255,7 @@ h5 {
     height: 60vh;
     width: 100%;
     padding-left: 50vw;
+    padding-bottom: 0;
   }
 
   .first-section,
