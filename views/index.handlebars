@@ -36,7 +36,7 @@
                                             </a>
                                     </div>
                                     <div class="carousel-div-img-container">
-                                        <img src="images/carousel-3.jpg" alt="">
+                                        <img src="images/carousel-3-cropped.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="carousel-div">
@@ -213,6 +213,10 @@
         </section>
          --}}
 
+
+         <section id="map-section-header">
+            <h1 class="text-center text-white">Acerca de Baker Tilly Internacional</h1>
+         </section>
         <section id="map-section">
             <div class="map-wrapper">
                 <img src="images/map.png" alt="">
@@ -344,9 +348,8 @@
                 console.log('clicked')
             })
             window.onload=nextSlide()
-
-
             {{!-- setInterval(nextSlide,10000) --}}
+
             gsap.to('#cta-header',{duration:1,opacity:1,x:0})
             gsap.to('#work-with-us .box',{duration:1.5,x:150})
             if(this.innerWidth <= 612){
@@ -357,7 +360,7 @@
                 x:'30%',
                 y:'0%'
                 }); 
-                console.log('hieroeji')
+               
             }else{
                    gsap.to("#services-header", {
                 scrollTrigger: "#services", 
@@ -379,7 +382,7 @@
             const timersTable= {
             numOficinas:{
                 start:0,
-                end:640,
+                end:706,
                 done:false
             },
             numTerritorios:{
@@ -394,12 +397,12 @@
             },
             numExpertos:{
                 start:0,
-                end:37000,
+                end:39000,
                 done:false
             },
                ingresos:{
                 start:0,
-                end:4.03,
+                end:4.2,
                 done:false
             }
              }
@@ -420,8 +423,8 @@
                             timersTable[timer]['start'] =  timersTable[timer]['start']+200
                             window[timer].innerHTML=parseInt(window[timer].innerHTML)+200
                         }else if(timer === 'ingresos'){
-                            timersTable[timer]['start'] =  Math.round((timersTable[timer]['start'] + 0.01) * 100)/100
-                            window[timer].innerHTML = Math.round((timersTable[timer]['start'] + 0.01) * 100)/100
+                            timersTable[timer]['start'] =  Math.round((timersTable[timer]['start'] + 0.1) * 100)/100
+                            window[timer].innerHTML = Math.round((timersTable[timer]['start'] + 0.1) * 100)/100
                             console.log(timersTable[timer]['start'])
                         }
                         else{

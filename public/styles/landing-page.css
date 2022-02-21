@@ -146,9 +146,10 @@ p {
 }
 
 .step-instructions-image-section img {
-  width: 700px;
-  height: 700px;
+  width: 900px;
+  height: 900px;
   object-fit: contain;
+  padding-bottom: 10vh;
 }
 
 .icon {
