@@ -17,6 +17,7 @@ const stepMarksSubHeaders = document.querySelectorAll('.step-mark h6');
 function selectPlan(e,chosenPlan){
     let planInput = document.querySelector('#plan')
     planInput.value=chosenPlan
+    gtag('plan',chosenPlan)
 }
 plans.forEach((plan)=>{
     plan.addEventListener('click',(e)=>{  

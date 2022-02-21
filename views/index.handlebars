@@ -369,7 +369,7 @@
             }
 
             //COUNTDOWN TIMER
-           
+
             var numOficinas = document.querySelector('#numero-oficinas')
             var numTerritorios = document.querySelector('#numero-territorios')
             var numFirmasMiembros = document.querySelector('#numero-firmas-miembros')
@@ -399,11 +399,11 @@
             },
                ingresos:{
                 start:0,
-                end:4.04,
+                end:4.03,
                 done:false
             }
-
              }
+             
             const counters = Object.keys(timersTable)
             function runTimers(){
                 if(timersDone === counters.length){
@@ -420,8 +420,9 @@
                             timersTable[timer]['start'] =  timersTable[timer]['start']+200
                             window[timer].innerHTML=parseInt(window[timer].innerHTML)+200
                         }else if(timer === 'ingresos'){
-                            timersTable[timer]['start'] =  timersTable[timer]['start']+0.1
-                            window[timer].innerHTML=parseFloat(window[timer].innerHTML).toFixed(2)+1
+                            timersTable[timer]['start'] =  Math.round((timersTable[timer]['start'] + 0.01) * 100)/100
+                            window[timer].innerHTML = Math.round((timersTable[timer]['start'] + 0.01) * 100)/100
+                            console.log(timersTable[timer]['start'])
                         }
                         else{
                             timersTable[timer]['start'] =  timersTable[timer]['start']+1
@@ -432,7 +433,7 @@
             })
             }
             function startTimer(){
-                runCounters = setInterval(runTimers,50)
+                runCounters = setInterval(runTimers,25)
             }
           
         </script>

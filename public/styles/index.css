@@ -375,6 +375,29 @@
 }
 
 @media screen and (max-width: 612px) {
+  .carousel-div-text {
+    padding: 20px;
+  }
+  .carousel-div button {
+    height: auto;
+  }
+  #map-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .map-wrapper {
+    width: 100%;
+  }
+  .data-div {
+    width: 100%;
+  }
+  .data-row {
+    width: 100%;
+  }
+  .carousel-div h1 {
+    font-size: 2rem;
+  }
   #hero-section {
     height: 70vh;
   }
