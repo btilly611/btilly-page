@@ -119,6 +119,10 @@ footer a:hover {
     object-fit: contain;
   }
 
+  .row-4 {
+    margin-left: 5%;
+  }
+
   .logos-container {
     margin-left: 20%;
     padding-bottom: 0;

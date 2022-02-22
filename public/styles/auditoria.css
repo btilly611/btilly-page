@@ -132,9 +132,14 @@ p {
   right: -90px;
   top: 110px;
 }
+.flip-card-back h1 {
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
 
 .flip-card {
-  background-color: transparent;
+  background-color: #8d8a8a;
   width: 250px;
   height: 300px;
   border: 1px solid whitesmoke;
@@ -198,6 +203,10 @@ p {
     font-size: 3rem;
   }
 
+  #main-wrapper {
+    flex-direction: column;
+  }
+
   .steps-container {
     flex-direction: column;
   }
@@ -223,7 +232,7 @@ p {
   }
 
   #gray-bar {
-    display: none;
+    width: 100%;
   }
 
   #text-description {

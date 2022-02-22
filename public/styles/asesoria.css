@@ -85,12 +85,16 @@ p {
 }
 
 .flip-card {
-  background-color: transparent;
+  background-color: #8d8a8a;
   width: 250px;
   height: 300px;
   border: 1px solid whitesmoke;
   perspective: 1000px;
   margin: 2vh 0;
+}
+.flip-card-back h1 {
+  font-family: sans-serif;
+  font-size: 1.8rem;
 }
 
 .flip-card-inner {
@@ -151,5 +155,9 @@ p {
   #first-section,
   #second-section {
     width: 100%;
+  }
+
+  .conoce-equipo {
+    right: -80px;
   }
 }

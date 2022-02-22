@@ -51,12 +51,15 @@ h1 {
   font-weight: 700;
   margin-left: 1vw;
   font-size: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .plan button {
   background-color: black;
   color: white;
   font-size: 9.5px;
+  width: auto;
 }
 
 .container.plan-details {
@@ -308,7 +311,7 @@ iframe {
     width: 90%;
     position: absolute;
     border: 1px solid gray;
-    left: 20px;
+    left: 0;
   }
 
   .container.step-header {

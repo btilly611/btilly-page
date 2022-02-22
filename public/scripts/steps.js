@@ -31,6 +31,9 @@ plans.forEach((plan)=>{
        const chosenPlan = e.currentTarget.classList[1]
        const numberOfBenefits = benefits[chosenPlan]['numberOfBenefits'];
        const columnNumber = benefits[chosenPlan]['column'];
+       gtag('event','plan-fue-escogido',{
+           'value':chosenPlan
+       })
         selectPlan(e,chosenPlan)
         for(var i = 2; i <= numberOfBenefits;i++){
             const currentRow = rows[i]
@@ -135,10 +138,17 @@ selectPlanBtns.forEach((button)=>{
             console.log('button clicked')
         })
     })
-nxt.addEventListener('click',nxtStep)
-prev.addEventListener('click',prevStep)
+nxt.addEventListener('click',()=>{
+    gtag('event','proximo-paso')
+    nxtStep()
+})
+prev.addEventListener('click',()=>{
+    gtag('event','paso-anterior')
+    prevStep()
+})
 window.addEventListener('load',nxtStep)
 const form = document.querySelector('form')
+
 form.addEventListener('submit',(e)=>{
     // e.preventDefault()
 })
