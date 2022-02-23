@@ -169,7 +169,7 @@
         const accordionButtons = Array.from(document.querySelectorAll('.accordion-button'))
         const thirdSectionHeader = document.querySelector('#third-section-header')
         const stepInstructionsSection = document.querySelector('#step-instructions')
-        {{!-- accordionButtons.forEach((button)=>{
+        accordionButtons.forEach((button)=>{
             button.addEventListener('click',()=>{
                 console.log(thirdSectionHeader.style.marginTop)
                 if(thirdSectionHeader.style.marginTop==='-20vh' || thirdSectionHeader.style.marginTop===''){
@@ -180,7 +180,7 @@
                      console.log(2)
                 }
             })
-        }) --}}
+        }) 
 
         button.addEventListener('mouseover',()=>{
             document.querySelector('#main button a').style.color="black";
