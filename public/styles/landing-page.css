@@ -131,6 +131,8 @@ p {
   height: auto;
   background-color: #ebe7e4;
   display: flex;
+  position: relative;
+  top: 150px;
 }
 
 .step-instructions-section {
