@@ -131,8 +131,6 @@ p {
   height: auto;
   background-color: #ebe7e4;
   display: flex;
-  position: relative;
-  top: 150px;
 }
 
 .step-instructions-section {
@@ -145,14 +143,12 @@ p {
   width: 35%;
   display: flex;
   justify-content: right;
-  position: relative;
 }
 
 .step-instructions-image-section img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  position: relative;
+  object-fit: cover;
   right: 0;
 }
 
@@ -176,8 +172,9 @@ h5 {
 
 #third-section-header {
   background-color: #ebe7e4;
-  height: auto;
+  height: 55vh;
   position: relative;
+  margin-top: 0vh;
 }
 
 .container.third-section-headers {

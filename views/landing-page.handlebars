@@ -167,9 +167,21 @@
         });
         const button = document.querySelector('#main button')
         const accordionButtons = Array.from(document.querySelectorAll('.accordion-button'))
-        const thirdSectionHeaders = document.querySelector('.container.third-section-headers')
-     
-        console.log(accordionButtons)
+        const thirdSectionHeader = document.querySelector('#third-section-header')
+        const stepInstructionsSection = document.querySelector('#step-instructions')
+        {{!-- accordionButtons.forEach((button)=>{
+            button.addEventListener('click',()=>{
+                console.log(thirdSectionHeader.style.marginTop)
+                if(thirdSectionHeader.style.marginTop==='-20vh' || thirdSectionHeader.style.marginTop===''){
+                    thirdSectionHeader.style.marginTop='0'
+                    console.log(1)
+                }else{
+                    thirdSectionHeader.style.marginTop='-20vh'
+                     console.log(2)
+                }
+            })
+        }) --}}
+
         button.addEventListener('mouseover',()=>{
             document.querySelector('#main button a').style.color="black";
         })
