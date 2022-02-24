@@ -107,7 +107,7 @@
                     <div id='first-section-text'>
                         <h1>Baker Tilly Honduras</h1>
                         <h2>Now For Tomorrow</h2>
-                                <a href="/">
+                                <a href="/btilly-h">
                                 <button>
                                     Mas información
                                 </button>
@@ -239,7 +239,7 @@
                                                 </a>
                                                 <a href="/asesoria">
                                                 <button>
-                                                    Verifica nuestros planes
+                                                    Mas información
                                                 </button>
                                             </a>
                                         </div>
@@ -290,7 +290,9 @@
                     <h1><b>Trabaja con nosotros</b></h1>
                 </div>
                 <div class="d-flex">
-                    <i class="fas fa-arrow-right ml-auto black-arrow"></i>
+                    <a href="/carreras" class="ml-auto">
+                        <i class="fas fa-arrow-right ml-auto black-arrow"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -403,7 +405,7 @@
                 done:false
             },
                ingresos:{
-                start:0,
+                start:0.0,
                 end:4.2,
                 done:false
             }
@@ -417,30 +419,29 @@
                 counters.forEach((timer,index)=>{
                     if(timersTable[timer]['start'] === timersTable[timer]['end'] && timersTable[timer]['done'] === false){
                         timersTable[timer]['done']=true
+                        console.log('done')
                         timersDone++
-                        console.log('reached point',timersTable[timer]['done'])
                     }else if(timersTable[timer]['done']===false){
                         if(timer === 'numExpertos'){
-                            console.log('expertos')
                             timersTable[timer]['start'] =  timersTable[timer]['start']+200
                             window[timer].innerHTML=parseInt(window[timer].innerHTML)+200
                         }else if(timer === 'ingresos'){
+                            console.log(Math.round((timersTable[timer]['start'] + 0.1) * 100)/100,'first loop')
                             timersTable[timer]['start'] =  Math.round((timersTable[timer]['start'] + 0.1) * 100)/100
                             window[timer].innerHTML = Math.round((timersTable[timer]['start'] + 0.1) * 100)/100
-                            console.log(timersTable[timer]['start'])
+                            console.log(Math.round((timersTable[timer]['start'] + 0.1) * 100)/100)
                         }
                         else{
                             timersTable[timer]['start'] =  timersTable[timer]['start']+1
                             window[timer].innerHTML=parseInt(window[timer].innerHTML)+1
                     }
-                      
                     }
             })
             }
             function startTimer(){
-                runCounters = setInterval(runTimers,500)
+                runCounters = setInterval(runTimers,1000)
             }
-          
+
         </script>
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

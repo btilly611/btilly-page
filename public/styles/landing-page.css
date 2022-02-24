@@ -148,9 +148,10 @@ p {
 .step-instructions-image-section img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   right: 0;
   z-index: 1000;
+  display: block;
 }
 
 .icon {
@@ -173,9 +174,8 @@ h5 {
 
 #third-section-header {
   background-color: #ebe7e4;
-  height: 55vh;
+  height: 30vh;
   position: relative;
-  margin-top: -20vh;
 }
 
 .container.third-section-headers {

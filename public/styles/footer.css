@@ -100,6 +100,12 @@ footer a:hover {
   margin-left: 80px;
 }
 
+@media screen and (max-width: 912px) {
+  .slogan-container img {
+    width: 150px;
+  }
+}
+
 @media screen and (max-width: 678px) {
   .row-2 ul,
   .row-3 ul {
