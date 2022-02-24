@@ -406,7 +406,7 @@
             },
                ingresos:{
                 start:0.0,
-                end:4.2,
+                end:4.3,
                 done:false
             }
              }
@@ -426,10 +426,9 @@
                             timersTable[timer]['start'] =  timersTable[timer]['start']+200
                             window[timer].innerHTML=parseInt(window[timer].innerHTML)+200
                         }else if(timer === 'ingresos'){
-                            console.log(Math.round((timersTable[timer]['start'] + 0.1) * 100)/100,'first loop')
-                            timersTable[timer]['start'] =  Math.round((timersTable[timer]['start'] + 0.1) * 100)/100
+
                             window[timer].innerHTML = Math.round((timersTable[timer]['start'] + 0.1) * 100)/100
-                            console.log(Math.round((timersTable[timer]['start'] + 0.1) * 100)/100)
+                            timersTable[timer]['start'] =  Math.round((timersTable[timer]['start'] + 0.1) * 100)/100                           
                         }
                         else{
                             timersTable[timer]['start'] =  timersTable[timer]['start']+1
@@ -439,7 +438,7 @@
             })
             }
             function startTimer(){
-                runCounters = setInterval(runTimers,1000)
+                runCounters = setInterval(runTimers,300)
             }
 
         </script>
