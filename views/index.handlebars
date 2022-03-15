@@ -419,16 +419,19 @@
                 counters.forEach((timer,index)=>{
                     if(timersTable[timer]['start'] === timersTable[timer]['end'] && timersTable[timer]['done'] === false){
                         timersTable[timer]['done']=true
-                        console.log('done')
                         timersDone++
                     }else if(timersTable[timer]['done']===false){
                         if(timer === 'numExpertos'){
                             timersTable[timer]['start'] =  timersTable[timer]['start']+200
                             window[timer].innerHTML=parseInt(window[timer].innerHTML)+200
                         }else if(timer === 'ingresos'){
-
                             window[timer].innerHTML = Math.round((timersTable[timer]['start'] + 0.1) * 100)/100
                             timersTable[timer]['start'] =  Math.round((timersTable[timer]['start'] + 0.1) * 100)/100                           
+                        }else if(timer === 'numOficinas'){  
+                            {{!-- timersTable[timer]['start'] =  timersTable[timer]['start']+1
+                            window[timer].innerHTML=parseInt(window[timer].innerHTML)+1 --}}
+                            window[timer].innerHTML = timersTable[timer]['start'] + 11.03125
+                            timersTable[timer]['start'] = timersTable[timer]['start'] +  11.03125
                         }
                         else{
                             timersTable[timer]['start'] =  timersTable[timer]['start']+1
@@ -438,7 +441,7 @@
             })
             }
             function startTimer(){
-                runCounters = setInterval(runTimers,300)
+                runCounters = setInterval(runTimers,1000)
             }
 
         </script>

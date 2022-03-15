@@ -62,15 +62,45 @@ h2 {
 #clients-second-section {
   width: 50%;
   text-align: center;
-  padding: 8vh 6vw;
   text-align: justify;
   font-weight: 550;
 }
 
+#clients-first-section {
+  padding: 8vh 6vw;
+}
+
+#clients-second-section {
+  padding: 8vh 6vw;
+}
+#clients-second-section table {
+  border: 2px black solid;
+  height: 50vh;
+}
+th {
+  text-align: right;
+}
+tr,
+th,
+td {
+  border: 2px black solid;
+  text-align: center;
+  padding: 15px;
+}
+
+#clients-second-section img {
+}
+
 #structure {
   background-color: white;
-  padding: 15vh 15vw;
+  padding: 5vh 5vw;
   margin-top: 3vh;
+}
+
+#structure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 612px) {
