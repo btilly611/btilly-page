@@ -128,7 +128,7 @@ p {
 }
 
 #step-instructions {
-  height: auto;
+  height: 100vh;
   background-color: #ebe7e4;
   display: flex;
 }
