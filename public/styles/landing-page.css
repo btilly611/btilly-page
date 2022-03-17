@@ -131,7 +131,7 @@ p {
   height: auto;
   background-color: #ebe7e4;
   display: flex;
-  padding: 15vh 0;
+  padding: 10vh 0;
 }
 
 .step-instructions-section {
@@ -139,24 +139,21 @@ p {
   padding: 5vh 0 0 270px;
   box-sizing: border-box;
   position: relative;
-  top: 20vh;
 }
 
 .step-instructions-image-section {
   width: 35%;
+  height: 45vh;
   display: flex;
   justify-content: right;
 }
 
 .step-instructions-image-section img {
-  width: 50%;
+  width: 100%;
   height: 100%;
-  object-fit: contain;
   position: relative;
-  right: 0;
-  bottom: 5vh;
   z-index: 1000;
-  display: block;
+  display: inline-block;
 }
 
 .icon {
