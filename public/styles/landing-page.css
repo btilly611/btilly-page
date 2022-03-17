@@ -135,8 +135,10 @@ p {
 
 .step-instructions-section {
   width: 65%;
-  padding: 48vh 0 0 270px;
+  padding: 20vh 0 0 270px;
   box-sizing: border-box;
+  position: relative;
+  top: 20vh;
 }
 
 .step-instructions-image-section {
