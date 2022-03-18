@@ -143,14 +143,17 @@ p {
 
 .step-instructions-image-section {
   width: 35%;
-  height: 45vh;
+  height: 55vh;
   display: flex;
   justify-content: right;
+  overflow-x: hidden;
 }
 
 .step-instructions-image-section img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  right: -10vw;
   position: relative;
   z-index: 1000;
   display: inline-block;
