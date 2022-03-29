@@ -150,10 +150,9 @@ p {
 }
 
 .step-instructions-image-section img {
-  width: 100%;
+  width: 50%;
   height: 100%;
-  object-fit: contain;
-  right: -10vw;
+  object-fit: fill;
   position: relative;
   z-index: 1000;
   display: inline-block;
