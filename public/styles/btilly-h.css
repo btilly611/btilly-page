@@ -5,12 +5,10 @@ h2 {
 }
 
 #header {
-  height: 80vh;
+  height:auto;
+  margin-top:10vh;
   background-image: url('../images/honduras.png');
-  background-size: 100% 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-size:cover;
 }
 
 .inner-container {
@@ -105,7 +103,7 @@ td {
 
 #socios {
   width: 100%;
-  padding: 20vh 0;
+  padding: 8vh 0;
 }
 
 .socios-description {

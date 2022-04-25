@@ -36,6 +36,7 @@ button:hover {
   margin-left: 5vw;
   background-color: whitesmoke;
   padding: 5vh 3vw;
+  height:20vh;
 }
 
 @media screen and (max-width: 612px) {

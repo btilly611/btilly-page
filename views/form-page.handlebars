@@ -364,7 +364,12 @@
                             <input type="email" class="form-control"  name="email" placeholder="Correo Electrónico" required>
                         </div>
                           <div class="form-group">
-                            <input type="text" class="form-control" name="companyCategory" placeholder="Tipo de Empresa" required>
+                              <label for="companyCategory">Tipo de Empresa</label>
+                              <select class="form-control"  name="companyCategory" required >
+                                  <option value="comerciante-individual">Comerciante Individual</option>
+                                  <option value="sociedad-de-responsabilidad-limitada">Sociedad de Responsabilidad Limitada</option>
+                                  <option value="sociedad-anonima">Sociedad Anónima</option>
+                              </select>
                         </div>
                          <div class="form-group">
                             <input type="number" class="form-control" name="rtn"  placeholder="Registro Tributario Nacion" required>

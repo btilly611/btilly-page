@@ -74,11 +74,9 @@ app.get('/carreras',(req,res)=>{
 app.get('/contactanos',(req,res)=>{
     res.render('contactanos',{layout:false})
 })
-
 app.get('/landing-p-1',(req,res)=>{
     res.render('landing-page',{layout:false})
 })
-
 app.get('/form',(req,res)=>{
     res.render('form-page',{layout:false})
 })
@@ -99,6 +97,7 @@ app.post('/calendly', async (req,res)=>{
         res.status(404).send(e)
     }
 })
+
 // app.post('/payment',(req,res)=>{
 //     res.redirect('/form')
 // })

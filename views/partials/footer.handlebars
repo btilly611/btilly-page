@@ -95,7 +95,16 @@
         </div> --}}
     
     </div>
+
+
     <div class="copyright bg-white text-center">
             ©2021 Bakertilly Honduras
     </div>
+
+        <script>
+        const year = new Date().getFullYear()
+        const copyrightYear = `@${year} Bakertilly Honduras`
+        const copyright = document.querySelector('.copyright')
+        copyright.innerText=copyrightYear
+    </script>
 </footer>
