@@ -85,8 +85,21 @@ app.post('/calendly', async (req,res)=>{
         const message = {
             to:req.body.email,
             from:'ventas@bakertilly.hn',
-            subject:`Hola ${req.body.firstName}, gracias por suscribirte`,
-            text:'Gracias por suscribirte a Baker Tilly HN.'
+            subject:`Gracias por registrarte`,
+            html:`
+                <h4> Hola ${req.body.firstName},</h4>
+        
+                <p>Estas un paso más cerca de adquirir un plan contable que mejor se adapte a las necesidades de su negocio.
+                Puedes conocer más sobre nuestro equipo de expertos en el siguiente enlace:
+                </p>
+
+                <p> https://www.bakertilly.hn</p>
+
+                <b>*Este mensaje se envió desde una dirección de solo notificación que no puede aceptar respuestas entrantes. 
+
+                Puedes ponerte en contacto con nosotros en cualquier momento llamando al (+504) 2239-2663.
+                Colonia Humuya, Sendero Ámbito, 2da Calle, Tegucigalpa, Honduras</b>
+            `
         }        
         // let contact = new ContactDetails(req.body)
         // console.log(req.body.email)
