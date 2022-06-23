@@ -116,7 +116,7 @@ app.post('/calendly', async (req, res) => {
         await sendGrid.send(message)
         res.render('calendly', { layout: false })
     } catch (e) {
-        res.status(404).send(e)
+        res.status(404).send('Ha ocurrido un error',e)
     }
 })
 
