@@ -356,11 +356,11 @@
             let currentSlide = 0;
             carouselNext.addEventListener('click',()=>{
                 nextSlide()
-                console.log('clicked')
+                console.log('clicked-next')
             })
             carouselPrev.addEventListener('click',()=>{
-                nextSlide()
-                console.log('clicked')
+               prevSlide()
+                console.log('clicked-prev')
             })
             window.onload=nextSlide()
             {{!-- setInterval(nextSlide,10000) --}}
