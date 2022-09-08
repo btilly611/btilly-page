@@ -4,7 +4,11 @@
   display: flex;
   align-items: center;
 }
+.ml-auto{
+  height: 75px;
+  width: 350px;
 
+}
 h1,
 h3,
 h6 {
