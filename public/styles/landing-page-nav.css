@@ -33,7 +33,7 @@ nav a:focus {
   border: none;
 }
 .social-media-links {
-  font-size: 30px;
+  
   vertical-align: middle;
   margin-left: auto;
   margin-right: 5vw;
@@ -46,5 +46,8 @@ nav a:focus {
   .social-media-links img {
     width: 8.5vw;
     height: 8.5vw;
+  }
+  .social-media-links{
+    display: none;
   }
 }

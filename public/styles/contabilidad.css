@@ -46,7 +46,7 @@ h5 {
 }
 
 p {
-  font-family: Roboto;
+  
 }
 #main {
   display: flex;
@@ -76,7 +76,7 @@ p {
 }
 
 p {
-  font-family: Roboto;
+ 
 }
 
 .flip-card {
@@ -151,10 +151,12 @@ p {
 
 @media screen and (max-width: 612px) {
   #header {
-    height: 60vh;
+    height: 50vh;
     box-sizing: border-box;
   }
   #main {
+    text-align: justify;
+    font-size: 1.3rem;
     flex-direction: column;
   }
 
@@ -166,5 +168,11 @@ p {
 
   .right-container {
     font-size: 2rem;
+  }
+  .bg-dark{
+    display: none;
+  }
+ .text-white {
+    font-size: 1.5rem;
   }
 }

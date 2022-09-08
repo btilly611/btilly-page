@@ -33,10 +33,16 @@
 }
 
 #text-description {
+background-color: rgb(245, 245, 245);
+ 
+ 
+ text-align: justify;
+ 
   padding: 10vh 10vw;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   width: 70%;
 }
+
 
 #main-wrapper {
   display: flex;
@@ -68,6 +74,7 @@
 }
 
 p {
+  font-size: 1.3rem;
   font-family: Roboto;
 }
 
@@ -199,6 +206,9 @@ p {
 }
 
 @media screen and (max-width: 1000px) {
+  #header{
+    height: 50vh;
+  }
   #header h1 {
     font-size: 3rem;
   }

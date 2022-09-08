@@ -5,10 +5,11 @@ h2 {
 }
 
 #header {
-  height:auto;
-  margin-top:10vh;
+  width: 100%;
+  height: auto;
+  margin-top: 10vh;
   background-image: url('../images/honduras.png');
-  background-size:cover;
+  background-size: cover;
 }
 
 .inner-container {
@@ -34,6 +35,8 @@ h2 {
 }
 
 #more-info {
+  text-align: center;
+  text-align: justify;
   display: flex;
   padding: 10vh 10vw;
 }
@@ -56,6 +59,7 @@ h2 {
 #clients-first-section p {
   margin-top: 5vh;
 }
+
 #clients-first-section,
 #clients-second-section {
   width: 50%;
@@ -69,15 +73,19 @@ h2 {
 }
 
 #clients-second-section {
+
   padding: 8vh 6vw;
 }
+
 #clients-second-section table {
   border: 2px black solid;
   height: 50vh;
 }
+
 th {
   text-align: right;
 }
+
 tr,
 th,
 td {
@@ -86,10 +94,11 @@ td {
   padding: 15px;
 }
 
-#clients-second-section img {
-}
+#clients-second-section img {}
 
 #structure {
+  text-align: center;
+  text-align: justify;
   background-color: white;
   padding: 5vh 5vw;
   margin-top: 3vh;
@@ -110,6 +119,8 @@ td {
   padding: 0 10vw;
   line-height: 1.5;
   font-family: sans-serif;
+  text-align: center;
+  text-align: justify;
 }
 
 .socios-image-container {
@@ -125,23 +136,33 @@ td {
 
 @media screen and (max-width: 612px) {
   #header {
-    height: 50vh;
+    margin-right: 50%;
+    background-size: 110% 100%;
+    background-repeat: no-repeat;
+    height: 20vh;
   }
+
   .img-container,
   .country-container {
+
     height: 6.5vh;
     margin: 0 1.5vw;
   }
+
   .inner-container {
+
     margin-top: 10vh;
   }
+
   .inner-container h1 {
     font-size: 2rem;
     margin-top: 0.5vh;
   }
+
   #more-info {
     flex-direction: column;
   }
+
   #first-section,
   #second-section {
     width: 100%;
@@ -150,13 +171,16 @@ td {
   #clients {
     flex-direction: column;
   }
+
   #clients-first-section,
   #clients-second-section {
+  
     width: 100%;
   }
+  
 }
 
-@media screen and (max-width: 320px) {
+/*@media screen and (max-width: 320px) {
   .inner-container {
     height: 20vh;
     margin-top: 20vh;
@@ -168,4 +192,4 @@ td {
   .country-container {
     height: 5vh;
   }
-}
+}*/

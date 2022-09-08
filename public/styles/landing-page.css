@@ -12,9 +12,7 @@ h6 {
   font-weight: 900;
 }
 
-p {
-  font-family: Roboto;
-}
+p {}
 
 #main h1 {
   font-family: 'Noto Sans', sans-serif;
@@ -35,7 +33,7 @@ p {
   font-size: 1rem;
 
   border: 2px black solid;
-  font-family: Roboto;
+
   font-weight: 300;
   background-color: black;
   color: white;
@@ -50,6 +48,7 @@ p {
   background-color: transparent;
   color: black;
 }
+
 /* Fix button hover */
 #main .first-section img {
   object-fit: contain;
@@ -59,10 +58,11 @@ p {
 }
 
 .first-section {
-  width: 18%;
+  width: 100%;
   display: flex;
   height: 100%;
 }
+
 .second-section {
   width: 82%;
 }
@@ -70,7 +70,7 @@ p {
 #services-section {
   padding: 5vw 0;
   font-size: 1.2rem;
-  font-family: 'Roboto';
+
   height: auto;
   display: flex;
   flex-direction: column;
@@ -78,7 +78,7 @@ p {
   align-items: center;
 }
 
-#services-section > div {
+#services-section>div {
   width: 60%;
 }
 
@@ -93,6 +93,7 @@ p {
   position: relative;
   top: 11vh;
 }
+
 #services-section h4 {
   padding: 0 230px;
   font-size: 1rem;
@@ -100,6 +101,7 @@ p {
   margin-top: 3vh;
   text-align: center;
 }
+
 #service-boxes {
   display: flex;
   padding: 0 0 6vh 0;
@@ -161,6 +163,7 @@ p {
 .icon {
   text-align: left;
 }
+
 .icon h5 {
   margin-left: 8vw !important;
 }
@@ -194,7 +197,7 @@ h5 {
 }
 
 .container.third-section-headers p {
-  font-family: Roboto;
+
   margin-top: 3vh;
 }
 
@@ -210,6 +213,16 @@ h5 {
 }
 
 @media screen and (max-width: 612px) {
+  #services-section h1 {
+    margin-top: -50px;
+    font-size: 2.5rem !important;
+  }
+
+  #services-section h4 {
+    text-align: justify !important;
+    font-size: 2.5rem;
+  }
+
   #main {
     flex-direction: column;
     padding-top: 5vh;
@@ -220,8 +233,15 @@ h5 {
     padding: 5vw 5vw;
   }
 
+  #main .first-section img {
+    object-fit: contain;
+    position: relative;
+    margin-top: auto;
+    width: 26vh;
+  }
+
   .img-container img {
-    width: 15vw;
+    width: 20vw;
     height: 15vw;
     margin-bottom: 2vh;
   }
@@ -237,6 +257,7 @@ h5 {
     padding: 2vh;
     height: auto;
   }
+
   .container.third-section-headers {
     padding-left: 0 !important;
     position: relative;
@@ -266,12 +287,18 @@ h5 {
     padding-left: 50vw;
     padding-bottom: 0;
     bottom: 0;
+
+  }
+
+  .step-instructions-image-section {
+    display: none;
   }
 
   .first-section,
   .second-section {
     width: 100%;
   }
+
   .first-section img {
     margin-top: 7vh;
   }
@@ -307,6 +334,7 @@ h5 {
     text-align: center;
     margin-bottom: 2vh;
   }
+
   #services-section h4 {
     padding: 0 50px;
     font-size: 1rem;
@@ -329,4 +357,5 @@ h5 {
   #main h1 {
     font-size: 2rem;
   }
+
 }

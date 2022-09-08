@@ -43,10 +43,29 @@
 
 #first-section {
   height: 100vh;
+
   background-image: url('../images/carousel-3-cropped.jpg');
   background-size: 100% 100%;
+
 }
 
+/*Responsive page */
+/*
+@media screen and (max-width: 800px) {
+  #first-section {
+    height: 50vh !important;
+    background-size: 100% 100% !important;
+    content: normal;
+  }
+  
+  #first-section-text{
+    margin-top: -100px;
+
+  }
+  
+
+}
+*/
 #first-section::after {
   content: '';
   position: absolute;
@@ -60,13 +79,16 @@
 
 #feature-main-section {
   width: 100% !important;
+
 }
+
 .carousel,
 .carousel-div {
   width: 100%;
   height: 100%;
   position: relative;
 }
+
 .carousel-div-img-container::after {
   content: '';
   position: absolute;
@@ -77,6 +99,7 @@
   height: 100%;
   opacity: 0.7;
 }
+
 .carousel-div img {
   width: 100%;
   height: 100%;
@@ -93,6 +116,7 @@
   color: white;
   font-family: sans-serif;
 }
+
 .arrow {
   border: solid white;
   border-width: 0 5px 5px 0;
@@ -116,13 +140,16 @@
   left: 5%;
   top: 50%;
 }
+
 .carousel-div {
   display: none;
 }
+
 .carousel-div-text h1 {
   font-family: sans-serif;
   font-weight: 700;
 }
+
 .carousel-div-text p {
   font-family: Roboto;
 }
@@ -138,6 +165,7 @@
 .carousel-div-text button:hover {
   background-color: #bdd352;
 }
+
 .btilly-honduras-slide {
   font-family: sans-serif;
 }
@@ -148,6 +176,7 @@
   font-size: 4.5rem;
   font-weight: 700;
 }
+
 #first-section-text h2,
 .carousel-div h2 {
   font-family: sans-serif !important;
@@ -186,6 +215,7 @@
   font-weight: 500;
   font-family: 'Noto Sans';
 }
+
 #about-us p {
   font-size: 18px;
   color: black;
@@ -199,7 +229,7 @@
   justify-content: center;
 }
 
-.wrapper > div {
+.wrapper>div {
   background-color: white;
   width: 150px;
   height: 150px;
@@ -220,6 +250,7 @@
 #bakertilly-button:hover {
   color: gray;
 }
+
 .value-prop {
   text-align: center;
 }
@@ -318,6 +349,7 @@
 .black-arrow {
   transition: transform 1.3s ease-in-out;
 }
+
 #work-with-us .box:hover .black-arrow {
   transform: translate(30px, 30px);
 }
@@ -352,6 +384,7 @@
   padding: 5vh 3vw;
   display: flex;
 }
+
 .map-wrapper {
   width: 65%;
   height: 80%;
@@ -375,11 +408,13 @@
   font-size: 3rem;
   padding-top: 5.5vh;
 }
+
 .data-div {
   width: 35%;
   padding: 0vh 0;
   height: auto;
 }
+
 .data-row {
   color: white;
   font-family: Roboto;
@@ -393,6 +428,7 @@
   font-weight: 700;
   text-align: left;
 }
+
 .data-row h4 {
   font-weight: 300;
   text-align: left;
@@ -415,13 +451,19 @@
 
 @media screen and (max-width: 612px) {
   #first-section {
-    height: 80vh;
+    height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
   }
+  #feature-main-section{
+    height: 70vh;
+  }
+
 
   .carousel-div-text p {
-    font-size: 10px;
+    font-size: 15px;
+    padding: 10%;
+    text-align: left;
   }
 
   .carousel-div-text,
@@ -430,6 +472,9 @@
   }
 
   #first-section-text h1 {
+    font-size: 2.5rem;
+  }
+  #first-section-text h2 {
     font-size: 1.5rem;
   }
 
@@ -438,6 +483,7 @@
     height: auto;
     margin: 2vh 0;
   }
+
   #map-section {
     flex-direction: column;
     height: auto;
@@ -446,18 +492,24 @@
   .map-wrapper {
     width: 100%;
   }
+
   .data-div {
     width: 100%;
   }
+
   .data-row {
     width: 100%;
   }
+
   .carousel-div h1 {
+    left: auto;
     font-size: 2rem;
   }
+
   #hero-section {
     height: 70vh;
   }
+
   #cta-header {
     font-size: 3rem;
   }
@@ -466,6 +518,7 @@
     height: auto;
     padding: 70vh 0;
   }
+
   #about-us h1 {
     font-size: 3rem;
   }
@@ -483,7 +536,7 @@
     flex-direction: column;
   }
 
-  .wrapper > div {
+  .wrapper>div {
     width: 100%;
     height: auto;
     padding: 5px;
@@ -498,16 +551,30 @@
     padding: 0vh;
     height: 50vh;
   }
+
   #work-with-us .box {
+    margin-left: -40px;
+    width: 50%;
+    height: 40%;
   }
 
   #work-with-us .box h1 {
     font-size: 1.5rem;
   }
+  
+  #work-with-us .ml-auto {
+margin-top: 40%;
+margin-right: 10%;
+font-size: 2.5rem;
+    
+  }
+
 
   footer .row-3 {
     flex-direction: column;
   }
+  
+
 
   footer .row-3 ul {
     width: auto;

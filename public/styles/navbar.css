@@ -43,7 +43,11 @@ nav a:focus {
   margin-left: auto;
   margin-right: 5vw;
 }
+.social-media-links a {
+  color: white !important;
+}
 .social-media-links img {
+  font-size: 5.5rem;
   width: 2.3vw;
   height: 2.3vw;
 }
@@ -53,9 +57,15 @@ a,
 li {
   font-weight: 700 !important;
 }
+
+
 @media screen and (max-width: 612px) {
   .social-media-links img {
     width: 8.5vw;
     height: 8.5vw;
+  
+  }
+  .social-media-links {
+    display: none !important;
   }
 }

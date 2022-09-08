@@ -2,7 +2,7 @@
   background-size: 33% 100%;
   font-weight: bolder;
   background-color: black;
-  font-family: 'Roboto' !important;
+ 
 }
 
 #header h2 {
@@ -47,14 +47,16 @@ p {
   width: 62%;
   padding: 3vh 0;
   padding-left: 10vw;
+ 
 }
 
 p {
-  font-family: Roboto;
+text-align: justify;
+font-size: 1.3rem;
 }
 
 #second-section {
-  width: 25%;
+margin-left: 0%;
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
@@ -97,6 +99,7 @@ p {
 }
 
 .cards-container {
+ margin-block-start: 0%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,6 +183,9 @@ p {
 }
 
 @media screen and (max-width: 612px) {
+  #header{
+    height: 50vh;
+  }
   #main {
     flex-direction: column;
   }
@@ -190,10 +196,21 @@ p {
   .prop h2 {
     font-size: 1.8rem;
   }
-  #first-section,
-  #second-section {
+  #first-section {
     width: 100%;
     margin-top: 5vh;
     font-size: 1rem;
   }
+ 
+  #second-section {
+    width: 100%;
+    margin-top: 0vh;
+   
+    font-size: 1rem;
+  }
+ 
+  body{
+    background-color: rgb(245, 245, 245);
+  }
+  
 }

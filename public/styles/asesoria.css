@@ -46,7 +46,7 @@ h5 {
 }
 
 p {
-  font-family: Roboto;
+text-align: justify;
 }
 
 #first-section {
@@ -160,5 +160,8 @@ p {
 
   .conoce-equipo {
     right: -80px;
+  }
+  #header{
+    height: 50vh;
   }
 }
