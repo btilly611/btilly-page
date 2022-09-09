@@ -58,8 +58,9 @@ h1 {
 .plan button {
   background-color: black;
   color: white;
-  font-size: 9.5px;
+  font-size: 10.5px;
   width: auto;
+  font-weight: bold;
 }
 .select-plan-btn:hover{
 color: #bdd352;
@@ -269,6 +270,7 @@ iframe {
 
   #main-container {
     width: 100%;
+    padding: 10px;
   }
 
   .step-mark {
@@ -290,7 +292,7 @@ iframe {
   }
 
   .container.plan-details {
-    padding: 0 !important;
+    padding: 10px !important;
     max-width: 100%;
     margin-right: 10vw;
   }
