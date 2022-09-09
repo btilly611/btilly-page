@@ -14,10 +14,13 @@ const checks = Array.from(document.querySelectorAll('.check'))
 const numbers = Array.from(document.querySelectorAll('.number'))
 const stepMarks = document.querySelectorAll('.step-mark')    
 const stepMarksSubHeaders = document.querySelectorAll('.step-mark h6');
+
 function selectPlan(e,chosenPlan){
     let planInput = document.querySelector('#plan')
     planInput.value=chosenPlan
     gtag('plan',chosenPlan)
+
+
 }
 plans.forEach((plan)=>{
     plan.addEventListener('click',(e)=>{  
@@ -46,7 +49,7 @@ prev.disabled=true
 function prevStep(){
     if(stepCount > 1){
         nxt.disabled=false
-        nxt.style.display=""
+        nxt.style.display="none";
         prev.disabled=false
         stepCount--
         clocks[stepCount].style.display="none";
@@ -68,6 +71,8 @@ function prevStep(){
         console.log(stepCount,'SC')
         stepCount++
         stepCount === 1 ? prev.disabled=true : '';
+        prev.style.display="none";
+        
     }
 }
 function nxtStep(){
@@ -135,6 +140,7 @@ selectPlanBtns.forEach((button)=>{
         button.addEventListener('click',()=>{
             selectPlan()
             nxtStep()
+            prev.style.display="block";
             console.log('button clicked')
         })
     })

@@ -35,7 +35,7 @@ h1 {
   font-size: 22px;
 }
 .container.step-header p {
-  font-family: 'Roboto';
+  /*font-family: 'Roboto';*/
   font-size: 15px;
 }
 
@@ -61,7 +61,9 @@ h1 {
   font-size: 9.5px;
   width: auto;
 }
-
+.select-plan-btn:hover{
+color: #bdd352;
+}
 .container.plan-details {
   margin: 0 !important;
   padding-right: 0 !important;
@@ -81,7 +83,7 @@ td > :nth-child(1) {
 }
 tr > td:nth-child(1) {
   padding-left: 67px;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 tr::after {
@@ -207,14 +209,14 @@ iframe {
 
 .step.form button {
   background-color: #d5ea69;
-  padding: 5px;
-  border-radius: 2px;
-  font-size: 1rem;
+  padding: 15px;
+  border-radius: 5px;
+  border: snow;
+  font-size: larger;
   font-family: sans-serif;
   font-weight: 700;
-
-  font-family: Roboto;
-  font-weight: 300;
+  /*font-family: Roboto;*/
+  font-weight: bold;
 }
 
 .step.form button:hover {
@@ -227,6 +229,7 @@ iframe {
   padding-left: 15px;
   display: flex;
   align-items: center;
+  padding: 10px;
 }
 
 .icon-container {
@@ -291,7 +294,11 @@ iframe {
     max-width: 100%;
     margin-right: 10vw;
   }
-
+  tr > td:nth-child(1) {
+    padding-left: 67px;
+    font-size: 13px;
+  
+}
   .benefit {
     padding-left: 0;
   }
@@ -300,7 +307,7 @@ iframe {
   }
 
   #steps-container {
-    margin-left: 0;
+    margin: 10px !important;
   }
 
   tr > td:nth-child(1) {
