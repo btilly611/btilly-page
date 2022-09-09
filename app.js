@@ -96,6 +96,10 @@ app.post('/calendly', async (req, res) => {
             from: 'ventas@bakertilly.hn',
             subject: `Gracias por registrarte`,
             html: `
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    
                 <h4> Hola ${req.body.firstName},</h4>
         <br><br>
                 <div class="card" style="width: 40rem; background-color: grey;    background: #e7ff72;
@@ -126,18 +130,18 @@ app.post('/calendly', async (req, res) => {
         await sendGrid.send(message)
         res.render('calendly', { layout: false })
     } catch (e) {
-        res.status(404).send('Ha ocurrido un error',e)
+        res.status(404).send('Ha ocurrido un error', e)
     }
 })
 
-app.post('/contact', async (req,res)=>{
+app.post('/contact', async (req, res) => {
 
-    try{
-            const message = {
-                to: req.body.email,
-                from: 'ventas@bakertilly.hn',
-                subject: `Confirmación de Recepción`,
-                html: `
+    try {
+        const message = {
+            to: req.body.email,
+            from: 'ventas@bakertilly.hn',
+            subject: `Confirmación de Recepción`,
+            html: `
                 <h5>Estimado(a) ${req.body.firstName}</h5>
                 <p>
                     Gracias por ponerse en contacto. Nuestro equipo se comunicará con usted por este mismo medio dentro de las próximas 24 horas.
@@ -146,13 +150,13 @@ app.post('/contact', async (req,res)=>{
                     Puede ponerse en contacto con nosotros en cualquier momento llamando al (+504) 2239-2663.
                     Colonia Humuya, Sendero Ámbito, 2da Calle, Tegucigalpa, Honduras
                 </p>`
-            }
-            let contact = new homePageContact(req.body)
-            await contact.save()
-            await sendGrid.send(message)
-            res.send('Form submitted')
-        }catch(e){
-            res.send('there was an error')
         }
+        let contact = new homePageContact(req.body)
+        await contact.save()
+        await sendGrid.send(message)
+        res.send('Form submitted')
+    } catch (e) {
+        res.send('there was an error')
+    }
 })
 
