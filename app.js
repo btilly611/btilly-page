@@ -97,17 +97,27 @@ app.post('/calendly', async (req, res) => {
             subject: `Gracias por registrarte`,
             html: `
                 <h4> Hola ${req.body.firstName},</h4>
-        
-                <p>Estas un paso más cerca de adquirir un plan contable que mejor se adapte a las necesidades de su negocio.
-                Puedes conocer más sobre nuestro equipo de expertos en el siguiente enlace:
-                </p>
+        <br><br>
+                <div class="card" style="width: 40rem; background-color: grey;    background: #e7ff72;
+                border-radius: 10px;">
+                <!-- la url de la img es termporal-->
+            
+                <div class="card-body">
+                  <img src="http://www.bakertilly.hn/images/logo.svg">
+                  <br>
+                  <h5 class="card-title">Gracias por contactarnos</h5>
+                  <p class="card-text">Estas un paso más cerca de adquirir un plan contable que mejor se adapte a las necesidades de
+                    su negocio.
+                    Puedes conocer más sobre nuestro equipo de expertos en el siguiente enlace:</p>
+                  <a target="_blank" href="http://www.bakertilly.hn" class="btn btn-primary" style="background-color: black;">Ir a Bakertilly hn</a>
+                </div>
+              </div>
 
-                <p> https://www.bakertilly.hn</p>
-
-                <b>*Este mensaje se envió desde una dirección de solo notificación que no puede aceptar respuestas entrantes. 
+                <br>
+                <p style="font-size: 0.8rem; font-style: italic;"><i style="color: red;">*</i>&nbsp; Este mensaje se envió desde una dirección de solo notificación que no puede aceptar respuestas entrantes. 
 
                 Puedes ponerte en contacto con nosotros en cualquier momento llamando al (+504) 2239-2663.
-                Colonia Humuya, Sendero Ámbito, 2da Calle, Tegucigalpa, Honduras</b>
+                Colonia Humuya, Sendero Ámbito, 2da Calle, Tegucigalpa, Honduras</p>
             `
         }
         let contact = new ContactDetails(req.body)
