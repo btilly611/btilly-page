@@ -32,18 +32,25 @@ input:hover {
 }
 form button {
   background-color: #d5ea69 !important;
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
   border: none !important;
+
 }
 form button:hover {
-  background-color: gray !important;
+  background-color: black !important;
   color: #d5ea69 !important;
 }
 @media screen and (max-width: 612px) {
   #main {
     flex-direction: column;
   }
+  #main .contact-info {
+    display: none;
+  }
   #main > * {
     width: 100%;
+  }
+  body{
+    background: #dadbd4 !important;
   }
 }

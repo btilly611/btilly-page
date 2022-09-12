@@ -80,30 +80,31 @@
             </div>
         </div>
         <div id="form-container">
+            <br>
             <h1>Contáctanos</h1>
             <form action="/contact" method="POST">
                 <div class="d-flex" style="justify-content:space-evenly;">
                     <div class="form-group w-50">
                         <input type="text" class="form-control p-4" name="firstName" id="primerNombre"
-                            placeholder="Primer Nombre">
+                            placeholder="Primer Nombre" required>
                     </div>
                     <div class="form-group w-50 ml-2">
                         <input type="text" class="form-control p-4" name="lastName" id="apellido"
-                            placeholder="Apellido">
+                            placeholder="Primer Apellido" required>
                     </div>
                 </div>
                 <div class="d-flex" style="justify-content:space-evenly;">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control p-4" name="email" id="dirección" aria-describedby="emailHelp"
-                        placeholder="Dirección">
+                        placeholder="E-Mail" required>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" name="message" id="mensaje" aria-describedby="emailHelp"
-                        placeholder="Escribe tu mensaje">
+                        placeholder="Escribe tu mensaje" required>
                 </div>
                 <div class="d-flex w-100">
-                    <button type="submit" class="btn btn-primary mx-auto px-5">Enviar</button>
+                    <button type="submit" class="btn btn-primary mx-auto px-5"> <b>Enviar</b></button>
                 </div>
             </form>
         </div>
