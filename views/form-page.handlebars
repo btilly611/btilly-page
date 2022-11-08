@@ -50,12 +50,16 @@
         </div>
     </nav>
     <div class="buttons container">
-        <button class="button prev" style="display: none;">
+        <form action="/calendly" method="POST">
+        <button class="button prev" >
             Anterior
         </button>
-        <button class="button nxt" style="display: none;">
-            Siguiente
-        </button>
+                                                                                                   
+            <button type="submit" class="button nxt">
+                Siguiente
+            </button>                                            
+        </form> 
+        
     </div>
     <div class="container step-header">
         <h1>Selecciona el Servicio para tu negocio</h1>
@@ -74,23 +78,31 @@
                                 </th>
                                 <th>
                                     <div class="text-center" style="font-family:sans-serif;">
-                                        Desde <br> <span style="    color: rgb(213 255 0);
-    font-weight: bold;
-    font-size: 2rem;">$150</span> <br> al mes
+                                        Persona Natural <br>
+                                    </div>
+                                    <div class="text-center" style="font-family:sans-serif;">
+                                        Desde <span>$150</span>/anual <br> + IVA
                                     </div>
                                 </th>
                                 <th>
-                                    <div class="text-center" style="font-family:sans-serif" ;>
-                                        Desde <br><span style="    color: rgb(213 255 0);
-    font-weight: bold;
-    font-size: 2rem;"> $250 </span><br>al mes
+                                    <div class="text-center" style="font-family:sans-serif;">
+                                        Desde <span>$150</span>/mes <br> + IVA
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="text-center" style="font-family:sans-serif;">
+                                        Persona Jurídica <br>
+                                    </div>
+                                    <div class="text-center" style="font-family:sans-serif;">
+                                        Desde <span>$250</span>/mes <br> + IVA
                                     </div>
                                 </th>
                                 <th>
                                     <div class="text-center" style="font-family:sans-serif">
-                                        <!--Consigue una cotización-->
+                                        <div class="text-center" style="font-family:sans-serif;">
+                                            Consigue una cotización <br>
+                                        </div>
                                         
-                                        <span style="font-weight: bold;"> Plan personalizado </span>
                                     </div>
                                 </th>
                             </tr>
@@ -99,29 +111,51 @@
 
                                 </th>
                                 <th>
+                                    <div class="plan cero text-center">
+                                        Plan <br> Declarativo
+                                        <form action="/calendly" method="POST">                                            
+                                                <input type="text" id="plan" name="plan" value="" style="display:none;" required>                                                                                            
+                                                <button type="submit" class="btn select-plan-btn"style="width:100% !important;">
+                                                    Contratar
+                                                </button>                                            
+                                        </form>                                                                                
+                                        <div id="calendario" class="step third" style="height:auto;"></div>
+                                    </div>
+                                </th>
+                                <th>
                                     <div class="plan one text-center">
                                         Plan <br> Declarativo
-                                        <button class="btn select-plan-btn">
-                                            Contratar
-                                        </button>
+                                        <form action="/calendly" method="POST">                                                                                           
+                                            <button type="submit" class="btn select-plan-btn"style="width:100% !important;">
+                                                Contratar
+                                            </button>                                            
+                                        </form>                                                                                
+                                        <div id="calendario" class="step third" style="height:auto;"></div>
                                     </div>
                                 </th>
                                 <th>
                                     <div class="plan two text-center">
                                         Plan <br>
                                         Básico
-                                        <button class="btn select-plan-btn">
-                                            Contratar
-                                        </button>
+                                        <form action="/calendly" method="POST">                                                                                          
+                                            <button type="submit" class="btn select-plan-btn"style="width:100% !important;">
+                                                Contratar
+                                            </button>                                            
+                                        </form>                                                                                
+                                        <div id="calendario" class="step third" style="height:auto;"></div>
                                     </div>
                                 </th>
                                 <th>
                                     <div class="plan three text-center">
                                         Plan <br>
                                         Avanzado
-                                        <button class="btn select-plan-btn">
-                                            Contratar
-                                        </button>
+                                        <form action="/calendly" method="POST">                                            
+                                                                                                                                       
+                                            <button type="submit" class="btn select-plan-btn"style="width:100% !important;">
+                                                Contratar
+                                            </button>                                            
+                                        </form>                                                                                
+                                        <div id="calendario" class="step third" style="height:auto;"></div>
                                     </div>
                                 </th>
                             </tr>
@@ -139,11 +173,17 @@
                             <td class="dot-container">
                                 <div class="dot"></div>
                             </td>
+                            <td class="dot-container">
+                                <div class="dot"></div>
+                            </td>
                         </tr>
 
                         <tr>
                             <td class="benefit">
-                                Presentación Mensual de Declaración de Impuesto sobre Venta (ISV)
+                                Presentación Anual de Declaración de Impuesto sobre Venta (ISV)
+                            </td>
+                            <td class="dot-container">
+                                <div class="dot"></div>
                             </td>
                             <td class="dot-container">
                                 <div class="dot"></div>
@@ -169,10 +209,16 @@
                             <td class="dot-container">
                                 <div class="dot"></div>
                             </td>
+                            <td class="dot-container">
+                                <div class="dot"></div>
+                            </td>
                         </tr>
                         <tr>
                             <td class="benefit">
-                                Presentación de Declaraciones Informativas de Impuestos
+                                Presentación Mensual de Declaración de Impuesto sobre Venta (ISV)
+                            </td>
+                            <td class="dot-container">
+                                <div class="dot"></div>
                             </td>
                             <td class="dot-container">
                                 <div class="dot"></div>
@@ -203,6 +249,8 @@
                                 Registros contables de todas las operaciones realizadas por la empresa.
                             </td>
                             <td class="dot-container">
+                            </td>
+                            <td class="dot-container">
 
                             </td>
                             <td class="dot-container">
@@ -215,6 +263,8 @@
                         <tr>
                             <td class="benefit">
                                 Estados Financieros
+                            </td>
+                            <td class="dot-container">
                             </td>
                             <td class="dot-container">
 
@@ -232,6 +282,8 @@
                                 Estado Financiero Anual del 1 de enero a 31 de diciembre (periodo fiscal)
                             </td>
                             <td class="dot-container">
+                            </td>
+                            <td class="dot-container">
 
                             </td>
                             <td class="dot-container">
@@ -245,6 +297,8 @@
                             <td class="benefit">
                                 Notas relevantes en los Estados Financieros para más información sobre las partidas y
                                 estados de cuentas.
+                            </td>
+                            <td class="dot-container">
                             </td>
                             <td class="dot-container">
 
@@ -261,6 +315,8 @@
                                 Asesoría Financiera para toma de decisiones diarias
                             </td>
                             <td class="dot-container">
+                            </td>
+                            <td class="dot-container">
 
                             </td>
                             <td class="dot-container">
@@ -273,6 +329,8 @@
                         <tr>
                             <td class="benefit">
                                 Carta con recomendaciones para mejorar procesos administrativos
+                            </td>
+                            <td class="dot-container">
                             </td>
                             <td class="dot-container">
 
@@ -288,6 +346,8 @@
                             <td class="benefit">
                                 Preparación de Declaraciones de Volumen de Venta y cálculo de impuestos de Industria,
                                 Comercio y Servicios.
+                            </td>
+                            <td class="dot-container">
                             </td>
                             <td class="dot-container">
 
@@ -307,6 +367,8 @@
                                 sobre registros contables realizados.
                             </td>
                             <td class="dot-container">
+                            </td>
+                            <td class="dot-container">
 
                             </td>
                             <td class="dot-container">
@@ -319,6 +381,8 @@
                         <tr>
                             <td class="benefit">
                                 Sistema de Facturación “OUTLAYS” para empresas de servicios
+                            </td>
+                            <td class="dot-container">
                             </td>
                             <td class="dot-container">
 
@@ -334,6 +398,8 @@
                             <td class="benefit">
                                 Detalles de cuentas relevantes (conciliaciones bancarias y comparativo mensual) en
                                 Estados Financieros
+                            </td>
+                            <td class="dot-container">
                             </td>
                             <td class="dot-container">
 
@@ -375,50 +441,7 @@
                     </div>
                 </div>
                 <div class="step form">
-                    <form action="/calendly" method="POST" class="contact-form">
-                        <div class="d-flex">
-                            <input type="text" id="plan" name="plan" value="" style="display:none;" required>
-                            <div class="form-group w-50 mr-3">
-                                <input type="text" class="form-control" name="firstName" placeholder="Nombre" required>
-                            </div>
-                            <div class="form-group w-50">
-                                <input type="text" class="form-control" name="lastName" placeholder="Apellido" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="companyPosition" placeholder="Cargo" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="email" placeholder="Correo Electrónico"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label for="companyCategory">Tipo de Empresa</label>
-                            <select class="form-control" name="companyCategory" required>
-                                <option value="comerciante-individual">Comerciante Individual</option>
-                                <option value="sociedad-de-responsabilidad-limitada">Sociedad de Responsabilidad
-                                    Limitada</option>
-                                <option value="sociedad-anonima">Sociedad Anónima</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" class="form-control" name="rtn"
-                                placeholder="Registro Tributario Nacional" value="0" hidden>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="companyName"
-                                placeholder="Nombre de la Empresa" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="companyAddress"
-                                placeholder="Dirección de la Empresa" value="N/A" hidden>
-                        </div>
-                        <div class="d-flex">
-                            <button type="submit" class="mx-auto">Enviar Formulario</button>
-                        </div>
-                </div>
-                </form>
-                <div class="step third" style="height:auto;">
+                    
                 </div>
             </div>
         </div>
@@ -438,6 +461,7 @@
             </div>
             <div class="vertical-line">
             </div>
+            <!-- 
             <div class="step-mark">
                 <div class="icon-container">
                     <div class="number">
@@ -450,12 +474,12 @@
                     <h6>Información de Contacto</h6>
                 </div>
             </div>
-            <div class="vertical-line">
-            </div>
+            -->
+            
             <div class="step-mark">
                 <div class="icon-container">
                     <div class="number">
-                        03
+                        02
                     </div>
                     <img src="/images/wall-clock.png" alt="" class="img-fluid clock">
                     <img src="/images/check.png" alt="" class="img-fluid check">
@@ -468,7 +492,7 @@
     </section>
     <script src="scripts/steps.js">
     </script>
-    <script src="scripts/validateForm.js"></script>
+    
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
     <script>
         Calendly.initInlineWidget({
