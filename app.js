@@ -94,6 +94,7 @@ app.get('/form', (req, res) => {
 })
 app.post('/calendly', async (req, res) => {
     try {
+        /*
         const message = {
             to: req.body.email,
             from: 'ventas@bakertilly.hn',
@@ -133,6 +134,7 @@ app.post('/calendly', async (req, res) => {
         console.log(req.body.email)
         await contact.save()
         await sendGrid.send(message)
+        */
         res.render('calendly', { layout: false })
     } catch (e) {
         res.status(404).send('Ha ocurrido un error', e)

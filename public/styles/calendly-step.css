@@ -63,7 +63,7 @@ h1 {
   margin-left: 7%;
   position: absolute;
   right: 0;
-  bottom: 43vh;
+  bottom: 59%;
 }
 
 .step-mark {
@@ -178,7 +178,7 @@ iframe {
   }
 
   #steps-container {
-    position: relative;
+    position: absolute;
   }
 
   #steps-container {
@@ -192,7 +192,7 @@ iframe {
     margin-left: 0;
     position: relative;
     padding-bottom: 0;
-    bottom: 0;
+    bottom: 59%;
   }
 
   .container.step-header {
