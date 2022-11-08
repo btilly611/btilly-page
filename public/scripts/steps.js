@@ -1,4 +1,3 @@
-
 let stepCount = 0;
 const stepsHeader = document.querySelector('.step-header')
 const stepHeaders = ['Selecciona el servicio para tu negocio','Información de Contacto y de Negocio','Proceso de Pago']
@@ -19,8 +18,6 @@ function selectPlan(e,chosenPlan){
     let planInput = document.querySelector('#plan')
     planInput.value=chosenPlan
     gtag('plan',chosenPlan)
-
-
 }
 plans.forEach((plan)=>{
     plan.addEventListener('click',(e)=>{  
@@ -32,7 +29,9 @@ plans.forEach((plan)=>{
         })
        e.currentTarget.style.backgroundColor="#d5ea69";
        const chosenPlan = e.currentTarget.classList[1]
+       console.log('planes: ' + chosenPlan)
        const numberOfBenefits = benefits[chosenPlan]['numberOfBenefits'];
+       console.log(numberOfBenefits);
        const columnNumber = benefits[chosenPlan]['column'];
        gtag('event','plan-fue-escogido',{
            'value':chosenPlan
@@ -46,7 +45,7 @@ plans.forEach((plan)=>{
     })
 })
 prev.disabled=true
-function prevStep(){
+function prevStep(){    
     if(stepCount > 1){
         nxt.disabled=false
         nxt.style.display="none";
@@ -75,6 +74,7 @@ function prevStep(){
         
     }
 }
+
 function nxtStep(){
     gtag('event','nextStep',{
         nextStep:true
@@ -94,43 +94,75 @@ function nxtStep(){
         return
     }
     if(stepCount > 0){
+        //window.location.href="/calendly";
+        return res.redirect('/calendly');
+        //stepCount++
+    }
+}
+
+/*
+function nxtStep(){
+    alert(stepCount);
+    gtag('event','nextStep',{
+        nextStep:true
+    })
+    if(stepCount === 0){
+        numbers[stepCount].style.display="none"
+        steps[stepCount].style.display="block";
+        clocks[stepCount].style.display="block";
+        checks[stepCount].style.display="none";
+        stepMarks[stepCount].style.backgroundColor="black";
+        stepMarks[stepCount].style.color="#d5ea69";
+        stepMarksSubHeaders[stepCount].style.color="#d5ea69";
+        stepsHeader.querySelector('h1').innerText=stepHeaders[stepCount]
+        stepsHeader.querySelector('p').innerText=stepSubHeaders[stepCount]
         window.location.hash=stepHeaders[stepCount]
+        stepCount++
+        return
+    }
+    if(stepCount > 0){
+        window.location.hash=stepHeaders[3]
         prev.disabled=false
         nxt.style.display="none";
         steps[stepCount-1].style.display="none";
-        stepMarks[stepCount-1].style.backgroundColor="whitesmoke";
-        stepMarks[stepCount-1].style.color="black";
-        stepMarksSubHeaders[stepCount-1].style.color="black";
-        stepMarks[stepCount].style.backgroundColor="black"
-        stepMarks[stepCount].style.color="#d5ea69";
-        stepMarksSubHeaders[stepCount].style.color="#d5ea69";
-        clocks[stepCount-1].style.display="none";
-        checks[stepCount-1].style.display="block";
-        numbers[stepCount-1].style.display="none";
-        numbers[stepCount].style.display="none";
-        clocks[stepCount].style.display="block";
-        checks[stepCount].style.display="none";
-        steps[stepCount].style.display="block";
-        stepsHeader.querySelector('h1').innerText=stepHeaders[stepCount]
-        stepsHeader.querySelector('p').innerText=stepSubHeaders[stepCount]
+        stepMarks[3-1].style.backgroundColor="whitesmoke";
+        stepMarks[3-1].style.color="black";
+        stepMarksSubHeaders[3-1].style.color="black";
+        stepMarks[3].style.backgroundColor="black"
+        stepMarks[3].style.color="#d5ea69";
+        stepMarksSubHeaders[3].style.color="#d5ea69";
+        clocks[3-1].style.display="none";
+        checks[3-1].style.display="block";
+        numbers[3-1].style.display="none";
+        numbers[3].style.display="none";
+        clocks[3].style.display="block";
+        checks[3].style.display="none";
+        steps[3].style.display="block";
+        stepsHeader.querySelector('h1').innerText=stepHeaders[3]
+        stepsHeader.querySelector('p').innerText=stepSubHeaders[3]
         // if(stepCount === steps.length-1){
         //     nxt.disabled=true
         // }
         stepCount++
     }
 }
+*/
 const benefits = {
+    'cero':{
+        'numberOfBenefits':5,
+        'column':2
+    },
      'one':{
          'numberOfBenefits':5,
-         'column':2
+         'column':3
      },
      'two':{
          'numberOfBenefits':9,
-         'column':3
+         'column':4
      },
      'three':{
          'numberOfBenefits':15,
-         'column':4
+         'column':5
      }
 }
 const selectPlanBtns = Array.from(document.querySelectorAll('.plan button.select-plan-btn'))
