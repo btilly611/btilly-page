@@ -1,5 +1,5 @@
 #main {
-  height: 90vh;
+  height: 110vh;
   background-color: #dadcdb;
   display: flex;
   align-items: center;
@@ -65,7 +65,7 @@ p {}
 }
 
 .first-section {
-  width: 100%;
+  width: 25%;
   display: flex;
   height: 100%;
 }
