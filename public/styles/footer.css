@@ -39,7 +39,7 @@ footer .logo {
 .logos-container {
   display: flex;
   width: 70%;
-  background-color: black;
+  background-color: rgb(43, 48, 58);
   margin-left: 20%;
   margin-bottom: 20px;
 }
