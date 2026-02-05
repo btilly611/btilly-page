@@ -4,7 +4,7 @@ nav > * {
 }
 
 nav {
-  background-color: white;
+  background-color: rgb(43, 48, 58);
   padding: 2.5vh 0 !important;
 }
 .nav a {
@@ -30,7 +30,7 @@ nav a:focus {
 }
 
 .dropdown-item:focus {
-  background-color: white;
+  background-color: rgb(43, 48, 58);
   color: black;
 }
 .dropdown-menu {
