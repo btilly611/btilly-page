@@ -9,7 +9,7 @@ nav {
   padding: 2vh 0 !important;
 }
 nav ul {
-  color: gray;
+  color: white;
   margin-right: 7vw;
 }
 .navbar-brand {
@@ -24,7 +24,7 @@ nav li a {
   text-transform: uppercase !important;
 }
 nav a:focus {
-  background-color: none;
+  background-color: white;
 }
 .dropdown-item:focus {
   background-color: white;
