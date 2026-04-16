@@ -1,0 +1,12 @@
+{
+  "name": "bakertilly-honduras",
+  "version": "2.0.0",
+  "description": "Nueva pagina web de Baker Tilly",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
