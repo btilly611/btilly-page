@@ -1,0 +1,63 @@
+/* ==========================================================
+   oficinas.css - ESTILOS PARA LA PÁGINA DE OFICINAS
+   ========================================================== */
+
+/* 1. REGISTRO DE LA FUENTE CARNAC */
+@font-face {
+    font-family: 'Carnac';
+    src: url('../fonts/carnac-bold.otf') format('opentype'),
+         url('../fonts/carnac-bold.ttf') format('truetype');
+    font-weight: 800; 
+    font-style: normal;
+}
+
+.font-headingBold, h1, h2, h3, h4 { 
+    font-family: 'Carnac', Arial, sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+/* 2. EFECTOS PARA LAS TARJETAS DE OFICINAS */
+.office-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.office-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.office-img-wrapper {
+    overflow: hidden;
+}
+
+.office-img-wrapper img {
+    transition: transform 0.5s ease;
+}
+
+.office-card:hover .office-img-wrapper img {
+    transform: scale(1.05);
+}
+
+/* 3. ANIMACIONES DE CARGA (FADE IN UP) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+        opacity: 0; /* Empieza invisible */
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Retrasos para el efecto cascada de las tarjetas */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.3s; }
+.delay-300 { animation-delay: 0.5s; }

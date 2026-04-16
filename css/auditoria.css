@@ -1,0 +1,125 @@
+/* auditoria.css - ESTILOS ESPECÍFICOS PARA LA PÁGINA DE AUDITORÍA */
+
+/* 1. FUENTES */
+@font-face {
+    font-family: 'Carnac';
+    src: url('../fonts/carnac-bold.otf') format('opentype'),
+         url('../fonts/carnac-bold.ttf') format('truetype');
+    font-weight: 800; 
+    font-style: normal;
+}
+
+/* Aplicar Carnac a los títulos */
+.font-headingBold, h1, h2, h3, h4 {
+    font-family: 'Carnac', sans-serif !important;
+}
+
+/* 2. OVERLAY HERO */
+.hero-overlay {
+    background: linear-gradient(90deg, rgba(26,29,35,0.95) 0%, rgba(26,29,35,0.8) 50%, transparent 100%);
+}
+
+/* 3. TARJETA FLOTANTE (STICKY) */
+.sticky-wrapper {
+    position: -webkit-sticky; /* Soporte Safari */
+    position: sticky;
+    top: 130px; /* Distancia desde la parte superior para no chocar con el header */
+    z-index: 20;
+    margin-bottom: 2rem;
+}
+
+.contact-card {
+    background-color: #2B303A; /* Fondo charcoal oscuro */
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* 4. BOTÓN VERDE LIMA (GLOW) */
+.btn-glow {
+    background-color: #C9EC51; /* Growth */
+    color: #2B303A;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1rem 2.5rem; 
+    border-radius: 9999px;
+    display: inline-block; 
+    width: auto; 
+    min-width: 200px; 
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(201, 236, 81, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-glow:hover {
+    background-color: #d4f565;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(201, 236, 81, 0.6);
+}
+
+/* 5. TARJETAS DE PROCESO (GRID 12 PASOS) */
+.process-card {
+    background-color: rgba(255, 255, 255, 0.03); 
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+}
+
+.process-card:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255,255,255,0.1);
+    transform: translateY(-5px);
+}
+
+/* Efecto hover suave para los iconos grandes */
+.icon-hover-effect {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.parent-hover:hover .icon-hover-effect {
+    transform: scale(1.1);
+}
+
+/* ==========================================================
+   6. ANIMACIONES ON-SCROLL (SUAVES Y ELEGANTES)
+   ========================================================== */
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(15px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.animate-fade-in {
+    opacity: 0; 
+    transform: translateY(15px); 
+    visibility: hidden;
+}
+
+.animate-fade-in.reveal-visible {
+    visibility: visible;
+    animation: fadeInUp 1.2s ease forwards; 
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }

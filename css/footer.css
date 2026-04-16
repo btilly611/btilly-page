@@ -1,0 +1,98 @@
+/* VARIABLES CORPORATIVAS */
+:root {
+  --bt-charcoal: #2b303a;
+  --bt-growth-green: #c9ec51;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* Fuente unificada */
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bg-bt-dark { background-color: var(--bt-charcoal); }
+
+/* --- TÍTULOS (ESTILO HEADER) --- */
+.footer-title {
+    color: var(--bt-growth-green);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Negrita como el header */
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+}
+
+/* --- ENLACES Y LISTAS --- */
+.footer-list {
+    color: #d1d5db;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; /* Más fino para elegancia */
+    font-size: 14px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li { margin-bottom: 12px; }
+
+.footer-list a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.footer-list a:hover {
+    color: white;
+    padding-left: 4px; /* Pequeño desplazamiento al pasar el mouse */
+}
+
+/* --- ICONOS CALADOS (Círculo blanco, logo color footer) --- */
+.social-circle {
+    background-color: #FFFFFF;
+    color: var(--bt-charcoal);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none;
+}
+
+.social-circle svg {
+    width: 22px;
+    height: 22px;
+}
+
+.social-circle:hover {
+    background-color: var(--bt-growth-green);
+    transform: translateY(-3px);
+    color: var(--bt-charcoal);
+}
+
+/* --- SLOGAN --- */
+.slogan-container {
+    display: block;
+    text-align: left;
+}
+
+/* --- LEYENDA LEGAL --- */
+.legal-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #6b7280;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .md\:col-span-4 {
+        align-items: center !important;
+        margin-top: 40px;
+    }
+    .slogan-container {
+        text-align: center;
+    }
+}

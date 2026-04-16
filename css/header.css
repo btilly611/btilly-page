@@ -1,0 +1,290 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --bt-charcoal: #2B303A; 
+            --bt-growth-green: #C9EC51;
+            --bt-aqua: #00BAB3;
+            --bt-aqua-light: #E0F2EF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .bg-bt-dark { background-color: var(--bt-charcoal); }
+        .text-bt-lime { color: var(--bt-growth-green); }
+
+        /* --- ESTILOS DE NAVEGACIÓN --- */
+        .nav-item {
+            font-size: 16px;
+            font-weight: 700;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 39px 20px;
+            transition: color 0.2s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .nav-item:hover { color: var(--bt-growth-green); }
+
+        .nav-item svg {
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .nav-group:hover .nav-item svg {
+            transform: rotate(180deg);
+            color: var(--bt-growth-green);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 240px;
+            background-color: var(--bt-charcoal);
+            border-top: 3px solid var(--bt-growth-green);
+            display: flex; 
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 50;
+            
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .nav-group:hover .dropdown-menu { 
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            padding: 12px 20px;
+            color: #FFFFFF;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            display: block;
+        }
+
+        .dropdown-item:hover {
+            background-color: #FFFFFF;
+            color: var(--bt-charcoal);
+            padding-left: 25px;
+        }
+
+        /* --- NUEVO: BOTÓN DE CONTACTO ULTRA PREMIUM --- */
+        .btn-contact {
+            background-color: var(--bt-growth-green);
+            color: var(--bt-charcoal);
+            padding: 7px 15px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700; 
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative; 
+            overflow: hidden; /* Mantiene el brillo adentro del botón */
+            z-index: 1;
+        }
+
+        /* 1. Efecto de "Brillo de Cristal" constante para llamar la atención */
+        .btn-contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg);
+            z-index: -1;
+            animation: brilloLlamada 3s infinite;
+        }
+
+        /* 2. Efecto al pasar el mouse (Levantamiento + Doble Pulso de Sonar) */
+        .btn-contact:hover,
+        .btn-contact:active {
+            transform: translateY(-2px);
+            animation: doblePulsoContacto 1.5s infinite;
+        }
+
+        /* Motores de las nuevas animaciones del botón */
+        @keyframes brilloLlamada {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
+        }
+
+        @keyframes doblePulsoContacto {
+            0% {
+                box-shadow: 0 0 0 0 rgba(201, 236, 81, 0.8), 0 0 0 0 rgba(201, 236, 81, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(201, 236, 81, 0), 0 0 0 0 rgba(201, 236, 81, 0.8);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(201, 236, 81, 0), 0 0 0 15px rgba(201, 236, 81, 0);
+            }
+        }
+
+        /* --- MICROINTERACCIONES DE ÍCONOS --- */
+        
+        .icon-globe svg {
+            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .icon-globe:hover svg {
+            transform: rotate(45deg) scale(1.1);
+        }
+
+        .icon-search svg {
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .icon-search:hover svg {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        #btn-mobile {
+            position: relative;
+            width: 38px;
+            height: 38px;
+        }
+
+        @media (min-width: 1280px) {
+            #btn-mobile {
+                display: none !important;
+            }
+        }
+
+        #icon-bars, #icon-close {
+            position: absolute;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        #icon-bars {
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+        }
+        #icon-close {
+            opacity: 0;
+            transform: rotate(-90deg) scale(0.5);
+        }
+
+        #btn-mobile.is-active #icon-bars {
+            opacity: 0;
+            transform: rotate(90deg) scale(0.5); 
+        }
+        #btn-mobile.is-active #icon-close {
+            opacity: 1;
+            transform: rotate(0deg) scale(1); 
+        }
+
+/* --- ESTILOS MÓVILES ELEGANTES --- */
+@media (max-width: 1279px) {
+    #btn-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu-active {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bt-charcoal);
+        padding-bottom: 20px;
+        align-items: flex-end !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        padding-right: 24px; 
+        padding-left: 24px;
+        animation: slideDownMobile 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    }
+    .mobile-menu-active nav {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-end;
+        margin: 0 !important;
+    }
+    .mobile-menu-active .nav-group {
+        width: 100%;
+        text-align: right;
+        border-bottom: 1px solid rgba(255,255,255,0.05); 
+    }
+    .mobile-menu-active .nav-item {
+        padding: 15px 0; 
+        width: 100%;
+        justify-content: flex-end;
+        gap: 12px;
+    }
+    
+    .mobile-menu-active .dropdown-menu {
+        position: static;
+        display: none; 
+        box-shadow: none;
+        background-color: transparent; 
+        width: 100%; 
+        align-items: flex-end; 
+        padding-right: 10px; 
+        margin-bottom: 10px;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .mobile-menu-active .dropdown-item {
+        border-bottom: none; 
+        padding: 8px 0;
+        color: #A0AAB2; 
+        text-align: right; 
+        width: auto;
+        padding-right: 0; 
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    }
+
+    .mobile-menu-active .dropdown-item:hover,
+    .mobile-menu-active .dropdown-item:active {
+        background-color: transparent !important; 
+        color: var(--bt-growth-green) !important; 
+        padding-left: 0; 
+        padding-right: 15px; 
+    }
+
+    .mobile-menu-active .nav-group:hover .dropdown-menu {
+        display: none !important; 
+    }
+    
+    .mobile-menu-active .nav-group.open-mobile .dropdown-menu {
+        display: flex !important;
+        animation: fadeInSubmenu 0.3s ease forwards;
+    }
+
+    .mobile-menu-active .nav-group.open-mobile .nav-item svg {
+        transform: rotate(180deg);
+        color: var(--bt-growth-green);
+    }
+
+    .mobile-menu-active .btn-contact {
+        margin: 20px 0;
+        align-self: flex-end;
+    }
+
+    /* Motores de animación móvil */
+    @keyframes slideDownMobile {
+        from { opacity: 0; transform: translateY(-15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInSubmenu {
+        from { opacity: 0; transform: translateY(-5px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}

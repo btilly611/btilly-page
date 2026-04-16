@@ -1,0 +1,105 @@
+/* ==========================================================
+   cultura.css - ESTILOS PARA LA PÁGINA DE NUESTRA CULTURA
+   ========================================================== */
+
+@font-face { font-family: 'Carnac'; src: url('../fonts/carnac-regular.otf'); font-weight: normal; }
+@font-face { font-family: 'Carnac'; src: url('../fonts/carnac-bold.otf'); font-weight: 700; }
+@font-face { font-family: 'Carnac'; src: url('../fonts/carnac-extrabold.otf'); font-weight: 800; }
+
+body { font-family: 'Roboto', sans-serif; color: #2B303A; }
+
+.font-headingBold, h1, h2, h3, h4 { 
+    font-family: 'Carnac', sans-serif !important; 
+    font-weight: 700 !important; 
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+/* OVERLAY HERO */
+.hero-overlay {
+    background: linear-gradient(to right, rgba(43,48,58,0.95) 0%, rgba(43,48,58,0.7) 50%, rgba(43,48,58,0.2) 100%);
+}
+
+/* TARJETAS DE VALORES */
+.value-card {
+    background-color: #ffffff;
+    border: 1px solid #dfe0e2;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.value-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #00BAB3;
+    transition: width 0.4s ease;
+}
+
+.value-card.growth-accent::after {
+    background-color: #C9EC51;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+}
+
+.value-card:hover::after {
+    width: 100%;
+}
+
+.value-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* BOTONES */
+.btn-glow {
+    background-color: #C9EC51;
+    color: #2B303A;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1rem 2.5rem; 
+    border-radius: 9999px;
+    display: inline-block; 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(201, 236, 81, 0.3);
+}
+
+.btn-glow:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+/* ANIMACIONES */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { opacity: 0; transform: translateY(20px); visibility: hidden; }
+.animate-fade-in.reveal-visible { visibility: visible; animation: fadeInUp 1s ease forwards; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
