@@ -1,0 +1,3 @@
+"scripts": {
+  "star": "node server.js"
+}
