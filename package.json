@@ -1,8 +1,6 @@
 {
   "name": "mi-proyecto-web",
   "version": "1.0.0",
-  "description": "Mi pagina web",
-  "main": "index.html",
   "scripts": {
     "start": "node server.js"
   },
