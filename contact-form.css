@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: CarnacLight, Arial, Helvetica, sans-serif;
+}
+
+.social-media-links {
+  font-size: 30px;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: 5vw;
+}
+
+nav {
+  box-shadow: 10px 10px 10px rgb(122, 122, 122);
+}
+.container {
+  margin-top: 200px;
+  width: 50%;
+}
+
+.main-container {
+  padding: 20vh 0;
+  align-items: center;
+}
+.form-container {
+  display: inline-block;
+  width: 65%;
+  padding: 0 5vw;
+  vertical-align: middle;
+}
+
+.plan {
+  border: 2px black solid;
+  box-sizing: border-box;
+  padding: 1vh 3vw;
+  margin-top: 3vh;
+  background-color: #f3f1f1;
+}
+
+.plan:hover {
+  cursor: pointer;
+}
+
+.loading-icon {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  margin-left: 2vw;
+}
+
+.loading-icon img {
+  max-width: 100%;
+}
+
+.numero-de-paso {
+  text-transform: uppercase;
+}
+.numero-de-paso h3,
+.descripcion-de-pasos {
+  font-size: 23px;
+  margin-top: 3vh;
+}
+.nombre-de-paso h3 {
+  font-size: 35px;
+}
+
+.button-container button {
+  position: relative !important;
+  display: inline-block !important;
+  box-sizing: border-box !important;
+  width: 49.6% !important;
+  padding: 5px !important;
+  margin: 0 !important;
+  margin-top: 2vh !important;
+  border: none !important;
+  background-color: black;
+  color: white;
+}
+
+.button-container button:hover {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 612px) {
+  .form-container,
+  .loading-icon {
+    width: 100%;
+    margin-top: 5vh;
+  }
+
+  .button-container button {
+    width: 45% !important;
+  }
+}
