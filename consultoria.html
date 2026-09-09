@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Consultoría | Baker Tilly Honduras</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/consultoria.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#2B303A',
+                        'charcoal-gradient': '#1a1d23',
+                        'charcoal-15': '#dfe0e2',
+                        'charcoal-5': '#f5f5f6',
+                        growth: '#C9EC51',
+                        aqua: '#00BAB3',
+                        'aqua-15': '#f5f5f6', 
+                    },
+                    spacing: {
+                        '10': '0.625rem', '16': '1rem', '24': '1.5rem', '32': '2rem', '33': '2.0625rem', '40': '2.5rem',
+                        '64': '4rem', '70': '4.375rem', '80': '5rem', '96': '6rem', 
+                        '176': '11rem', '333': '333px', '480': '480px',
+                        'em': '1em'
+                    },
+                    fontSize: {
+                        'huge': '1.5rem',
+                        'h2': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="relative antialiased text-charcoal bg-white flex flex-col min-h-screen">
+
+    <header class="bg-bt-dark w-full sticky top-0 z-[1000] px-6 lg:px-9 border-b border-white/5" style="background-color: #2B303A;">
+        <div class="max-w-[1800px] mx-auto flex justify-between items-center min-h-[90px]">
+            
+            <div class="flex items-center py-3">
+                <a href="index.html" class="flex items-center transition hover:opacity-80">
+                      <img src="img/White.png" alt="Logo Baker Tilly" class="h-[54px] w-auto">
+                </a>
+            </div>
+
+            <div class="flex items-center">
+                
+                <div id="menu-container" class="hidden xl:flex items-center mr-6 gap-5">
+                    <nav class="flex items-center">
+                        <div class="nav-group relative h-full">
+                            <div class="nav-item">Nosotros <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" opacity="100"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                            <div class="dropdown-menu">
+                                <a href="nosotros.html" class="dropdown-item">Nosotros</a>
+                                <a href="liderazgo.html" class="dropdown-item">Liderazgo</a>
+                                <a href="calidad.html" class="dropdown-item">Calidad</a>
+                                <a href="https://www.bakertilly.global" target="_blank" rel="noopener noreferrer" class="dropdown-item">Baker Tilly International</a>
+                            </div>
+                        </div>
+
+                        <div class="nav-group relative h-full">
+                            <div class="nav-item">Prácticas <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" opacity="100"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                            <div class="dropdown-menu">
+                                <a href="auditoria.html" class="dropdown-item">Auditoría</a>
+                                <a href="consultoria.html" class="dropdown-item">Consultoría</a>
+                                <a href="legal.html" class="dropdown-item">Legal</a>
+                                <a href="impuesto.html" class="dropdown-item">Impuestos</a>
+                                <a href="contabilidad.html" class="dropdown-item">Advisory</a>
+                            </div>
+                        </div>
+
+                        <div class="nav-group relative h-full">
+                            <a href="oficinas.html" class="nav-item cursor-pointer block w-full py-3 xl:py-0 xl:px-3 border-b border-white/5 xl:border-none hover:text-growth transition">Oficinas</a>
+                        </div>
+
+                        <div class="nav-group relative h-full">
+                            <div class="nav-item">Carrera <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" opacity="100"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                            <div class="dropdown-menu">
+                                <a href="vacantes.html" class="dropdown-item">Vacantes</a>
+                                <a href="cultura.html" class="dropdown-item">Nuestra Cultura</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <button onclick="window.location.href='contacto.html'" class="btn-contact mr-2">Contáctanos</button>
+                </div>
+
+                <div class="flex items-center space-x-2">
+                    
+                    <button id="btn-search" class="icon-search text-white opacity-90 hover:text-bt-lime transition">
+                        <svg width="50" height="42" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16.0002" cy="14.6004" r="8.14336" stroke="white" stroke-width="2"></circle>
+                            <line x1="22.319" y1="21.293" x2="25.0449" y2="24.0188" stroke="white" stroke-width="2" stroke-linecap="round"></line>
+                        </svg>
+                    </button>
+                    
+                    <a href="https://www.bakertilly.global" target="_blank" class="icon-globe text-white opacity-90 hover:text-bt-lime transition block">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2 12H22" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+
+                    <button id="btn-mobile" class="xl:hidden text-white pl-2 focus:outline-none">
+                        <svg id="icon-bars" width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                        <svg id="icon-close" width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="search-modal" class="absolute top-0 left-0 w-full h-[100px] z-[2000] hidden items-center justify-end px-6 lg:px-9 opacity-0 transition-opacity duration-300" style="background-color: #2B303A;">
+            <div class="w-full max-w-5xl flex items-center justify-end gap-3 md:gap-4 h-full relative pt-3">
+                
+                <div class="relative w-full max-w-[600px]">
+                    <input type="text" id="search-input" autocomplete="off" placeholder="Buscar" class="w-full bg-white text-charcoal text-lg py-2.5 pl-6 pr-12 rounded-full focus:outline-none shadow-lg">
+                    
+                    <div class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65" stroke-linecap="round"></line></svg>
+                    </div>
+                    
+                    <div id="search-results" class="absolute top-[120%] left-0 w-full bg-white rounded-xl shadow-2xl overflow-hidden max-h-[60vh] overflow-y-auto flex-col border border-gray-100 hidden">
+                    </div>
+                </div>
+
+                <button id="close-search" class="ml-4 md:ml-6 flex items-center gap-2 bg-white text-charcoal px-5 py-2.5 rounded-full font-bold text-[15px] hover:bg-aqua hover:text-white transition-all duration-300 shadow-lg shrink-0">
+                    Close
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <section class="consult-hero relative w-full h-[500px] overflow-hidden">
+            <div class="absolute inset-0 w-full h-full -z-10">
+                <img src="img/Consultoria.jpeg" alt="Consultoría Baker Tilly" class="w-full h-full object-cover"/>
+                <div class="hero-overlay absolute inset-0"></div>
+            </div>
+            <div class="container mx-auto px-6 h-full flex items-center pt-20 relative z-10">
+                <div class="text-white w-full animate-fade-in">
+                    <h1 class="font-headingBold text-5xl lg:text-7xl leading-tight mb-6">
+                        Consultoría de <br><span class="text-growth">Negocios</span>
+                    </h1>
+                    <div class="h-1 w-24 bg-growth mb-6"></div>
+                    <p class="text-xl md:text-2xl font-light opacity-90 max-w-2xl">
+                        Estrategia, Riesgo y Tecnología para un crecimiento sostenible.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white py-24 lg:py-32 relative">
+            <div class="container mx-auto px-6 animate-fade-in delay-100">
+                <div class="max-w-5xl">
+                    <h2 class="text-4xl lg:text-5xl font-headingBold mb-6 text-charcoal">Consultoría Especializada</h2>
+                    <div class="w-24 h-1 bg-growth mb-10"></div>
+                    
+                    <div class="prose prose-lg max-w-none text-gray-600 text-justify leading-loose">
+                        <p>
+                            La Consultoría de servicios especializados, complementa de gran manera los servicios que la firma ya entrega al mercado nacional. Estos servicios promueven la interrelación entre consultores nacionales y extranjeros que brindan su expertos y amplios conocimientos en el desarrollo de sus actividades de consultoría. Estos servicios incluyen diferentes alcances con soluciones que se acomodan a las necesidades de los clientes.
+                        </p>
+                        
+                        <h3 class="text-3xl font-headingBold mt-16 mb-6 text-charcoal flex items-center gap-3">
+                            <span class="w-2 h-8 bg-aqua rounded-full"></span> Precios de Transferencia
+                        </h3>
+                        
+                        <p>
+                            Los precios de transferencia surgen para controlar las transacciones entre las partes relacionadas de un grupo económico. Se definen como el precio o el monto por el cual una serie de empresas relacionadas pactan transar un bien o un servicio entre ellas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 overflow-hidden" style="background-color: #2B303A;">
+            <div class="container mx-auto px-6 animate-fade-in delay-100">
+                
+                <div class="w-full mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-headingBold text-white mb-6">
+                        <span style="color: #C9EC51;">¿Ocupo Un Estudio</span><br>De Precios De Transferencia?
+                    </h2>
+                    <div class="w-24 h-1 bg-growth"></div>
+                </div>
+
+                <div class="bt-desktop-diagram">
+                    <div class="bt-caja bt-abs" style="top: 0; left: 0; width: 160px; height: 65px;">Control, dirección</div>
+                    <div class="bt-caja bt-abs" style="top: 0; left: 220px; width: 160px; height: 65px;">Voto o capital<br>social 50%</div>
+                    <div class="bt-caja bt-abs" style="top: 0; left: 440px; width: 160px; height: 65px;">Consejeros o<br>administradores</div>
+                    <div class="bt-caja bt-abs" style="top: 0; left: 660px; width: 160px; height: 65px;">Establecimientos<br>permanentes</div>
+                    <div class="bt-caja bt-abs" style="top: 0; left: 880px; width: 160px; height: 65px;">Presunta Vinculación<br>(Internacional)</div>
+
+                    <div class="bt-arrow-h" style="top: 32px; left: 165px; width: 45px;"><span class="bt-text-h">NO</span></div>
+                    <div class="bt-arrow-h" style="top: 32px; left: 385px; width: 45px;"><span class="bt-text-h">NO</span></div>
+                    <div class="bt-arrow-h" style="top: 32px; left: 605px; width: 45px;"><span class="bt-text-h">NO</span></div>
+                    <div class="bt-arrow-h" style="top: 32px; left: 825px; width: 45px;"><span class="bt-text-h">NO</span></div>
+
+                    <div class="bt-big-no-route"><span class="bt-text-big-no">NO</span></div>
+
+                    <div class="bt-arrow-v" style="top: 70px; left: 80px; height: 50px;"><span class="bt-text-v">SI</span></div>
+                    <div class="bt-arrow-v" style="top: 70px; left: 300px; height: 50px;"><span class="bt-text-v">SI</span></div>
+                    <div class="bt-arrow-v" style="top: 70px; left: 520px; height: 50px;"><span class="bt-text-v">SI</span></div>
+                    <div class="bt-arrow-v" style="top: 70px; left: 740px; height: 50px;"><span class="bt-text-v">SI</span></div>
+                    <div class="bt-arrow-v" style="top: 70px; left: 960px; height: 50px;"><span class="bt-text-v">SI</span></div>
+
+                    <div class="bt-caja bt-abs" style="top: 130px; left: 0; width: 160px; height: 65px;">Relacionada</div>
+                    <div class="bt-caja bt-abs" style="top: 130px; left: 220px; width: 160px; height: 65px;">Relacionada</div>
+                    <div class="bt-caja bt-abs" style="top: 130px; left: 440px; width: 160px; height: 65px;">Relacionada</div>
+                    <div class="bt-caja bt-abs" style="top: 130px; left: 660px; width: 160px; height: 65px;">Relacionada</div>
+                    <div class="bt-caja bt-abs" style="top: 130px; left: 880px; width: 160px; height: 65px;">Relacionada</div>
+
+                    <div class="bt-bus-drop" style="top: 195px; left: 80px; height: 25px;"></div>
+                    <div class="bt-bus-drop" style="top: 195px; left: 300px; height: 25px;"></div>
+                    <div class="bt-bus-drop" style="top: 195px; left: 520px; height: 25px;"></div>
+                    <div class="bt-bus-drop" style="top: 195px; left: 740px; height: 25px;"></div>
+                    <div class="bt-bus-drop" style="top: 195px; left: 960px; height: 25px;"></div>
+                    <div class="bt-bus-horizontal" style="top: 220px; left: 80px; width: 880px;"></div>
+                    
+                    <div class="bt-arrow-v-white" style="top: 222px; left: 520px; height: 23px;"></div>
+
+                    <div class="bt-caja bt-abs bt-pregunta" style="top: 255px; left: 295px; width: 450px; height: 80px;">¿Usted desarrolló transacciones con<br>estas partes durante el periodo fiscal?</div>
+
+                    <div class="bt-arrow-h" style="top: 295px; left: 750px; width: 25px;"><span class="bt-text-h">NO</span></div>
+
+                    <div class="bt-caja bt-abs" style="top: 262px; left: 785px; width: 250px; height: 65px;">Usted está libre de precios<br>de transferencia</div>
+
+                    <div class="bt-arrow-v" style="top: 340px; left: 520px; height: 50px;"><span class="bt-text-v">SI</span></div>
+
+                    <div class="bt-caja bt-abs" style="top: 400px; left: 410px; width: 220px; height: 65px;">Usted tiene que analizar<br>sus transacciones</div>
+
+                    <div class="bt-arrow-h-white" style="top: 432px; left: 635px; width: 15px;"></div>
+
+                    <a href="contacto.html" class="bt-caja bt-abs bt-boton" style="top: 400px; left: 660px; width: 250px; height: 65px; text-decoration: none;">Ocupo un Estudio de Precios<br>de Transferencia</a>
+                </div>
+
+                <div class="bt-mobile-diagram">
+                    <p class="bt-mobile-aviso">Sigue el flujo lógico hacia abajo ▼</p>
+                    
+                    <div class="bt-m-cond">
+                        <div class="bt-caja">Control, dirección</div>
+                        <div class="bt-m-arrow-h"><span class="bt-m-text-h">SI</span></div>
+                        <div class="bt-caja">Relacionada</div>
+                    </div>
+                    <div class="bt-m-arrow-v bt-m-arrow-v-left"><span class="bt-m-text-v">NO</span></div>
+                    
+                    <div class="bt-m-cond">
+                        <div class="bt-caja">Voto o capital...</div>
+                        <div class="bt-m-arrow-h"><span class="bt-m-text-h">SI</span></div>
+                        <div class="bt-caja">Relacionada</div>
+                    </div>
+                    <div class="bt-m-arrow-v bt-m-arrow-v-left"><span class="bt-m-text-v">NO</span></div>
+                    
+                    <div class="bt-m-cond">
+                        <div class="bt-caja">Consejeros o<br>admin.</div>
+                        <div class="bt-m-arrow-h"><span class="bt-m-text-h">SI</span></div>
+                        <div class="bt-caja">Relacionada</div>
+                    </div>
+                    <div class="bt-m-arrow-v bt-m-arrow-v-left"><span class="bt-m-text-v">NO</span></div>
+                    
+                    <div class="bt-m-cond">
+                        <div class="bt-caja">Establecimientos<br>permanentes</div>
+                        <div class="bt-m-arrow-h"><span class="bt-m-text-h">SI</span></div>
+                        <div class="bt-caja">Relacionada</div>
+                    </div>
+                    <div class="bt-m-arrow-v bt-m-arrow-v-left"><span class="bt-m-text-v">NO</span></div>
+                    
+                    <div class="bt-m-cond">
+                        <div class="bt-caja">Presunta<br>Vinculación</div>
+                        <div class="bt-m-arrow-h"><span class="bt-m-text-h">SI</span></div>
+                        <div class="bt-caja">Relacionada</div>
+                    </div>
+                    
+                    <div class="bt-m-bifurcacion">
+                        <div class="bt-m-ruta-no">
+                            <div class="bt-m-arrow-v"><span class="bt-m-text-v">NO</span></div>
+                            <div class="bt-caja bt-libre">Usted está libre de<br>precios de transferencia</div>
+                        </div>
+                    </div>
+
+                    <div class="bt-m-divisor">
+                        <span>Si resultó ser parte "Relacionada"</span>
+                        <div class="bt-m-flecha-down">▼</div>
+                    </div>
+
+                    <div class="bt-caja bt-pregunta">¿Usted desarrolló transacciones con estas partes durante el periodo fiscal?</div>
+                    
+                    <div class="bt-m-arrow-v bt-m-arrow-center"><span class="bt-m-text-v">NO</span></div>
+                    <div class="bt-caja bt-libre">Usted está libre de<br>precios de transferencia</div>
+                    
+                    <div class="bt-m-separador-o">Ó</div>
+
+                    <div class="bt-m-arrow-v bt-m-arrow-center"><span class="bt-m-text-v">SI</span></div>
+                    <div class="bt-caja">Usted tiene que analizar<br>sus transacciones</div>
+                    
+                    <div class="bt-m-arrow-v-white bt-m-arrow-center"></div>
+                    
+                    <a href="contacto.html" class="bt-caja bt-boton text-center">Ocupo un Estudio de Precios<br>de Transferencia</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 border-t border-gray-200 overflow-hidden bg-white">
+            <div class="container mx-auto px-6 animate-fade-in">
+                
+                <div class="w-full mb-10">
+                    <h2 class="text-4xl lg:text-5xl font-headingBold text-charcoal mb-6">
+                        Pilares<br>Gestión de Riesgos y Control Interno
+                    </h2>
+                    <div class="w-24 h-1 bg-growth mb-6"></div>
+                    <p class="text-lg text-gray-600 text-justify leading-loose">
+                        La Gestión de Riesgos y Control Interno permite administrar todas aquellas situaciones que puedan tener efectos sobre los objetivos del negocio, antes de que estos sucedan. Nuestro modelo busca tener una gestión oportuna para determinar en qué medida y de qué forma se pueden eficientar los procesos de negocio, de tal manera que los mismos coadyuven de una manera eficiente, eficaz y económica.
+                    </p>
+                    <p class="text-sm font-bold mt-8 uppercase tracking-widest animate-pulse text-aqua">
+                        ▶ Interactúa con el primer pilar para encender el circuito
+                    </p>
+                </div>
+
+                <div class="bt-circuit-wrapper">
+                    <div class="bt-circuit-canvas">
+                        
+                        <div class="bt-mobile-track-bg"></div>
+                        <div class="bt-mobile-track-fill" id="bt-mobile-progress"></div>
+
+                        <svg class="bt-circuit-svg" viewBox="0 0 1200 480" preserveAspectRatio="none">
+                            <path class="bt-path-off" d="M80,40 L1120,40 A80,80 0 0,1 1120,200 L80,200 A80,80 0 0,0 80,360 L1120,360" />
+                            <path class="bt-path-on" id="bt-path-progress" d="M80,40 L1120,40 A80,80 0 0,1 1120,200 L80,200 A80,80 0 0,0 80,360 L1120,360" />
+                        </svg>
+                        
+                        <div class="bt-nodes-container">
+                            <div class="bt-circuit-node unlocked" data-step="1" style="top: 40px; left: 6.66%;">
+                                <div class="bt-circuit-stem"></div><div class="bt-circuit-dot"></div>
+                                <div class="bt-circuit-label">Gobierno<br>Corporativo</div>
+                            </div>
+                            <div class="bt-circuit-node locked" data-step="2" style="top: 40px; left: 33.33%;">
+                                <div class="bt-circuit-stem"></div><div class="bt-circuit-dot"></div>
+                                <div class="bt-circuit-label">Gestión Estratégica<br>del Negocio</div>
+                            </div>
+                            <div class="bt-circuit-node locked" data-step="3" style="top: 40px; left: 60%;">
+                                <div class="bt-circuit-stem"></div><div class="bt-circuit-dot"></div>
+                                <div class="bt-circuit-label">Gestión Estratégica de<br>la Auditoria Interna</div>
+                            </div>
+                            <div class="bt-circuit-node locked" data-step="4" style="top: 40px; left: 83.33%;">
+                                <div class="bt-circuit-stem"></div><div class="bt-circuit-dot"></div>
+                                <div class="bt-circuit-label">Auditoria<br>Interna</div>
+                            </div>
+                            <div class="bt-circuit-node locked" data-step="5" style="top: 200px; left: 83.33%;">
+                                <div class="bt-circuit-stem"></div><div class="bt-circuit-dot"></div>
+                                <div class="bt-circuit-label">Gobierno<br>de TI</div>
+                            </div>
+                            <div class="bt-circuit-node locked" data-step="6" style="top: 200px; left: 50%;">
+                                <div class="bt-circuit-stem"></div><div class="bt-circuit-dot"></div>
+                                <div class="bt-circuit-label">Sistemas de<br>Prevención de LA y FT</div>
+                            </div>
+                            <div class="bt-circuit-node locked" data-step="7" style="top: 200px; left: 16.66%;">
+                                <div class="bt-circuit-stem"></div><div class="bt-circuit-dot"></div>
+                                <div class="bt-circuit-label">Gestión Integral de<br>Riesgos y Control Interno</div>
+                            </div>
+                            <div class="bt-circuit-node locked" data-step="8" style="top: 360px; left: 33.33%;">
+                                <div class="bt-circuit-stem"></div><div class="bt-circuit-dot"></div>
+                                <div class="bt-circuit-label">Sistemas de Gestión de la<br>Seguridad de la Información</div>
+                            </div>
+                            <div class="bt-circuit-node locked" data-step="9" style="top: 360px; left: 66.66%;">
+                                <div class="bt-circuit-stem"></div><div class="bt-circuit-dot"></div>
+                                <div class="bt-circuit-label">Sistemas de Gestión de la<br>Continuidad de Negocios</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-charcoal text-white">
+            <div class="container mx-auto px-6 relative z-10 animate-fade-in">
+                <div class="w-full">
+                    <div class="mb-10">
+                        <h2 class="text-4xl lg:text-5xl font-headingBold mb-6">Servicios De Conversión a NIIF</h2>
+                        <div class="w-24 h-1 bg-growth"></div>
+                    </div>
+                    
+                    <div class="space-y-8 text-lg text-gray-300 font-light text-justify leading-loose">
+                        <p>
+                            Las Normas Internacionales de Información Financiera (IFRS por sus siglas en inglés) son el conjunto de estándares internacionales de contabilidad promulgadas por el International Accounting Standards Board (IASB), que establece los requisitos de reconocimiento, medición, presentación e información a revelar sobre las transacciones y hechos económicos que afectan a una empresa y que se reflejan en los estados financieros. La adopción de las NIIF/IFRS ofrece una oportunidad para mejorar la función financiera a través de una mayor consistencia en las políticas contables, obteniendo beneficios potenciales de mayor transparencia, incremento en la comparabilidad y mejora en la eficiencia.
+                        </p>
+                        
+                        <div class="bg-white/10 p-8 rounded-lg border-l-4 border-growth">
+                            <p class="font-bold text-white m-0">
+                                Como responsables de proporcionar servicios de alta calidad, dinámicos y responsables con la legislación, Irías y Asociados ha trasladado un especial interés en proporcionar un servicio especializado en la conversión de los controles, políticas y prácticas financieras fundamentadas en las Normas Internacionales de Información Financiera (NIIF).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-white">
+            <div class="container mx-auto px-6 animate-fade-in">
+                
+                <div class="w-full mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-headingBold text-charcoal mb-6">Productos de RRHH</h2>
+                    <div class="w-24 h-1 bg-growth"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 w-full mt-10">
+                    
+                    <div class="group relative border-t-[3px] border-gray-200 hover:border-[#C9EC51] transition-colors duration-300 pt-6 cursor-default animate-fade-in delay-100">
+                        <span class="block text-4xl font-headingBold text-gray-200 group-hover:text-[#C9EC51] transition-colors duration-300 mb-4">01</span>
+                        <h4 class="text-xl font-headingBold text-charcoal mb-3">Evaluación de <br>Clima Laboral</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">Medición del ambiente de trabajo para alinear la cultura corporativa con los objetivos del negocio.</p>
+                    </div>
+
+                    <div class="group relative border-t-[3px] border-gray-200 hover:border-[#00BAB3] transition-colors duration-300 pt-6 cursor-default animate-fade-in delay-200">
+                        <span class="block text-4xl font-headingBold text-gray-200 group-hover:text-[#00BAB3] transition-colors duration-300 mb-4">02</span>
+                        <h4 class="text-xl font-headingBold text-charcoal mb-3">Necesidades de <br>Capacitación</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">Diagnóstico preciso de brechas de conocimiento para diseñar planes de formación de alto impacto.</p>
+                    </div>
+
+                    <div class="group relative border-t-[3px] border-gray-200 hover:border-[#A3B258] transition-colors duration-300 pt-6 cursor-default animate-fade-in delay-300">
+                        <span class="block text-4xl font-headingBold text-gray-200 group-hover:text-[#A3B258] transition-colors duration-300 mb-4">03</span>
+                        <h4 class="text-xl font-headingBold text-charcoal mb-3">Capacitación <br>Institucional</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">Programas de desarrollo profesional diseñados para elevar el nivel técnico y gerencial del talento.</p>
+                    </div>
+
+                    <div class="group relative border-t-[3px] border-gray-200 hover:border-[#6B753C] transition-colors duration-300 pt-6 cursor-default animate-fade-in delay-400">
+                        <span class="block text-4xl font-headingBold text-gray-200 group-hover:text-[#6B753C] transition-colors duration-300 mb-4">04</span>
+                        <h4 class="text-xl font-headingBold text-charcoal mb-3">Evaluación del <br>Desempeño</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">Sistemas de medición de objetivos para maximizar el rendimiento individual y colectivo.</p>
+                    </div>
+
+                    <div class="group relative border-t-[3px] border-gray-200 hover:border-[#C9EC51] transition-colors duration-300 pt-6 cursor-default animate-fade-in delay-100">
+                        <span class="block text-4xl font-headingBold text-gray-200 group-hover:text-[#C9EC51] transition-colors duration-300 mb-4">05</span>
+                        <h4 class="text-xl font-headingBold text-charcoal mb-3">Manuales de <br>RRHH</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">Diseño y estructuración técnica de políticas, perfiles de puestos y procedimientos organizacionales.</p>
+                    </div>
+
+                    <div class="group relative border-t-[3px] border-gray-200 hover:border-[#00BAB3] transition-colors duration-300 pt-6 cursor-default animate-fade-in delay-200">
+                        <span class="block text-4xl font-headingBold text-gray-200 group-hover:text-[#00BAB3] transition-colors duration-300 mb-4">06</span>
+                        <h4 class="text-xl font-headingBold text-charcoal mb-3">Bolsa de <br>Empleo</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">Reclutamiento y selección de talento humano estratégico perfectamente alineado a su cultura.</p>
+                    </div>
+
+                    <div class="group relative border-t-[3px] border-gray-200 hover:border-[#A3B258] transition-colors duration-300 pt-6 cursor-default animate-fade-in delay-300">
+                        <span class="block text-4xl font-headingBold text-gray-200 group-hover:text-[#A3B258] transition-colors duration-300 mb-4">07</span>
+                        <h4 class="text-xl font-headingBold text-charcoal mb-3">Manejo de <br>Nómina</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">Gestión confidencial, exacta y puntual del pago y cumplimiento de las obligaciones laborales.</p>
+                    </div>
+
+                    <div class="group relative border-t-[3px] border-gray-200 hover:border-[#6B753C] transition-colors duration-300 pt-6 cursor-default animate-fade-in delay-400">
+                        <span class="block text-4xl font-headingBold text-gray-200 group-hover:text-[#6B753C] transition-colors duration-300 mb-4">08</span>
+                        <h4 class="text-xl font-headingBold text-charcoal mb-3">Outsourcing de <br>RRHH</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">Tercerización integral y profesional de la gestión humana para optimizar recursos operativos.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto px-6">
+                
+                <div class="w-full mb-16 text-center animate-fade-in">
+                    <h2 class="text-4xl lg:text-5xl font-headingBold text-charcoal mb-6">Liderazgo</h2>
+                    <div class="w-24 h-1 bg-growth mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-3xl mx-auto">
+                    
+                    <div class="relative aspect-[4/5] rounded-xl overflow-hidden group cursor-pointer shadow-xl animate-fade-in delay-100 bg-charcoal">
+                        <img src="img/FOTO - OZ.jpg" alt="Omar Zúniga" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-in-out group-hover:scale-110 filter grayscale group-hover:grayscale-0">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-transparent opacity-90 transition-opacity duration-500"></div>
+                        
+                        <div class="absolute bottom-0 left-0 w-full p-6 md:p-8">
+                            <div class="transform transition-transform duration-500 ease-in-out group-hover:-translate-y-2">
+                                <div class="text-growth text-xs font-bold uppercase tracking-widest mb-1">Director de Impuestos</div>
+                                <h3 class="text-white text-2xl md:text-3xl font-headingBold m-0">Omar Zúniga</h3>
+                            </div>
+                            
+                            <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                                <div class="overflow-hidden">
+                                    <div class="pt-4 mt-3 border-t border-growth/30">
+                                        <p class="text-white/80 text-sm leading-relaxed m-0">
+                                            Lidera las estrategias fiscales y de cumplimiento, aportando soluciones innovadoras para optimizar la carga tributaria corporativa.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative aspect-[4/5] rounded-xl overflow-hidden group cursor-pointer shadow-xl animate-fade-in delay-200 bg-charcoal">
+                        <img src="img/Alberto Zuniga-Socio Legal.jpg" alt="Alberto Zúniga" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-in-out group-hover:scale-110 filter grayscale group-hover:grayscale-0">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-transparent opacity-90 transition-opacity duration-500"></div>
+                        
+                        <div class="absolute bottom-0 left-0 w-full p-6 md:p-8">
+                            <div class="transform transition-transform duration-500 ease-in-out group-hover:-translate-y-2">
+                                <div class="text-growth text-xs font-bold uppercase tracking-widest mb-1">Socio Legal</div>
+                                <h3 class="text-white text-2xl md:text-3xl font-headingBold m-0">Alberto Zúniga</h3>
+                            </div>
+                            
+                            <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                                <div class="overflow-hidden">
+                                    <div class="pt-4 mt-3 border-t border-growth/30">
+                                        <p class="text-white/80 text-sm leading-relaxed m-0">
+                                            Brinda asesoría legal integral, asegurando la solidez jurídica y el cumplimiento corporativo en cada proyecto de consultoría.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer class="bg-bt-dark text-white pt-11 pb-8" style="background-color: #2B303A;">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-9">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-5">
+                
+                <div class="md:col-span-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 text-left max-w-[400px] mx-auto md:max-w-none md:mx-0">
+                        <div>
+                            <h4 class="footer-title font-bold mb-4 text-growth">Servicios</h4>
+                            <ul class="footer-list space-y-2 opacity-80">
+                                <li><a href="auditoria.html" class="hover:text-growth transition">Auditoría</a></li>
+                                <li><a href="consultoria.html" class="hover:text-growth transition">Consultoría</a></li>
+                                <li><a href="legal.html" class="hover:text-growth transition">Legal</a></li>
+                                <li><a href="impuestos.html" class="hover:text-growth transition">Impuestos</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="footer-title font-bold mb-4 text-growth">Nosotros</h4>
+                            <ul class="footer-list space-y-2 opacity-80">
+                                <li><a href="nosotros.html" class="hover:text-growth transition text-growth">Nuestra Firma</a></li>
+                                <li><a href="liderazgo.html" class="hover:text-growth transition">Liderazgo</a></li>
+                                <li><a href="oficinas.html" class="hover:text-growth transition">Oficinas</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="footer-title font-bold mb-4 text-growth">Carreras</h4>
+                            <ul class="footer-list space-y-2 opacity-80">
+                                <li><a href="vacantes.html" class="hover:text-growth transition">Vacantes</a></li>
+                                <li><a href="cultura.html" class="hover:text-growth transition">Cultura</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="footer-title font-bold mb-4 text-growth">Legal</h4>
+                            <ul class="footer-list space-y-2 opacity-80">
+                                <li><a href="privacidad.html" class="hover:text-growth transition">Aviso de Privacidad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-4 flex flex-col items-center md:items-start justify-start">
+                    <div class="flex space-x-3 mb-8 mt-1">
+                        <a href="https://www.linkedin.com/company/bakertillyhn/" class="social-circle hover:text-growth transition">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/share/1HJtvDfgG1/" class="social-circle hover:text-growth transition">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/bakertillyhonduras?igsh=dXpicDg5ZmF0Z3hs" class="social-circle hover:text-growth transition">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                    <div class="slogan-container mt-2 md:mt-0">
+                        <img src="img/NowForTomorrow.png" alt="Now, for tomorrow" class="w-48 md:w-56 h-auto object-contain">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 mt-4 text-center md:text-left">
+                <p class="text-sm opacity-60">
+                    © 2026 Baker Tilly Honduras es miembro de la red global de Baker Tilly International Ltd., cuyos miembros son entidades legales separadas e independientes. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. MENÚ MÓVIL
+            const btnMobile = document.getElementById('btn-mobile');
+            const menuContainer = document.getElementById('menu-container');
+
+            if(btnMobile){
+                btnMobile.addEventListener('click', () => {
+                    menuContainer.classList.toggle('hidden');
+                    menuContainer.classList.toggle('mobile-menu-active');
+                    btnMobile.classList.toggle('is-active');
+                });
+            }
+
+            // 2. DROPDOWNS EN CELULAR
+            const navGroups = document.querySelectorAll('.nav-group');
+            navGroups.forEach(group => {
+                group.addEventListener('click', (e) => {
+                    if (window.innerWidth < 1280) {
+                        const dropdown = group.querySelector('.dropdown-menu');
+                        if(dropdown) {
+                            navGroups.forEach(g => { 
+                                if(g !== group) g.classList.remove('open-mobile'); 
+                            });
+                            group.classList.toggle('open-mobile');
+                        }
+                    }
+                });
+            });
+
+            // 3. ANIMACIONES ON-SCROLL SUAVES
+            const animatedElements = document.querySelectorAll('.animate-fade-in');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            animatedElements.forEach(el => {
+                revealObserver.observe(el);
+            });
+
+            // 4. LÓGICA DEL CIRCUITO (SVG en PC, Barra Vertical en Móvil)
+            const circuitNodes = document.querySelectorAll('.bt-circuit-node');
+            const svgPath = document.getElementById('bt-path-progress');
+            const mobileProgress = document.getElementById('bt-mobile-progress');
+            
+            let pathLength = 0;
+            if(svgPath) {
+                pathLength = svgPath.getTotalLength();
+                svgPath.style.strokeDasharray = pathLength;
+                svgPath.style.strokeDashoffset = pathLength;
+                svgPath.style.transition = 'stroke-dashoffset 0.8s ease-in-out';
+            }
+
+            const stepOffsets = { 1: 0.00, 2: 0.09, 3: 0.18, 4: 0.26, 5: 0.40, 6: 0.51, 7: 0.62, 8: 0.80, 9: 0.92 };
+            const mobileOffsets = { 1: 0, 2: 12.5, 3: 25, 4: 37.5, 5: 50, 6: 62.5, 7: 75, 8: 87.5, 9: 100 };
+            let currentMaxCircuit = 1;
+
+            function drawCircuit(step) {
+                if(svgPath) {
+                    const targetOffset = pathLength - (pathLength * stepOffsets[step]);
+                    svgPath.style.strokeDashoffset = targetOffset;
+                }
+                
+                if(mobileProgress) {
+                    mobileProgress.style.height = mobileOffsets[step] + '%';
+                }
+
+                circuitNodes.forEach(node => {
+                    const nodeStep = parseInt(node.getAttribute('data-step'));
+                    if(nodeStep <= step) {
+                        node.classList.remove('locked');
+                        node.classList.add('unlocked');
+                    }
+                });
+            }
+
+            setTimeout(() => { drawCircuit(1); }, 200);
+
+            circuitNodes.forEach(node => {
+                const triggerNext = () => {
+                    if (node.classList.contains('unlocked')) {
+                        const hoveredStep = parseInt(node.getAttribute('data-step'));
+                        const nextStep = hoveredStep + 1;
+                        
+                        if (nextStep <= 9 && nextStep > currentMaxCircuit) {
+                            currentMaxCircuit = nextStep;
+                            
+                            const nextNode = document.querySelector(`.bt-circuit-node[data-step="${nextStep}"]`);
+                            if(nextNode) nextNode.classList.add('ignite-active');
+                            
+                            drawCircuit(currentMaxCircuit);
+                        }
+                    }
+                };
+
+                node.addEventListener('mouseenter', triggerNext);
+                node.addEventListener('click', triggerNext);
+            });
+        });
+    </script>
+
+
+<script>
+    // ==========================================
+    // BUSCADOR INTERNO ULTRA AGRESIVO (TOP BAR LIMPIO)
+    // ==========================================
+    const btnSearch = document.getElementById('btn-search');
+    const searchModal = document.getElementById('search-modal');
+    const closeSearch = document.getElementById('close-search');
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+
+    // DICCIONARIO EXPANDIDO
+    const paginasWeb = [
+        { titulo: "Inicio", url: "index.html", descripcion: "Página principal de Baker Tilly Honduras.", tags: "inicio home portada principal informacion firma bakertilly baker tili tilly" },
+        { titulo: "Nosotros", url: "nosotros.html", descripcion: "Conoce nuestra historia, misión y visión corporativa.", tags: "nosotros firma historia valores proposito mision vision quienes somos trayectoria corporativo" },
+        { titulo: "Liderazgo", url: "liderazgo.html", descripcion: "Conoce a los socios y directores de la firma.", tags: "liderazgo socios directores gerentes jefes directiva management dueños ejecutivos" },
+        { titulo: "Equipo", url: "equipo.html", descripcion: "El talento profesional que conforma nuestra firma.", tags: "equipo staff personal profesionales talento capital humano colaboradores empleados" },
+        { titulo: "Calidad", url: "calidad.html", descripcion: "Nuestros estándares y certificaciones internacionales.", tags: "calidad excelencia estandares certificacion procesos normas iso garantia" },
+        { titulo: "Oficinas", url: "oficinas.html", descripcion: "Ubicación de nuestras sedes en Honduras.", tags: "oficinas ubicacion direccion tegucigalpa san pedro sula mapa sucursales sedes donde estan telefono" },
+        { titulo: "Auditoría", url: "auditoria.html", descripcion: "Servicios de auditoría externa, interna y financiera.", tags: "auditoria auditorias estados financieros revisoria riesgos control interno niif contable auditar" },
+        { titulo: "Consultoría", url: "consultoria.html", descripcion: "Asesoría de negocios y gestión de riesgos.", tags: "consultoria negocios asesoria riesgos estrategia empresarial management consultor asesor" },
+        { titulo: "Legal", url: "legal.html", descripcion: "Servicios legales, corporativos y laborales.", tags: "legal abogados abogacia derecho mercantil corporativo laboral leyes contratos demandas juridico" },
+        { titulo: "Impuestos", url: "impuesto.html", descripcion: "Asesoría fiscal y cumplimiento tributario.", tags: "impuestos fiscal tributario sar precios transferencia rentas declaraciones impuestos defensa fiscal" },
+        { titulo: "Advisory / Contabilidad", url: "contabilidad.html", descripcion: "Servicios de BPO, contabilidad y planillas.", tags: "contabilidad advisory bpo outsourcing planillas nomina recursos humanos libros contables contador" },
+        { titulo: "Vacantes", url: "vacantes.html", descripcion: "Oportunidades de empleo y bolsa de trabajo.", tags: "vacantes empleo trabajo carreras cv reclutamiento rrhh bolsa plaza pasantias chamba contratacion" },
+        { titulo: "Nuestra Cultura", url: "cultura.html", descripcion: "Los valores y el ambiente laboral de nuestra firma.", tags: "cultura valores ambiente crecimiento beneficios responsabilidad social rse clima" },
+        { titulo: "Contacto", url: "contacto.html", descripcion: "Ponte en comunicación con nuestros expertos.", tags: "contacto telefono correo mensaje informacion whatsapp ubicacion hablar llamar" },
+        { titulo: "Aviso de Privacidad", url: "privacidad.html", descripcion: "Términos legales y manejo de datos personales.", tags: "privacidad datos legal terminos condiciones confidencialidad cookies politicas" }
+    ];
+
+    function limpiarTexto(texto) {
+        return texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    if(btnSearch && searchModal) {
+        // Al abrir, vaciamos todo y escondemos el cuadro blanco
+        btnSearch.addEventListener('click', () => {
+            searchModal.classList.remove('hidden');
+            searchModal.classList.add('flex');
+            setTimeout(() => searchModal.classList.remove('opacity-0'), 10);
+            
+            searchInput.value = '';
+            searchResults.innerHTML = '';
+            searchResults.classList.remove('flex');
+            searchResults.classList.add('hidden'); // Ocultar cuadro
+            
+            setTimeout(() => searchInput.focus(), 100); 
+        });
+
+        // Al cerrar, nos aseguramos de ocultar el modal
+        closeSearch.addEventListener('click', () => {
+            searchModal.classList.add('opacity-0');
+            setTimeout(() => {
+                searchModal.classList.remove('flex');
+                searchModal.classList.add('hidden');
+            }, 300); 
+        });
+
+        // Lógica de búsqueda
+        searchInput.addEventListener('input', function() {
+            const inputCrudo = this.value.trim();
+            const textoBuscado = limpiarTexto(inputCrudo);
+            searchResults.innerHTML = ''; 
+
+            // Si el buscador está vacío, OCULTAMOS el cuadro blanco y salimos
+            if (textoBuscado.length === 0) {
+                searchResults.classList.remove('flex');
+                searchResults.classList.add('hidden');
+                return;
+            }
+
+            // Si hay texto, MOSTRAMOS el cuadro blanco
+            searchResults.classList.remove('hidden');
+            searchResults.classList.add('flex');
+
+            const stopWords = ["el", "la", "los", "las", "un", "una", "de", "del", "y", "o", "en", "para", "por", "con"];
+            let palabrasClave = textoBuscado.split(/\s+/).filter(p => p.length > 2 && !stopWords.includes(p));
+            
+            if (palabrasClave.length === 0 && textoBuscado.length > 0) { palabrasClave = [textoBuscado]; }
+
+            const resultados = paginasWeb.filter(pagina => {
+                const contenidoPagina = limpiarTexto(`${pagina.titulo} ${pagina.descripcion} ${pagina.tags}`);
+                return palabrasClave.some(palabra => {
+                    if (contenidoPagina.includes(palabra)) return true;
+                    if (palabra.length >= 4) {
+                        const patronFuzzy = palabra.split('').join('.*');
+                        const regex = new RegExp(patronFuzzy, 'i');
+                        return regex.test(contenidoPagina);
+                    }
+                    return false;
+                });
+            });
+
+            if (resultados.length > 0) {
+                resultados.forEach(res => {
+                    const link = document.createElement('a');
+                    link.href = res.url;
+                    link.className = "block bg-white hover:bg-gray-50 border-b border-gray-100 p-5 transition text-left group";
+                    link.innerHTML = `
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="text-charcoal text-lg font-bold group-hover:text-aqua transition">${res.titulo}</h4>
+                                <p class="text-gray-500 text-sm mt-1">${res.descripcion}</p>
+                            </div>
+                            <svg class="w-6 h-6 text-gray-300 group-hover:text-aqua transition transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                    `;
+                    searchResults.appendChild(link);
+                });
+            } else {
+                searchResults.innerHTML = `<div class="p-6 text-center text-gray-500"><p class="text-base">No encontramos resultados exactos para "<span class="font-bold text-charcoal">${inputCrudo}</span>".</p></div>`;
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
