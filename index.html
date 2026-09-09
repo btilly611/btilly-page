@@ -88,7 +88,7 @@
 
                 <div class="flex items-center space-x-2">
                     
-                    <button id="btn-search" class="icon-search text-white opacity-90 hover:text-bt-lime transition">
+                    <button id="btn-search" aria-label="Abrir buscador" class="icon-search text-white opacity-90 hover:text-bt-lime transition">
                         <svg width="50" height="42" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="16.0002" cy="14.6004" r="8.14336" stroke="white" stroke-width="2"></circle>
                             <line x1="22.319" y1="21.293" x2="25.0449" y2="24.0188" stroke="white" stroke-width="2" stroke-linecap="round"></line>
@@ -164,9 +164,84 @@
             </div>
         </section>
 
+
+
+       
+<section class="py-24 bg-gray-50" id="noticias">
+    <div class="container mx-auto px-6 max-w-[1400px]">
+        <div class="flex justify-between items-end mb-12 animate-fade-in">
+            <div>
+                <span class="text-growth font-bold tracking-widest uppercase text-sm mb-2 block">Actualidad</span>
+                <h2 class="text-4xl font-headingBold text-charcoal">Últimas Noticias</h2>
+            </div>
+            <a href="noticias" class="hidden md:inline-flex items-center text-aqua font-bold hover:text-charcoal transition border-b border-transparent hover:border-charcoal pb-1 uppercase text-sm tracking-wider">Ver todas las noticias</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            
+            <article class="news-card group">
+                <a href="noticia-premio.html" class="flex flex-col h-full">
+                    <div class="news-img-wrapper">
+                        <img src="img/Maria Irias-Socia Directora.jpg" alt="Lic. María Irías Montenegro" class="news-img" style="object-position: top;">
+                        <div class="news-date">MAY 2026</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow bg-white">
+                        <span class="category-tag">Postulación</span>
+                        <h3 class="text-xl font-headingBold text-charcoal mb-4 group-hover:text-aqua transition">Premio a la Excelencia de la Contaduría 2026</h3>
+                        <p class="text-gray-500 text-sm mb-6 line-clamp-3">Nuestra Socia Directora ha sido postulada a este prestigioso galardón que honra su liderazgo y ética profesional.</p>
+                        <span class="read-more text-sm font-bold">Leer noticia →</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="news-card group">
+                <a href="noticia-madres.html" class="flex flex-col h-full">
+                    <div class="news-img-wrapper">
+                        <img src="img/madre.jpeg" alt="Día de las Madres" class="news-img">
+                        <div class="news-date">MAY 2026</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow bg-white">
+                        <span class="category-tag">Cultura</span>
+                        <h3 class="text-xl font-headingBold text-charcoal mb-4 group-hover:text-aqua transition">Homenaje a las Madres Baker Tilly</h3>
+                        <p class="text-gray-500 text-sm mb-6 line-clamp-3">Celebramos con orgullo a las madres de nuestro equipo, reconociendo su invaluable capacidad de equilibrar la excelencia profesional.</p>
+                        <span class="read-more text-sm font-bold">Leer noticia →</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="news-card group">
+                <a href="noticia-capacitacion.html" class="flex flex-col h-full">
+                    <div class="news-img-wrapper">
+                        <img src="img/capacitacion.jfif" alt="Diplomas Contabilidad" class="news-img">
+                        <div class="news-date">ABR 2026</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow bg-white">
+                        <span class="category-tag">Capacitación</span>
+                        <h3 class="text-xl font-headingBold text-charcoal mb-4 group-hover:text-aqua transition">Excelencia mediante el Aprendizaje</h3>
+                        <p class="text-gray-500 text-sm mb-6 line-clamp-3">Colaboradoras del área de Contabilidad reciben certificaciones y diplomas, reafirmando nuestro compromiso de servicio.</p>
+                        <span class="read-more text-sm font-bold">Leer noticia →</span>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+
+        <div class="mt-12 text-center md:hidden">
+            <a href="noticias" class="inline-block text-aqua font-bold border-b-2 border-aqua pb-1 uppercase text-sm tracking-wider">Ver todas las noticias</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
         <section class="bg-white pt-24 pb-16 border-b border-gray-100">
             <div class="container mx-auto px-6 max-w-6xl text-center animate-fade-in delay-100">
-                <h2 class="text-3xl lg:text-4xl font-headingBold text-charcoal mb-6">Más de 29 años de excelencia ininterrumpida</h2>
+                <h2 class="text-3xl lg:text-4xl font-headingBold text-charcoal mb-6">Más de 33 años de excelencia ininterrumpida</h2>
                 <div class="w-16 h-1 bg-growth mx-auto mb-8"></div>
                 <p class="text-xl text-gray-600 leading-relaxed mb-12 max-w-4xl mx-auto">
                     Posicionados como una de las 10 firmas de auditoría y consultoría más importantes del país, forjamos nuestro prestigio a través de un profundo compromiso con el éxito de nuestros clientes corporativos, financieros y gubernamentales.
@@ -177,7 +252,7 @@
         <section id="stats-section" class="bg-aqua-15 py-16">
             <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center animate-fade-in">
                 <div> 
-                    <div class="font-headingBold text-5xl text-aqua mb-2">+<span class="num-counter" data-target="29">0</span></div>
+                    <div class="font-headingBold text-5xl text-aqua mb-2">+<span class="num-counter" data-target="33">0</span></div>
                     <div class="text-charcoal text-sm font-bold uppercase tracking-wider">Años de Experiencia</div>
                 </div>
                 <div> 
@@ -185,12 +260,12 @@
                     <div class="text-charcoal text-sm font-bold uppercase tracking-wider">Oficinas Principales</div>
                 </div>
                 <div> 
-                    <div class="font-headingBold text-5xl text-aqua mb-2">+<span class="num-counter" data-target="150">0</span></div>
+                    <div class="font-headingBold text-5xl text-aqua mb-2">+<span class="num-counter" data-target="65">0</span></div>
                     <div class="text-charcoal text-sm font-bold uppercase tracking-wider">Colaboradores</div>
                 </div>
                 <div> 
-                    <div class="font-headingBold text-5xl text-aqua mb-2"><span class="num-counter" data-target="10">0</span></div>
-                    <div class="text-charcoal text-sm font-bold uppercase tracking-wider">Socios Directores</div>
+                    <div class="font-headingBold text-5xl text-aqua mb-2"><span class="num-counter" data-target="1">0</span></div>
+                    <div class="text-charcoal text-sm font-bold uppercase tracking-wider">Socio Director</div>
                 </div>
             </div>
         </section>
@@ -295,57 +370,7 @@
             </div>
         </section>
 
-        <section class="py-24 bg-gray-50">
-            <div class="container mx-auto px-6 max-w-[1400px]">
-                <div class="flex justify-between items-end mb-12 animate-fade-in">
-                    <div>
-                        <span class="text-growth font-bold tracking-widest uppercase text-sm mb-2 block">Actualidad</span>
-                        <h2 class="text-4xl font-headingBold text-charcoal">Perspectivas</h2>
-                    </div>
-                    <a href="#" class="hidden md:inline-flex items-center text-aqua font-bold hover:text-charcoal transition border-b border-transparent hover:border-charcoal pb-1">Ver todas las noticias</a>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
-                    <a href="#" class="insight-card group animate-fade-in delay-100">
-                        <div class="insight-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Noticia 1" class="insight-img">
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">Impuestos</span>
-                            <h4 class="text-xl font-headingBold text-charcoal mb-3 group-hover:text-aqua transition">Actualización en la normativa de Precios de Transferencia</h4>
-                            <p class="text-gray-500 text-sm leading-relaxed line-clamp-3">Conoce los nuevos requisitos documentales exigidos por la autoridad tributaria y cómo preparar a tu organización para cumplirlos.</p>
-                        </div>
-                    </a>
-
-                    <a href="#" class="insight-card group animate-fade-in delay-200">
-                        <div class="insight-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Noticia 2" class="insight-img">
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">Legal</span>
-                            <h4 class="text-xl font-headingBold text-charcoal mb-3 group-hover:text-growth transition">El impacto del Gobierno Corporativo en empresas familiares</h4>
-                            <p class="text-gray-500 text-sm leading-relaxed line-clamp-3">Estrategias legales clave para asegurar la sucesión exitosa y la protección del patrimonio a través de las generaciones.</p>
-                        </div>
-                    </a>
-
-                    <a href="#" class="insight-card group animate-fade-in delay-300">
-                        <div class="insight-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Noticia 3" class="insight-img">
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">Auditoría</span>
-                            <h4 class="text-xl font-headingBold text-charcoal mb-3 group-hover:text-aqua transition">Implementación de NIIF: Retos comunes y soluciones</h4>
-                            <p class="text-gray-500 text-sm leading-relaxed line-clamp-3">Un análisis de las principales dificultades que enfrentan las empresas locales al transicionar a las Normas Internacionales.</p>
-                        </div>
-                    </a>
-
-                </div>
-                <div class="mt-8 text-center md:hidden">
-                    <a href="#" class="inline-block text-aqua font-bold border-b border-aqua pb-1">Ver todas las noticias</a>
-                </div>
-            </div>
-        </section>
+        
 
         <section class="py-24 bg-[#2B303A] text-white">
             <div class="container mx-auto px-6">

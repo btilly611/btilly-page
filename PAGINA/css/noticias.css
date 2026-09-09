@@ -1,0 +1,116 @@
+/* ==========================================================
+   noticias.css - ESTILOS OFICIALES BAKER TILLY HONDURAS
+   ========================================================== */
+:root {
+    --aqua: #00BAB3;
+    --charcoal: #2B303A;
+    --growth: #C9EC51;
+}
+
+
+/* Fuentes Oficiales Extraídas de tu Index */
+        @font-face { font-family: 'Carnac'; src: url('fonts/carnac-regular.otf'); font-weight: normal; }
+        @font-face { font-family: 'Carnac'; src: url('fonts/carnac-bold.otf'); font-weight: 700; }
+        @font-face { font-family: 'Carnac'; src: url('fonts/carnac-extrabold.otf'); font-weight: 800; }
+        body { font-family: 'Roboto', sans-serif; color: #2B303A; }
+        .font-headingBold { font-family: 'Carnac', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+
+
+
+/* --- Hero de Noticias --- */
+.noticias-hero {
+    background-image: url('../img/inicio.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(43,48,58,0.95) 0%, rgba(43,48,58,0.6) 50%, rgba(43,48,58,0.2) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Tarjetas de Noticias (Estilo exacto al insight-card) --- */
+.news-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #f3f4f6;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+}
+
+/* Contenedor de imagen */
+.news-img-wrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.news-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-img {
+    transform: scale(1.05);
+}
+
+/* Etiqueta de fecha (Con el color Growth #C9EC51) */
+.news-date {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--growth);
+    color: var(--charcoal);
+    padding: 8px 20px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    border-top-right-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Etiquetas de categoría */
+.category-tag {
+    color: var(--aqua);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* Enlace "Leer más" */
+.read-more {
+    font-weight: 800;
+    color: var(--charcoal);
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    margin-top: auto;
+}
+
+.news-card:hover .read-more {
+    color: var(--aqua);
+}

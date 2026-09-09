@@ -1,0 +1,84 @@
+/* ==========================================================
+   perfil.css - DISEÑO DE PERFIL INDIVIDUAL DE SOCIOS
+   ========================================================== */
+@font-face { font-family: 'Carnac'; src: url('../fonts/carnac-regular.otf'); font-weight: normal; }
+@font-face { font-family: 'Carnac'; src: url('../font/carnac-extrabold.otf'); font-weight: 2000; }
+
+body { font-family: 'Roboto', sans-serif; color: #2B303A; }
+.font-headingBold { font-family: 'Carnac', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+
+/* Acordeones (Menús desplegables de Educación, Experiencia, etc.) */
+.accordion-item {
+    border: 1px solid #00BAB3; /* Borde estilo México */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.accordion-btn {
+    width: 100%;
+    text-align: left;
+    padding: 1.25rem 1.5rem;
+    background-color: #ffffff;
+    font-size: 1.25rem;
+    font-family: 'Carnac', sans-serif;
+    font-weight: 700;
+    color: #2B303A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-btn:hover {
+    background-color: #f8fafc;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease;
+    background-color: #ffffff;
+    padding: 0 1.5rem;
+}
+
+/* Clases activas para el JS */
+.accordion-item.active .accordion-content {
+    max-height: 500px; /* Altura máxima para la animación */
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* ==========================================================
+   ANIMACIONES DE ENTRADA (FADE IN UP)
+   ========================================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0; /* Comienza invisible */
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Retrasos para crear un efecto cascada elegante */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.3s; }
+.delay-300 { animation-delay: 0.5s; }

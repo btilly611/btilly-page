@@ -1,0 +1,45 @@
+/* Fuentes Oficiales Extraídas de tu Index */
+@font-face { font-family: 'Carnac'; src: url('../fonts/carnac-regular.otf'); font-weight: normal; }
+@font-face { font-family: 'Carnac'; src: url('../fonts/carnac-bold.otf'); font-weight: 700; }
+@font-face { font-family: 'Carnac'; src: url('../fonts/carnac-extrabold.otf'); font-weight: 800; }
+
+body { 
+    font-family: 'Roboto', sans-serif; 
+    color: #2B303A; 
+    line-height: 1.8; 
+}
+
+.font-headingBold { 
+    font-family: 'Carnac', sans-serif; 
+    font-weight: 700; 
+    letter-spacing: -0.02em; 
+}
+
+/* Estilo para la primera letra del artículo (Letra Capital) */
+.dropcap::first-letter {
+    font-family: 'Carnac', sans-serif;
+    font-weight: 700;
+    float: left;
+    font-size: 5.5rem;
+    line-height: 0.8;
+    padding-right: 0.75rem;
+    padding-top: 0.2rem;
+    color: #00BAB3; /* Color Aqua de Baker Tilly Honduras */
+}
+
+/* --- AJUSTE PREMIUM DE LA IMAGEN --- */
+.premium-image-container {
+    max-width: 800px; /* Evita que la imagen sea gigante */
+    margin: 4rem auto; /* La centra perfectamente y le da aire */
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.premium-image {
+    width: 100%;
+    max-height: 550px; /* Limita la altura */
+    object-fit: cover;
+    object-position: top; /* Asegura que se vea su rostro impecable */
+}
