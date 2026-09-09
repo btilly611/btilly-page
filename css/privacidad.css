@@ -1,0 +1,69 @@
+/* ==========================================================
+   privacidad.css - ESTILOS PARA TEXTOS LEGALES
+   ========================================================== */
+
+/* 1. REGISTRO DE LA FUENTE CARNAC */
+@font-face {
+    font-family: 'Carnac';
+    src: url('../fonts/carnac-bold.otf') format('opentype'),
+         url('../fonts/carnac-bold.ttf') format('truetype');
+    font-weight: 800; 
+    font-style: normal;
+}
+
+.font-headingBold, h1, h2, h3, h4 { 
+    font-family: 'Carnac', Arial, sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+/* 2. ESTILOS DE CONTENIDO LEGAL */
+.legal-content h2 {
+    color: #00BAB3; /* Color Aqua de Baker Tilly */
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #dfe0e2;
+    padding-bottom: 0.5rem;
+}
+
+.legal-content p {
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+}
+
+.legal-content ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #4a4a4a;
+    line-height: 1.8;
+}
+
+.legal-content li {
+    margin-bottom: 0.5rem;
+}
+
+.legal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1rem;
+}
+
+.legal-table th {
+    background-color: #2B303A;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 15px;
+    font-family: 'Carnac', Arial, sans-serif;
+}
+
+.legal-table td {
+    border: 1px solid #dfe0e2;
+    padding: 12px 15px;
+    color: #4a4a4a;
+}
